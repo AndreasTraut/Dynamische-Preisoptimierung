@@ -345,6 +345,108 @@
       "width": 1280,
       "height": 720,
       "config": "{\"objects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":\"#FFFFFF\"}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"wallpaper\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"defaultDrillFilterOtherVisuals\":true}"
+    },
+    {
+      "id": "s3-preisempfehlung-dashboard",
+      "name": "ReportSection3",
+      "displayName": "Preisempfehlungs-Dashboard",
+      "visualContainers": [
+        {
+          "id": "vc-s3-title-bar",
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 52,
+          "z": 0,
+          "config": "{\"name\": \"s3TitleBar\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 0, \"y\": 0, \"z\": 0, \"width\": 1280, \"height\": 52, \"tabOrder\": 0}}], \"singleVisual\": {\"visualType\": \"shape\", \"objects\": {\"line\": [{\"properties\": {\"strokeColor\": {\"solid\": {\"color\": \"#000000\"}}, \"strokeWidth\": {\"expr\": {\"Literal\": {\"Value\": \"2D\"}}}, \"shape\": {\"shapeType\": {\"expr\": {\"Literal\": {\"Value\": \"'rectangle'\"}}}, \"fill\": {\"fillType\": {\"expr\": {\"Literal\": {\"Value\": \"1D\"}}}, \"fillColor\": {\"solid\": {\"color\": \"#000000\"}}}}}}]}, \"vcObjects\": {}}}"
+        },
+        {
+          "id": "vc-s3-title-text",
+          "x": 16,
+          "y": 8,
+          "width": 900,
+          "height": 36,
+          "z": 10,
+          "config": "{\"name\": \"s3TitleText\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 16, \"y\": 8, \"z\": 10, \"width\": 900, \"height\": 36, \"tabOrder\": 10}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Preisempfehlungs-Dashboard\", \"textStyle\": {\"fontFamily\": \"Segoe UI\", \"fontSize\": \"18pt\", \"bold\": true, \"color\": \"#FFFFFF\"}}], \"horizontalTextAlignment\": \"left\"}]}}]}}, \"vcObjects\": {}}"
+        },
+        {
+          "id": "vc-s3-subtitle",
+          "x": 16,
+          "y": 32,
+          "width": 1000,
+          "height": 20,
+          "z": 10,
+          "config": "{\"name\": \"s3Subtitle\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 16, \"y\": 32, \"z\": 10, \"width\": 1000, \"height\": 20, \"tabOrder\": 11}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Aktueller vs. Empfohlener Preis  |  Erwartete Umsatzänderung (%)  |  Erwartete Margenänderung (%)\", \"textStyle\": {\"fontFamily\": \"Segoe UI\", \"fontSize\": \"9pt\", \"bold\": false, \"color\": \"#CCCCCC\"}}], \"horizontalTextAlignment\": \"left\"}]}}]}}, \"vcObjects\": {}}"
+        },
+        {
+          "id": "vc-s3-label-preis",
+          "x": 16,
+          "y": 56,
+          "width": 400,
+          "height": 20,
+          "z": 0,
+          "config": "{\"name\": \"s3LabelPreis\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 16, \"y\": 56, \"z\": 0, \"width\": 400, \"height\": 20, \"tabOrder\": 20}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Aktueller vs. Empfohlener Preis\", \"textStyle\": {\"fontFamily\": \"Segoe UI\", \"fontSize\": \"10pt\", \"bold\": true, \"color\": \"#000000\"}}], \"horizontalTextAlignment\": \"left\"}]}}]}}, \"vcObjects\": {}}"
+        },
+        {
+          "id": "vc-s3-label-umsatz",
+          "x": 440,
+          "y": 56,
+          "width": 400,
+          "height": 20,
+          "z": 0,
+          "config": "{\"name\": \"s3LabelUmsatz\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 440, \"y\": 56, \"z\": 0, \"width\": 400, \"height\": 20, \"tabOrder\": 21}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Erwartete Umsatzänderung (%)\", \"textStyle\": {\"fontFamily\": \"Segoe UI\", \"fontSize\": \"10pt\", \"bold\": true, \"color\": \"#000000\"}}], \"horizontalTextAlignment\": \"left\"}]}}]}}, \"vcObjects\": {}}"
+        },
+        {
+          "id": "vc-s3-label-marge",
+          "x": 864,
+          "y": 56,
+          "width": 400,
+          "height": 20,
+          "z": 0,
+          "config": "{\"name\": \"s3LabelMarge\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 864, \"y\": 56, \"z\": 0, \"width\": 400, \"height\": 20, \"tabOrder\": 22}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Erwartete Margenänderung (%)\", \"textStyle\": {\"fontFamily\": \"Segoe UI\", \"fontSize\": \"10pt\", \"bold\": true, \"color\": \"#000000\"}}], \"horizontalTextAlignment\": \"left\"}]}}]}}, \"vcObjects\": {}}"
+        },
+        {
+          "id": "vc-s3-bar-preis",
+          "x": 16,
+          "y": 70,
+          "width": 400,
+          "height": 626,
+          "z": 0,
+          "config": "{\"name\": \"s3BarPreis\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 16, \"y\": 70, \"z\": 0, \"width\": 400, \"height\": 626, \"tabOrder\": 30}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Category\": [{\"queryRef\": \"Produkte.produkt_id\", \"active\": true}], \"Y\": [{\"queryRef\": \"ModelOutput.Aktueller Preis Ø\"}, {\"queryRef\": \"ModelOutput.Empfohlener Preis Ø\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"p\", \"Entity\": \"Produkte\", \"Type\": 0}, {\"Name\": \"m\", \"Entity\": \"ModelOutput\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"p\"}}, \"Property\": \"produkt_id\"}, \"Name\": \"Produkte.produkt_id\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"Aktueller Preis Ø\"}, \"Name\": \"ModelOutput.Aktueller Preis Ø\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"Empfohlener Preis Ø\"}, \"Name\": \"ModelOutput.Empfohlener Preis Ø\"}]}, \"objects\": {\"dataColors\": [{\"properties\": {\"fill\": {\"solid\": {\"color\": \"#0070C0\"}}}}, {\"properties\": {\"fill\": {\"solid\": {\"color\": \"#ED7D31\"}}}}], \"categoryAxis\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"10D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI'\"}}}}}], \"valueAxis\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"10D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI'\"}}}}}], \"legend\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"position\": {\"expr\": {\"Literal\": {\"Value\": \"'Top'\"}}}}}], \"labels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": \"#000000\"}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"9D\"}}}}}], \"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": \"#FFFFFF\"}}}}]}, \"vcObjects\": {}}}"
+        },
+        {
+          "id": "vc-s3-bar-umsatz",
+          "x": 440,
+          "y": 70,
+          "width": 400,
+          "height": 626,
+          "z": 0,
+          "config": "{\"name\": \"s3BarUmsatz\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 440, \"y\": 70, \"z\": 0, \"width\": 400, \"height\": 626, \"tabOrder\": 31}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Category\": [{\"queryRef\": \"Produkte.produkt_id\", \"active\": true}], \"Y\": [{\"queryRef\": \"ModelOutput.ΔUmsatz positiv Ø\"}, {\"queryRef\": \"ModelOutput.ΔUmsatz negativ Ø\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"p\", \"Entity\": \"Produkte\", \"Type\": 0}, {\"Name\": \"m\", \"Entity\": \"ModelOutput\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"p\"}}, \"Property\": \"produkt_id\"}, \"Name\": \"Produkte.produkt_id\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"ΔUmsatz positiv Ø\"}, \"Name\": \"ModelOutput.ΔUmsatz positiv Ø\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"ΔUmsatz negativ Ø\"}, \"Name\": \"ModelOutput.ΔUmsatz negativ Ø\"}]}, \"objects\": {\"dataColors\": [{\"properties\": {\"fill\": {\"solid\": {\"color\": \"#70AD47\"}}}}, {\"properties\": {\"fill\": {\"solid\": {\"color\": \"#C00000\"}}}}], \"categoryAxis\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"10D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI'\"}}}}}], \"valueAxis\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"10D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI'\"}}}}}], \"legend\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"position\": {\"expr\": {\"Literal\": {\"Value\": \"'Top'\"}}}}}], \"labels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": \"#000000\"}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"9D\"}}}}}], \"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": \"#FFFFFF\"}}}}]}, \"vcObjects\": {}}}"
+        },
+        {
+          "id": "vc-s3-bar-marge",
+          "x": 864,
+          "y": 70,
+          "width": 400,
+          "height": 626,
+          "z": 0,
+          "config": "{\"name\": \"s3BarMarge\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 864, \"y\": 70, \"z\": 0, \"width\": 400, \"height\": 626, \"tabOrder\": 32}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Category\": [{\"queryRef\": \"Produkte.produkt_id\", \"active\": true}], \"Y\": [{\"queryRef\": \"ModelOutput.ΔMarge positiv Ø\"}, {\"queryRef\": \"ModelOutput.ΔMarge negativ Ø\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"p\", \"Entity\": \"Produkte\", \"Type\": 0}, {\"Name\": \"m\", \"Entity\": \"ModelOutput\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"p\"}}, \"Property\": \"produkt_id\"}, \"Name\": \"Produkte.produkt_id\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"ΔMarge positiv Ø\"}, \"Name\": \"ModelOutput.ΔMarge positiv Ø\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"m\"}}, \"Property\": \"ΔMarge negativ Ø\"}, \"Name\": \"ModelOutput.ΔMarge negativ Ø\"}]}, \"objects\": {\"dataColors\": [{\"properties\": {\"fill\": {\"solid\": {\"color\": \"#70AD47\"}}}}, {\"properties\": {\"fill\": {\"solid\": {\"color\": \"#C00000\"}}}}], \"categoryAxis\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"10D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI'\"}}}}}], \"valueAxis\": [{\"properties\": {\"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"10D\"}}}, \"fontFamily\": {\"expr\": {\"Literal\": {\"Value\": \"'Segoe UI'\"}}}}}], \"legend\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"position\": {\"expr\": {\"Literal\": {\"Value\": \"'Top'\"}}}}}], \"labels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": \"#000000\"}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"9D\"}}}}}], \"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": \"#FFFFFF\"}}}}]}, \"vcObjects\": {}}}"
+        },
+        {
+          "id": "vc-s3-footer",
+          "x": 0,
+          "y": 704,
+          "width": 1280,
+          "height": 16,
+          "z": 0,
+          "config": "{\"name\": \"s3Footer\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 0, \"y\": 704, \"z\": 0, \"width\": 1280, \"height\": 16, \"tabOrder\": 70}}], \"singleVisual\": {\"visualType\": \"textbox\", \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Quelle: PricingPrototypeDB  |  Modell: Ridge-Regression (Log-Log)  |  Preisempfehlung: Amoroso-Robinson  |  IBCS Version 1.2  |  Andreas Traut\", \"textStyle\": {\"fontFamily\": \"Segoe UI\", \"fontSize\": \"8pt\", \"bold\": false, \"color\": \"#808080\"}}], \"horizontalTextAlignment\": \"center\"}]}}]}}, \"vcObjects\": {}}"
+        }
+      ],
+      "filters": "[]",
+      "ordinal": 2,
+      "width": 1280,
+      "height": 720,
+      "config": "{\"objects\": {\"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": \"#FFFFFF\"}}, \"transparency\": {\"expr\": {\"Literal\": {\"Value\": \"0D\"}}}}}], \"wallpaper\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}, \"defaultDrillFilterOtherVisuals\": true}"
     }
   ],
   "config": "{\"version\":\"5.51\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.51\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"filterPanelEnabled\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1}}",
