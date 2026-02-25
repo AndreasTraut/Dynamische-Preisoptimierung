@@ -12,6 +12,10 @@ Theoretischer Hintergrund:
       ε = ∂log(Q) / ∂log(P) = (ΔQ/Q) / (ΔP/P)
 
   Typischerweise gilt ε < 0 (Nachfrage sinkt bei Preisstieg).
+
+Dokumentation:
+  docs/MODELL_DOKUMENTATION.md – Kap. 4 (ML-Modell) und Kap. 5 (Konkrete Berechnungen)
+  Studienarbeit Kap. 4: „Entwicklung der Machine-Learning-Modelle zur Preisoptimierung"
 """
 
 from __future__ import annotations

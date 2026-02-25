@@ -9,6 +9,10 @@ Prototyp-DWH-Simulation:
   damit der Prototyp ohne externe Datenbankinstallation lauffähig ist.
   Die Tabellen- und Spaltenbezeichnungen entsprechen denen in
   sql/create_tables.sql (SQL-Server-kompatibel).
+
+Dokumentation:
+  docs/MODELL_DOKUMENTATION.md – Kap. 2 (Daten & ETL) und Kap. 3 (Feature Engineering)
+  Studienarbeit Kap. 3: „Datenintegration und -aufbereitung für die Preismodellierung"
 """
 
 from pathlib import Path

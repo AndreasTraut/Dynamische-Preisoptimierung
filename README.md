@@ -4,6 +4,38 @@ Prototyp-Implementierung des in der Studienarbeit
 *„Dynamisches Preisoptimierungsmodell im eCommerce"* (Andreas Traut)
 beschriebenen Machine-Learning-basierten Preisoptimierungssystems.
 
+> 📖 **Detaillierte Modell-Dokumentation mit konkreten Berechnungen:**  
+> **[docs/MODELL_DOKUMENTATION.md](docs/MODELL_DOKUMENTATION.md)**  
+> (Formeln, Schritt-für-Schritt-Berechnungen, alle Ergebnisse mit echten Zahlen,  
+> Verlinkungen zu Studienarbeit-Kapiteln und Quellcode-Funktionen)
+
+---
+
+## Tatsächliche Modellergebnisse (Produktionslauf)
+
+```
+ETL abgeschlossen: Daten in PricingPrototypeDB.sqlite geladen.
+  P001: ε = -1.183  R² = 0.609  MAE = 0.111
+  P002: ε = -1.047  R² = 0.417  MAE = 0.109
+  P003: ε = -1.317  R² = 0.570  MAE = 0.117
+  P004: ε = -0.525  R² = 0.499  MAE = 0.116
+  P005: ε = -0.656  R² = 0.442  MAE = 0.120
+```
+
+**ModelOutput (dbo.ModelOutput):**
+
+| Produkt | ε | R² | Ist-Preis | Wettbewerbspr. | Empf. Preis | ΔMenge | ΔUmsatz | ΔMarge |
+|---|---|---|---|---|---|---|---|---|
+| P001 | −1,18 | 0,61 | 63,57 € | 62,67 € | **76,28 €** | −23,6 % | −8,4 % | **+5,3 %** |
+| P002 | −1,05 | 0,42 | 102,71 € | 98,27 € | **104,97 €** | −2,3 % | −0,2 % | **+1,9 %** |
+| P003 | −1,32 | 0,57 | 24,63 € | 22,99 € | **29,56 €** | −26,4 % | −11,6 % | **−1,6 %** |
+| P004 | −0,52 | 0,50 | 30,39 € | 38,72 € | **33,95 €** | −6,2 % | +4,9 % | **+15,6 %** |
+| P005 | −0,66 | 0,44 | 45,37 € | 49,96 € | **48,33 €** | −4,3 % | +2,0 % | **+6,9 %** |
+
+**Dashboard-Vorschau:**
+
+![Dashboard](dashboard_preview.png)
+
 ---
 
 ## Systemüberblick

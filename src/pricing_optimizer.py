@@ -19,6 +19,11 @@ Ansatz (präskriptive Analytik):
   Der empfohlene Preis berücksichtigt zusätzlich Wettbewerb und Mindestmarge.
 
 Ausgabe wird in der Tabelle dbo.ModelOutput (SQLite: ModelOutput) gespeichert.
+
+Dokumentation:
+  docs/MODELL_DOKUMENTATION.md – Kap. 6 (Preisempfehlung) und Kap. 6.3 (Konkrete Berechnungen)
+  Studienarbeit Kap. 4.4: „Ableitung von Preisempfehlungen aus den Modellergebnissen"
+  Studienarbeit Kap. 6:   „Operationalisierung und Monitoring im BI-System"
 """
 
 from __future__ import annotations
