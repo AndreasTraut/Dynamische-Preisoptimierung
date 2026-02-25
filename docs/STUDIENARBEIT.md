@@ -283,10 +283,9 @@ Nach jedem Kapitel wird die Einordnung in diesen CRISP-DM Standard erklärt.
 
 ### 2.1 Bestehende Preisprozesse und Herausforderungen im E-Commerce Team (insb. Amazon)
 
-*Entwurf:*
+Bei einem international tätigen, mittelständischen Branchenführer im E-Commerce-Bereich vollziehen sich Preisgestaltungsprozesse typischerweise manuell oder auf Basis heuristischer Regelwerke. Verantwortliche Mitarbeiter des Amazon-Teams pflegen Preise häufig auf Grundlage von Erfahrungswerten, sporadischen Wettbewerbsbeobachtungen und internen Vorgaben zu Mindestmargen – ein Prozess, der weder systematisch noch skalierbar ist. Plattformtools wie Pacvue ermöglichen zwar eine gewisse Automatisierung im Bereich des Bid-Managements, ersetzen jedoch keine datengetriebene, dynamische Preislogik.
 
-- Hypothetische Beschreibung der aktuellen (vermutlich manuellen oder regelbasierten) Preisgestaltungsprozesse bei einem international tätigen, mittelständischen Branchenführer.
-- Identifikation der damit verbundenen Herausforderungen (z.B. Zeitaufwand, Inkonsistenzen, verpasste Chancen).
+Die daraus resultierenden Herausforderungen sind vielfältig: Der manuelle Aufwand für die regelmäßige Preispflege eines umfangreichen Produktportfolios bindet erhebliche personelle Ressourcen. Gleichzeitig entstehen Inkonsistenzen, wenn verschiedene Mitarbeiter nach unterschiedlichen Kriterien entscheiden oder Preisanpassungen nicht zeitnah vorgenommen werden. Verpasste Optimierungschancen sind die Folge: Preissenkungspotenziale bei unelastischen Produkten bleiben ungenutzt, während zu hoch angesetzte Preise bei preiselastischer Nachfrage Marktanteile kosten. Der Übergang zu einem datengesteuerten, modellbasierten Preisoptimierungssystem ist daher nicht nur wünschenswert, sondern strategisch notwendig.
 
 ---
 
@@ -294,10 +293,9 @@ Nach jedem Kapitel wird die Einordnung in diesen CRISP-DM Standard erklärt.
 
 #### 2.2.1 Interne Daten (Verkäufe, Lagerbestand, Produktdaten, ERP-Daten)
 
-*Entwurf:*
+Für ein wirkungsvolles Preisoptimierungsmodell sind zunächst umfangreiche interne Datenpools erforderlich. Hierzu zählen insbesondere historische Verkaufsdaten (Menge, Preis, Datum) auf Artikelebene, Lagerbestandsinformationen, Produktstammdaten (Produktbezeichnung, Kategorie, Einstandspreis) sowie ERP-Daten zu Kostenstrukturen und Lieferzeiten. Diese Daten liegen in realen Systemen typischerweise in verschiedenen Quellsystemen vor – etwa SAP für das ERP und eine dedizierte E-Commerce-Plattform – und müssen über definierte ETL-Prozesse in das Data Warehouse integriert werden.
 
-- Auflistung der benötigten internen Daten (Verkäufe, Lagerbestand, Produktdaten, ERP-Daten).
-- Bezug zur Prototyp-Umsetzung: Beschreibung der simulierten internen Daten (CSV-Format, Inhalt, Struktur).
+Im Rahmen der prototypischen Umsetzung dieser Studienarbeit wurden die internen Daten durch synthetische Datensätze im CSV-Format simuliert. Die Datei [`data/produkte.csv`](../data/produkte.csv) enthält Produktstammdaten mit Produkt-ID, Bezeichnung, Kategorie und Einstandspreis; die Datei [`data/verkaeufe.csv`](../data/verkaeufe.csv) bildet historische Tagesverkäufe mit Datum, Produkt-ID, abgesetzter Menge und erzieltem Verkaufspreis ab. Die Generierung dieser synthetischen Daten erfolgte mittels des Python-Skripts [`data/generate_data.py`](../data/generate_data.py), das realistische Preis-Mengen-Beziehungen mit steuerbarer Zufallskomponente erzeugt.
 
 > 📂 *Prototyp-Daten: [`data/produkte.csv`](../data/produkte.csv), [`data/verkaeufe.csv`](../data/verkaeufe.csv)*  
 > 📄 *Datengenerierung: [`data/generate_data.py`](../data/generate_data.py)*  
@@ -305,11 +303,9 @@ Nach jedem Kapitel wird die Einordnung in diesen CRISP-DM Standard erklärt.
 
 #### 2.2.2 Externe Daten (Wettbewerbspreise, Marketing-Plattformdaten z.B. Pacvue, Marktdaten)
 
-*Entwurf:*
+Neben den internen Daten sind externe Datenquellen für eine wettbewerbsfähige Preisgestaltung unverzichtbar. Zu den wichtigsten externen Daten zählen Wettbewerbspreise auf Amazon und anderen relevanten Marktplätzen, Daten aus Marketing-Plattformen wie Pacvue (z.B. Klickraten, Werbekosten, organische Rankingpositionen) sowie übergeordnete Marktdaten zur Nachfrageentwicklung und saisonalen Trends. Die Beschaffung dieser Daten kann über offizielle APIs der Plattformbetreiber (z.B. Amazon Selling Partner API), spezialisierte Datenanbieter oder, wo rechtlich und technisch zulässig, durch Web-Scraping-Lösungen erfolgen. Die Integration in das Data Warehouse setzt dabei zuverlässige ETL-Pipelines voraus, die regelmäßige Aktualisierungen gewährleisten.
 
-- Auflistung der benötigten externen Daten (Wettbewerbspreise, Marketing-Plattformdaten wie Pacvue, Marktdaten).
-- Diskussion möglicher Beschaffungswege (APIs, Scraping).
-- Bezug zur Prototyp-Umsetzung: Beschreibung der simulierten externen Daten (CSV-Format, Inhalt, Struktur, z.B. statische oder leicht variierende Wettbewerbspreise).
+Im Prototyp wurden die externen Daten durch die synthetische Datei [`data/wettbewerbspreise.csv`](../data/wettbewerbspreise.csv) abgebildet. Diese enthält für jeden Beobachtungstag und jedes Produkt einen simulierten Wettbewerbspreis, der als leicht variierender Referenzwert um den eigenen Listenpreis herum generiert wurde. Diese Vereinfachung erlaubt es, die konzeptionelle Einbindung externer Preisdaten in das Modell nachzubilden, ohne auf reale Drittsysteme angewiesen zu sein.
 
 > 📂 *Prototyp-Daten: [`data/wettbewerbspreise.csv`](../data/wettbewerbspreise.csv)*
 
@@ -317,12 +313,11 @@ Nach jedem Kapitel wird die Einordnung in diesen CRISP-DM Standard erklärt.
 
 ### 2.3 Anforderungen an Datenqualität, Granularität und Verfügbarkeit
 
-*Entwurf:*
+Die Qualität, Granularität und zeitliche Verfügbarkeit der Eingabedaten stellen entscheidende Erfolgsfaktoren für jedes datengetriebene Preisoptimierungsmodell dar. Im Hinblick auf die Datenqualität ist insbesondere der konsistente Abgleich zwischen internen Verkaufsdaten und externen Plattformdaten (z.B. Pacvue-Reportings vs. Amazon Vendor Central) von Bedeutung, da Diskrepanzen zu fehlerhaften Elastizitätsschätzungen führen können. Es empfiehlt sich daher, bereits im ETL-Prozess systematische Validierungsschritte zu verankern, die Inkonsistenzen identifizieren und protokollieren.
 
-- Diskussion der Wichtigkeit von hoher Datenqualität (z.B. Abgleich Pacvue vs. interne).
-- Festlegung der benötigten Granularität (z.B. tägliche Verkäufe/Preise).
-- Anforderungen an die zeitliche Verfügbarkeit der Daten für ein operatives System.
-- Bezug zur Prototyp-Umsetzung: Erläuterung, dass für den Prototyp Qualität und Verfügbarkeit durch die synthetischen Daten als gegeben angenommen wurden.
+Hinsichtlich der Granularität hat sich für operative Preisoptimierungssysteme eine tägliche Datenbasis auf Artikelebene als sinnvoll erwiesen. Diese Detailtiefe ermöglicht es, kurzfristige Preiseffekte und saisonale Muster zuverlässig zu erfassen, ohne den Prozess mit zu feingranularen Intraday-Schwankungen zu belasten. Für ein operatives System ist zudem eine zeitnahe Datenverfügbarkeit erforderlich: Idealerweise stehen die Vortagesdaten zu einem definierten Zeitpunkt des Folgetages vollständig und konsolidiert zur Verfügung, um tagesaktuelle Preisempfehlungen generieren zu können.
+
+Im Rahmen des Prototyps wurden Datenqualität und -verfügbarkeit durch die Nutzung synthetischer Datensätze vereinfachend als gegeben angenommen. Die generierten CSV-Daten sind konsistent, vollständig und in der benötigten täglichen Granularität vorhanden, sodass der Fokus des Prototyps auf der Methodik der Modellierung und nicht auf der Datenaufbereitung liegt.
 
 ---
 
@@ -332,22 +327,13 @@ Nach jedem Kapitel wird die Einordnung in diesen CRISP-DM Standard erklärt.
 
 #### 3.1.1 Nutzung von PowerQuery und SQL Server Integration Services (SSIS)
 
-*Entwurf:*
-
-- Beschreibung der geplanten Nutzung von PowerQuery und SQL Server Integration Services (SSIS) im Zielsystem.
+Im Zielsystem ist vorgesehen, die ETL-Strecken für interne Daten über eine Kombination aus **Power Query** und **SQL Server Integration Services (SSIS)** zu realisieren. Power Query bietet sich dabei insbesondere für explorative Transformationen und die unkomplizierte Anbindung verschiedenartiger Quellformate (Excel, CSV, OData) an, während SSIS als produktionsreifes Werkzeug für die automatisierte, überwachte und planbare Ausführung komplexer Datenpipelines eingesetzt wird. SSIS-Pakete ermöglichen die strukturierte Abfolge von Extraktions-, Transformations- und Ladeschritten, inklusive Fehlerbehandlung und Protokollierung, wie sie für einen zuverlässigen Betrieb im Data Warehouse erforderlich sind.
 
 #### 3.1.2 Anbindung von APIs oder Scraping-Lösungen (für Wettbewerbsdaten)
 
-*Entwurf:*
+Für die Akquise externer Wettbewerbsdaten sind im Zielsystem API-Anbindungen oder Scraping-Lösungen vorgesehen. Offizielle Schnittstellen, wie die Amazon Selling Partner API, liefern strukturierte Daten in definierten Intervallen und stellen den bevorzugten Beschaffungsweg dar, da sie zuverlässiger und rechtlich unbedenklicher sind als Web-Scraping. Wo keine offiziellen APIs verfügbar sind, können kontrollierte Scraping-Lösungen eingesetzt werden, die in SSIS-Pipelines oder als eigenständige Python-Dienste integriert werden können.
 
-- Erläuterung der Anbindung von APIs oder Scraping-Lösungen für Wettbewerbsdaten.
-
-*Prototyp-Umsetzung:* Detaillierte Beschreibung, wie die ETL-Strecke im Prototyp vereinfacht umgesetzt wurde:
-
-- Laden der synthetischen CSV-Daten mittels Python (pandas).
-- Alternativ/Ergänzend: Nutzung von Power Query in Power BI Desktop für Transformationen.
-- Laden der vorbereiteten Daten in die lokale SQL Server Developer Edition Datenbank.
-- Klarstellung, dass SSIS im Prototyp nicht verwendet wurde.
+Im Rahmen des Prototyps wurde die ETL-Strecke erheblich vereinfacht umgesetzt. Das Laden der synthetischen CSV-Daten in die Python-Verarbeitungsschicht erfolgte direkt über die `pandas`-Bibliothek (Funktion `load_csv_to_db()` in [`src/data_preparation.py`](../src/data_preparation.py)). Ergänzend dazu wurden Power Query-Transformationen innerhalb von Power BI Desktop genutzt, um die Daten für das Reporting-Modell aufzubereiten. Die so vorbereiteten Daten wurden anschließend in die lokale SQL Server Developer Edition Datenbank geladen. Der Einsatz von SSIS fand im Prototyp bewusst nicht statt; diese Technologie ist für das Zielsystem vorgesehen und konzeptionell in [Kapitel 3.1.1](#311-nutzung-von-powerquery-und-sql-server-integration-services-ssis) beschrieben.
 
 > 🐍 *Prototyp-Code: [`src/data_preparation.py → load_csv_to_db()`](../src/data_preparation.py)*  
 > 🗄️ *SQL-Skripte: [`sql/create_tables.sql`](../sql/create_tables.sql) · [`sql/load_data.sql`](../sql/load_data.sql)*  
@@ -401,20 +387,18 @@ Diese Simulation erlaubte es, den konzeptionellen Datenfluss von der Quelle übe
 
 #### 3.3.1 Erstellung relevanter Merkmale (z.B. Zeitmerkmale, Preisindizes, Marketing-Einflüsse, rollierende Kennzahlen)
 
-*Entwurf:*
+Das Feature Engineering stellt einen zentralen Schritt in der Datenvorbereitung für die Preismodellierung dar. Aus den Rohdaten werden dabei aussagekräftige Merkmale abgeleitet, die dem Modell relevante Informationen über Preis-Mengen-Zusammenhänge und deren Einflussgrößen bereitstellen. Zu den wichtigsten Merkmalsgruppen zählen **Zeitmerkmale** (Wochentag, Monat, Quartal, Jahreszeit, Feiertags-Flags), die saisonale Nachfragemuster abbilden; **Preisindizes**, die den eigenen Preis ins Verhältnis zum Wettbewerbspreis setzen (relativer Preisindex); **Marketing-Einflüsse**, die Werbeaktivitäten und Klickpreise in den Erklärungsrahmen einbeziehen; sowie **rollierende Kennzahlen** wie gleitende Durchschnitte der Verkaufsmenge oder des Preises über definierte Zeitfenster, die kurzfristige Trendkomponenten erfassen.
 
-- Auflistung und Erklärung von Beispielen (Zeitmerkmale, Preisindizes, Marketing-Einflüsse, rollierende Kennzahlen etc.).
-- Beschreibung der Umsetzung im Prototyp mittels Python (pandas/numpy) auf den DataFrames.
+Im Prototyp wurde das Feature Engineering mit Hilfe von **Python** (Bibliotheken `pandas` und `numpy`) auf den geladenen DataFrames umgesetzt. Die Funktion `build_feature_dataframe()` in [`src/data_preparation.py`](../src/data_preparation.py) konsolidiert die Daten aus den verschiedenen Quellen und berechnet die für die Modellierung benötigten Merkmale, darunter insbesondere den logarithmierten Preis sowie Zeitkomponenten, die eine robustere Schätzung der Preiselastizität ermöglichen.
 
 > 🐍 *Prototyp-Code: [`src/data_preparation.py → build_feature_dataframe()`](../src/data_preparation.py)*  
 > 📖 *Feature-Tabelle mit allen Merkmalen: [MODELL_DOKUMENTATION.md → Kap. 3](MODELL_DOKUMENTATION.md#3--feature-engineering-studienarbeit-kap-33)*
 
 #### 3.3.2 Transformation von Daten für Modellierungszwecke (z.B. Log-Transformation)
 
-*Entwurf:*
+Für eine stabile und interpretierbare Regressionsmodellierung sind bestimmte Datentransformationen erforderlich. Von besonderer Bedeutung ist die **Log-Transformation** von Preis und Verkaufsmenge: Durch die doppelt-logarithmische Modellformulierung (log-log-Regression) wird der Regressionskoeffizient des Preises direkt als Preiselastizität interpretierbar – er gibt an, um wieviel Prozent sich die Nachfrage bei einer einprozentigen Preisänderung verändert. Diese Transformation linearisiert zudem die typischerweise multiplikative Preis-Mengen-Beziehung und verbessert die Modellanpassung. Ergänzend können Skalierungsmaßnahmen (z.B. Standardisierung numerischer Features) sowie die Kodierung kategorialer Merkmale (z.B. One-Hot-Encoding für Produktkategorien) erforderlich sein.
 
-- Erläuterung notwendiger Transformationen (z.B. Log-Transformation, Skalierung).
-- Beschreibung der im Prototyp durchgeführten Transformationen (Datentypen, einfache Berechnungen).
+Im Prototyp wurden diese Transformationen direkt in Python vorgenommen. Die Konvertierung von Datumsspalten, die Berechnung logarithmischer Werte und einfache Ableitungen wie der relative Preisindex wurden dabei als vorbereitende Berechnungsschritte im Feature-Engineering-Modul implementiert, bevor die Daten dem Modellierungsprozess übergeben wurden.
 
 > 📖 *Theoretischer Hintergrund zur Log-Transformation: [MODELL_DOKUMENTATION.md → Kap. 4.1](MODELL_DOKUMENTATION.md#41--theoretischer-hintergrund)*
 
@@ -424,11 +408,9 @@ Diese Simulation erlaubte es, den konzeptionellen Datenfluss von der Quelle übe
 
 ### 4.1 Auswahl geeigneter Modellierungsansätze
 
-*Entwurf:*
+Für die Modellierung im Rahmen der dynamischen Preisoptimierung kommen grundsätzlich zwei Klassen von Ansätzen in Betracht. **Modelle zur Schätzung der Preiselastizität** – insbesondere Regressionsmodelle in log-log-Spezifikation – quantifizieren den direkten Zusammenhang zwischen Preisänderungen und der resultierenden Nachfragereaktion und liefern damit die theoretische Basis für optimale Preisempfehlungen gemäß der Amoroso-Robinson-Relation. **Modelle zur Nachfrageprognose**, wie etwa Zeitreihenmodelle (ARIMA, Prophet) oder gradientenbasierte Ensemble-Verfahren (z.B. Random Forest, XGBoost), ergänzen diesen Ansatz, indem sie die absolute Nachfrage unter gegebenen Marktbedingungen vorhersagen – insbesondere nützlich, wenn keine ausreichenden Preisvarianzen für eine Elastizitätsschätzung vorliegen.
 
-- Modelle zur Schätzung der Preiselastizität (z.B. Regressionsmodelle)
-- Modelle zur Nachfrageprognose (z.B. Zeitreihenanalyse, weitere Regressionsmodelle)
-- Begründung der Auswahl für den Prototyp: Fokus auf Preiselastizität mittels (vereinfachter) Regression
+Für den Prototyp dieser Studienarbeit wurde bewusst der Fokus auf die Schätzung der Preiselastizität mittels einer (vereinfachten) linearen Regression in log-log-Spezifikation gelegt. Dieser Ansatz ist methodisch transparent, direkt interpretierbar und erlaubt es, den gesamten Modellierungsprozess – von der Datenaufbereitung über das Training bis hin zur Ableitung von Preisempfehlungen – vollständig mit Python und scikit-learn abzubilden, wie in den folgenden Kapiteln detailliert beschrieben wird.
 
 > 📖 *Gewählter Ansatz im Prototyp: [MODELL_DOKUMENTATION.md → Kap. 4](MODELL_DOKUMENTATION.md#4--ml-modell-preiselastizität-studienarbeit-kap-4)*
 
@@ -438,11 +420,9 @@ Diese Simulation erlaubte es, den konzeptionellen Datenfluss von der Quelle übe
 
 #### 4.2.1 Nutzung von Bibliotheken
 
-*Entwurf:*
+Die Implementierung der Modelle im Prototyp basiert auf dem etablierten Python-Ökosystem für Data Science und Machine Learning. Die Bibliothek **scikit-learn** wurde für die eigentliche Modellierung eingesetzt: Sie stellt sowohl die Regressionsklassen (z.B. `LinearRegression`) als auch standardisierte Methoden für die Datensaufteilung (`train_test_split`) und die Berechnung von Evaluationsmetriken (`r2_score`, `mean_absolute_error`, `mean_squared_error`) bereit. Die Datenhaltung, -manipulation und das Feature Engineering erfolgten mit **pandas** (DataFrames, Merging, Aggregation), während **numpy** für numerische Operationen wie die Berechnung von Logarithmen und Matrizenoperationen genutzt wurde.
 
-- Detaillierte Beschreibung der Verwendung von scikit-learn für die Modellierung, pandas für Datenmanipulation und numpy für numerische Operationen.
-- Erwähnung der Entwicklungsumgebung (Jupyter Notebook via Anaconda).
-- Bezug zu Python/ML-Skills.
+Als Entwicklungsumgebung diente **Jupyter Notebook** (bereitgestellt über die Anaconda-Distribution), das eine iterative und interaktive Arbeitsweise ermöglicht – insbesondere für explorative Analysen und die schrittweise Entwicklung und Visualisierung des Modellierungsprozesses. Das vollständige End-to-End-Notebook ist unter [`notebooks/dynamic_pricing_prototype.ipynb`](../notebooks/dynamic_pricing_prototype.ipynb) einsehbar. Die Modellierungslogik ist zudem in das Skript [`src/model.py`](../src/model.py) überführt worden, das eine reproduzierbare und modular einsetzbare Implementierung darstellt.
 
 > 🐍 *Prototyp-Code: [`src/model.py`](../src/model.py)*  
 > 📓 *End-to-End Notebook: [`notebooks/dynamic_pricing_prototype.ipynb`](../notebooks/dynamic_pricing_prototype.ipynb)*  
@@ -450,10 +430,9 @@ Diese Simulation erlaubte es, den konzeptionellen Datenfluss von der Quelle übe
 
 #### 4.2.2 Umgang mit produkt- oder kategoriespezifischen Unterschieden
 
-*Entwurf:*
+Die Berücksichtigung produkt- oder kategoriespezifischer Unterschiede in der Preiselastizität stellt eine zentrale Modellierungsentscheidung dar. Grundsätzlich stehen zwei Strategien zur Verfügung: **Separate Modelle** je Produkt oder Kategorie ermöglichen eine maximale Anpassungsfähigkeit an die jeweiligen Preis-Mengen-Charakteristika, erfordern jedoch ausreichende Datenpunkte je Segment und erhöhen den Verwaltungsaufwand erheblich. Alternativ kann ein **einheitliches Modell** mit der Produkt-ID oder Kategorie als kategorialem Feature (z.B. nach One-Hot-Encoding) trainiert werden, das Elastizitätsunterschiede implizit durch die geschätzten Koeffizienten abbildet und mit weniger Daten auskommt.
 
-- Diskussion von Strategien (separate Modelle, Kategorie als Feature).
-- Beschreibung des gewählten Ansatzes im Prototyp (z.B. ein Modell mit Produkt-ID als Feature oder separate Modelle, falls die synthetischen Daten dies zuließen).
+Im Prototyp wurde ein pragmatischer Ansatz gewählt: Da die synthetischen Daten für jeden der fünf Produkte eine ausreichende Anzahl an Beobachtungen enthielten, wurden **separate Modelle je Produkt** trainiert. Dies erlaubt eine direkte, produktspezifische Interpretation der geschätzten Elastizitätskoeffizienten und vermeidet mögliche Verzerrungen durch eine zu starke Pooling-Annahme über heterogene Produktkategorien hinweg.
 
 ---
 
@@ -461,19 +440,17 @@ Diese Simulation erlaubte es, den konzeptionellen Datenfluss von der Quelle übe
 
 #### 4.3.1 Aufteilung in Trainings-, Validierungs- und Testdaten
 
-*Entwurf:*
+Eine methodisch korrekte Aufteilung der Daten in Trainings- und Testmengen ist eine Grundvoraussetzung für eine verlässliche Modellbewertung. Bei Zeitreihendaten – und Verkaufsdaten sind inhärent zeitlich geordnet – ist die klassische zufällige Hold-out-Aufteilung ungeeignet, da sie temporale Abhängigkeiten verletzt und zu einer unrealistisch optimistischen Modellbewertung führen kann (Data Leakage). Stattdessen wird ein **Zeitreihen-Split** verwendet: Die chronologisch früheren Beobachtungen bilden die Trainingsmenge, während die neuesten Beobachtungen zur Evaluation herangezogen werden. Dieses Vorgehen simuliert reale Bedingungen, bei denen das Modell auf der Basis vergangener Daten trainiert wird und anschließend Vorhersagen für zukünftige Perioden treffen soll.
 
-- Erläuterung des Prinzips (z.B. Hold-out, Zeitreihen-Split).
-- Beschreibung der Umsetzung mit den synthetischen Daten im Prototyp.
+Im Prototyp wurde eine Aufteilung von 80 % Trainingsdaten und 20 % Testdaten nach dem Zeitreihen-Split-Prinzip vorgenommen. Die Implementierung erfolgte in Python (scikit-learn), wobei sichergestellt wurde, dass die temporale Reihenfolge der Datenpunkte für jeden Produktdatensatz erhalten blieb.
 
 > 📖 *Verwendeter Zeitreihen-Split (80/20): [MODELL_DOKUMENTATION.md → Kap. 4.2](MODELL_DOKUMENTATION.md#42--implementierung)*
 
 #### 4.3.2 Metriken zur Bewertung der Modellgüte
 
-*Entwurf:*
+Zur Bewertung der Modellgüte wurden für die im Prototyp eingesetzten Regressionsmodelle die in der Literatur etablierten Metriken verwendet. Das **Bestimmtheitsmaß R²** (Coefficient of Determination) gibt an, welcher Anteil der Varianz der Zielvariablen (log. Absatzmenge) durch das Modell erklärt wird; ein Wert nahe 1 indiziert eine hohe Anpassungsgüte. Der **Mean Absolute Error (MAE)** misst den durchschnittlichen absoluten Prognosefehler in der Einheit der Zielvariablen und ist robust gegenüber Ausreißern. Der **Root Mean Squared Error (RMSE)** bestraft große Einzelfehler stärker und erlaubt daher eine differenziertere Beurteilung der Modellstabilität.
 
-- Vorstellung relevanter Metriken (z.B. R², Adjusted R², MAE, RMSE für Regression).
-- Erklärung, wie diese mit scikit-learn berechnet wurden.
+Alle drei Metriken wurden mit den Funktionen `r2_score`, `mean_absolute_error` und `mean_squared_error` aus dem Modul `sklearn.metrics` auf dem jeweiligen Testdatensatz berechnet. Die konkreten Metrikwerte für alle fünf Produkte des Prototyps sind in [MODELL_DOKUMENTATION.md → Kap. 7.1](MODELL_DOKUMENTATION.md#71--modellgüte-metriken-testset-zeitreihen-split-8020) dokumentiert.
 
 > 📖 *Konkrete Metrikwerte (R², MAE, RMSE): [MODELL_DOKUMENTATION.md → Kap. 7.1](MODELL_DOKUMENTATION.md#71--modellgüte-metriken-testset-zeitreihen-split-8020)*
 
@@ -481,11 +458,9 @@ Diese Simulation erlaubte es, den konzeptionellen Datenfluss von der Quelle übe
 
 ### 4.4 Ableitung von Preisempfehlungen aus den Modellergebnissen
 
-*Entwurf:*
+Die Überführung von Modelloutputs in operative Preisempfehlungen ist der eigentliche präskriptive Schritt im Optimierungsprozess. Konzeptionell bildet hierfür die **Amoroso-Robinson-Relation** die theoretische Grundlage: Der gewinnmaximierende Preis lässt sich als Funktion der geschätzten Preiselastizität und der Grenzkosten ableiten. In der praktischen Umsetzung müssen jedoch zusätzliche Randbedingungen berücksichtigt werden, darunter Mindest- und Höchstpreise (z.B. aus Margenzielen oder vertraglichen Vereinbarungen), Wettbewerbspreise als Orientierungsgröße sowie plattformspezifische Restriktionen auf Amazon. Diese Business Rules stellen sicher, dass die algorithmisch ermittelten Preise betriebswirtschaftlich sinnvoll und marktkonform sind.
 
-- Konzeptionelle Überlegungen: Wie können Elastizitäten und Prognosen in konkrete Preisvorschläge überführt werden (unter Berücksichtigung von Business Rules, Margenzielen, Wettbewerb)?
-- Umsetzung im Prototyp: Beschreibung des vereinfachten Ansatzes, z.B. Interpretation des Preiskoeffizienten als Elastizität, einfache Regel zur Preisanpassung basierend auf Elastizität und Wettbewerbspreis.
-- Speicherung der Ergebnisse (z.B. Elastizität, Vorschlag) in der SQL-Datenbanktabelle `dbo.ModelOutput`.
+Im Prototyp wurde ein vereinfachter Ansatz zur Preisempfehlung implementiert: Der geschätzte Regressionskoeffizient für den logarithmierten Preis wird als Preiselastizität ε interpretiert. Basierend auf diesem Wert und dem aktuellen Wettbewerbspreis berechnet die Funktion `recommend_price()` in [`src/pricing_optimizer.py`](../src/pricing_optimizer.py) einen Preisvorschlag: Bei hochelastischer Nachfrage (|ε| > 1) wird eine Annäherung an den Wettbewerbspreis empfohlen, während bei unelastischer Nachfrage ein Aufschlag möglich ist. Die resultierenden Ergebnisse – Elastizität, Ist-Preis, Wettbewerbspreis und Preisempfehlung je Produkt – werden abschließend in der SQL-Datenbanktabelle `dbo.ModelOutput` gespeichert und stehen damit für das Reporting in Power BI zur Verfügung.
 
 > 🐍 *Prototyp-Code: [`src/pricing_optimizer.py → recommend_price()`](../src/pricing_optimizer.py)*  
 > 📖 *Amoroso-Robinson-Relation und Business Rules: [MODELL_DOKUMENTATION.md → Kap. 6](MODELL_DOKUMENTATION.md#6--preisempfehlung-präskriptive-analytik-studienarbeit-kap-44)*
@@ -496,10 +471,9 @@ Diese Simulation erlaubte es, den konzeptionellen Datenfluss von der Quelle übe
 
 ### 5.1 Technische Evaluation der Modellergebnisse und Elastizitäten
 
-*Entwurf:*
+Die technische Evaluation des Modells beginnt mit der Analyse der in [Kapitel 4.3.2](#432-metriken-zur-bewertung-der-modellgüte) definierten Gütemetriken auf dem Testdatensatz. Die R²-Werte der produktspezifischen Modelle geben Aufschluss darüber, inwieweit der logarithmierte Preis als wesentlicher Erklärungsfaktor die Varianz der Absatzmenge beschreibt; MAE und RMSE quantifizieren die typische Prognosegüte in der log-transformierten Einheit. Die im Prototyp erzielten Werte sind in [MODELL_DOKUMENTATION.md → Kap. 7](MODELL_DOKUMENTATION.md#7--ergebnisse--evaluation-studienarbeit-kap-5) dokumentiert.
 
-- Analyse der Modellgüte anhand der in [Kapitel 4.3.2](#432-metriken-zur-bewertung-der-modellgüte) definierten Metriken.
-- Plausibilitätsprüfung der berechneten Elastizitäten (Vorzeichen, Größenordnung) im Kontext der (simulierten) Produkte.
+Ergänzend zur quantitativen Modellbewertung ist eine inhaltliche **Plausibilitätsprüfung** der geschätzten Elastizitäten unerlässlich. Ökonomisch fundierte Erwartungen sind: Preiselastizitäten sollten negativ sein (steigende Preise führen zu sinkender Nachfrage), ihre Größenordnung sollte im Bereich üblicher Konsumgüter liegen (typischerweise −0,5 bis −2,0), und Produkte mit stärkerem Wettbewerbsdruck sollten höhere Elastizitäten aufweisen als Nischenprodukte. Abweichungen von diesen Erwartungen würden auf Modellierungsprobleme, Datenfehler oder unzureichende Erklärungsvariablen hinweisen und erfordern eine kritische Auseinandersetzung mit den zugrundeliegenden Ursachen.
 
 > 📖 *Modellgüte und Plausibilitätsprüfung: [MODELL_DOKUMENTATION.md → Kap. 7](MODELL_DOKUMENTATION.md#7--ergebnisse--evaluation-studienarbeit-kap-5)*
 
@@ -507,11 +481,9 @@ Diese Simulation erlaubte es, den konzeptionellen Datenfluss von der Quelle übe
 
 ### 5.2 Konzeption und Simulation von A/B-Tests im E-Commerce Kontext
 
-*Entwurf:*
+A/B-Tests – auch als kontrollierte Feldexperimente bezeichnet – stellen das methodisch robusteste Instrument zur Validierung von Preisänderungen im realen Marktumfeld dar. Während Modellmetriken nur aussagen, wie gut das Modell historische Muster nachbildet, liefern A/B-Tests kausale Evidenz dafür, ob eine Preisanpassung tatsächlich die erwartete Wirkung auf Absatz, Umsatz und Marge erzielt. Für einen international tätigen, mittelständischen Branchenführer auf Amazon könnte ein solches Testdesign wie folgt aussehen: Eine zufällig ausgewählte Teilmenge von Produkten (Testgruppe) erhält den modellempfohlenen Preis, während eine vergleichbare Kontrollgruppe den bestehenden Preis beibehält. Nach einem definierten Testzeitraum werden die Kennzahlen beider Gruppen statistisch verglichen, um den kausalen Effekt der Preisänderung zu isolieren.
 
-- Erläuterung der Wichtigkeit von A/B-Tests zur Validierung von Preisänderungen im realen Umfeld.
-- Beschreibung eines möglichen A/B-Test Designs für einen international tätigen, mittelständischen Branchenführer auf Amazon.
-- Diskussion, wie die Ergebnisse solcher Tests zur Modellverbesserung genutzt werden könnten. Betonung, dass dies im Prototyp nur konzeptionell behandelt werden kann.
+Die Ergebnisse solcher Tests können auf mehreren Ebenen zur Modellverbesserung genutzt werden: Erstens liefern sie echte Reaktionsdaten, die das Modell mit tatsächlich beobachteten Elastizitäten kalibrieren; zweitens decken sie Produktsegmente auf, in denen das Modell systematisch über- oder unterschätzt; drittens ermöglichen sie eine laufende Überprüfung der Modellhypothesen unter sich verändernden Marktbedingungen. Im Rahmen des vorliegenden Prototyps konnte ein A/B-Test aufgrund fehlender realer Verkaufsdaten und mangelnder Plattformzugriffe nur konzeptionell behandelt werden; die methodische Grundlage ist in [MODELL_DOKUMENTATION.md → Kap. 7.3](MODELL_DOKUMENTATION.md#73--ab-test-konzept--studienarbeit-kap-52) dokumentiert.
 
 > 📖 *A/B-Test Konzept: [MODELL_DOKUMENTATION.md → Kap. 7.3](MODELL_DOKUMENTATION.md#73--ab-test-konzept--studienarbeit-kap-52)*
 
@@ -519,10 +491,9 @@ Diese Simulation erlaubte es, den konzeptionellen Datenfluss von der Quelle übe
 
 ### 5.3 Bewertung der Auswirkungen auf die Geschäftsziele (Umsatz, Marge)
 
-*Entwurf:*
+Die Messung des geschäftlichen Impacts eines operativen Preisoptimierungssystems erfordert geeignete Methoden, die über die rein technische Modellbewertung hinausgehen. Im Live-Betrieb bieten sich insbesondere der **Vergleich von Test- und Kontrollgruppen** (bei parallelen A/B-Tests) sowie **Zeitreihenvergleiche** (Before/After-Analysen mit statistischer Kontrolle von Confoundern) an. Relevante KPIs sind dabei Umsatzveränderung (ΔUmsatz), Margenentwicklung (ΔMarge) und Absatzmengendelta (ΔMenge) im Vergleich zur Baseline-Periode oder Kontrollgruppe.
 
-- Methoden zur Messung des Impacts im Live-Betrieb (Vergleich Test- vs. Kontrollgruppe, Zeitreihenvergleich).
-- Simulation im Prototyp: Beschreibung, wie in Power BI (mittels DAX) der simulierte Effekt der Preisvorschläge auf Umsatz und Marge dargestellt wurde.
+Im Prototyp wurde dieser Impact-Nachweis anhand synthetischer Daten in Power BI (mittels **DAX**-Measures) simuliert. Für jedes Produkt wurden auf Basis der Modellergebnisse aus `dbo.ModelOutput` die erwarteten Veränderungen in Umsatz und Marge berechnet, wenn der empfohlene Preis anstelle des Ist-Preises angewendet wird. Die konkreten Berechnungsformeln und die daraus resultierenden ΔUmsatz- und ΔMarge-Werte für alle Produkte sind in [MODELL_DOKUMENTATION.md → Kap. 6.3](MODELL_DOKUMENTATION.md#63--konkrete-berechnung-für-alle-produkte-stand-31122023) detailliert dokumentiert.
 
 > 📖 *Konkrete ΔUmsatz- und ΔMarge-Berechnungen: [MODELL_DOKUMENTATION.md → Kap. 6.3](MODELL_DOKUMENTATION.md#63--konkrete-berechnung-für-alle-produkte-stand-31122023)*
 
@@ -530,9 +501,7 @@ Diese Simulation erlaubte es, den konzeptionellen Datenfluss von der Quelle übe
 
 ### 5.4 Iterative Verbesserung der Modelle basierend auf Evaluationsergebnissen
 
-*Entwurf:*
-
-- Diskussion der Notwendigkeit eines kontinuierlichen Verbesserungsprozesses (Monitoring, Retraining, Feature-Anpassung).
+Ein datengetriebenes Preisoptimierungsmodell ist kein statisches Artefakt, sondern erfordert einen **kontinuierlichen Verbesserungsprozess**, um dauerhaft valide Empfehlungen zu liefern. Marktbedingungen, Wettbewerbsverhalten und Nachfragestrukturen verändern sich im Zeitverlauf; ein Modell, das ausschließlich auf historischen Daten trainiert wurde, verliert daher schrittweise an Prognosegenauigkeit (Concept Drift). Um dem entgegenzuwirken, sind ein regelmäßiges **Monitoring** der Modellgüte (z.B. wöchentliche Überprüfung von MAE und R² auf neuen Daten), definierte Trigger für ein **Retraining** (z.B. bei Unterschreitung eines Mindest-R²) sowie eine periodische **Feature-Anpassung** an veränderte Einflussfaktoren notwendig. Dieses Prinzip entspricht dem CRISP-DM-Prozessmodell, das in [Kapitel 1](#1-einleitung) beschrieben ist und den iterativen Charakter von Data-Mining-Projekten betont.
 
 ---
 
@@ -540,10 +509,9 @@ Diese Simulation erlaubte es, den konzeptionellen Datenfluss von der Quelle übe
 
 ### 6.1 Bereitstellung der Modellergebnisse
 
-*Entwurf:*
+Die Bereitstellung der Modellergebnisse für das operative Reporting und die Entscheidungsunterstützung ist ein zentraler Schritt im Deployment-Prozess. Im Zielsystem ist vorgesehen, die berechneten Elastizitäten und Preisempfehlungen in das Data Warehouse zu schreiben, von wo aus sie über die Datamart-Schicht für Analysewerkzeuge wie Power BI oder SSAS Tabular Models zugänglich gemacht werden. Diese Architektur ermöglicht eine saubere Trennung zwischen dem Modellierungsprozess (Python/scikit-learn) und dem Reporting-Frontend (Power BI), da beide Schichten über die SQL-Datenbank entkoppelt sind.
 
-- Diskussion verschiedener Optionen für das Zielsystem: Speicherung im DWH für das Modell-Deployment.
-- Umsetzung im Prototyp: Einfache Speicherung der Ergebnisse (Elastizitäten, Preisvorschläge) in einer Tabelle (`dbo.ModelOutput`) der SQL Server Datenbank.
+Im Prototyp wurde dieser Ansatz durch eine direkte Speicherung der Modellergebnisse in der Tabelle `dbo.ModelOutput` der lokalen SQL Server Developer Edition Datenbank umgesetzt. Die Funktion `save_recommendations()` in [`src/pricing_optimizer.py`](../src/pricing_optimizer.py) schreibt für jedes Produkt die berechneten Kennzahlen (Elastizität, Ist-Preis, Wettbewerbspreis, empfohlener Preis, erwartete Mengen- und Umsatzveränderung) in diese Tabelle, die anschließend als Datenquelle für das Power BI Dashboard dient.
 
 > 🐍 *Prototyp-Code: [`src/pricing_optimizer.py → save_recommendations()`](../src/pricing_optimizer.py)*  
 > 📖 *dbo.ModelOutput Schema: [MODELL_DOKUMENTATION.md → Kap. 8.1](MODELL_DOKUMENTATION.md#81--dbomodelouput)*
@@ -554,19 +522,13 @@ Diese Simulation erlaubte es, den konzeptionellen Datenfluss von der Quelle übe
 
 #### 6.2.1 Definition von Dimensionen, Fakten und Hierarchien für Pricing-Analysen
 
-*Entwurf:*
+Im Zielsystem ist der Einsatz von **SQL Server Analysis Services (SSAS) Tabular** als analytische Datenbankschicht vorgesehen. SSAS Tabular-Modelle bieten durch die zugrundeliegende **VertiPaq**-Komprimierungstechnologie hochperformante Analysen über große Datenmengen, ein zentrales, versioniertes Datenmodell mit einheitlichen Business-Metriken sowie eine nahtlose Integration mit Power BI und Excel. Die Kenntnis von SSAS Tabular und DAX stellt dabei eine wertvolle Kompetenz im Bereich Enterprise Business Intelligence dar, da Tabular-Modelle in großen Organisationen als Single Source of Truth für sämtliche Reporting-Bedarfe fungieren.
 
-- Ziel-Architektur: Beschreibung der Nutzung von SQL Server Analysis Services (SSAS) Tabular für performante Analysen.
-- Bezug zum Skillset.
-- Prototyp-Umsetzung: Erläuterung, wie Power BI Desktop intern die gleiche Engine (VertiPaq) wie SSAS Tabular nutzt und somit das Datenmodell in Power BI als Prototyp des Tabular Models dient.
-- Beschreibung der im Power BI Prototyp erstellten Tabellenbeziehungen und des Modells (Sternschema/Schneeflocke).
+Da Power BI Desktop intern die gleiche VertiPaq-Engine wie SSAS Tabular verwendet, diente das im Prototyp aufgebaute Power BI-Datenmodell als funktional äquivalente Simulation eines Tabular Models. Das Modell folgt dabei einer **Sternschema**-Struktur: Die Faktentabellen (Verkäufe, Wettbewerbspreise, Modellergebnisse) sind über definierte Beziehungen mit den Dimensionstabellen (Produkte, Datum) verknüpft. Diese Modellstruktur ermöglicht effiziente Filter- und Aggregationsoperationen über mehrere Dimensionen hinweg und bildet die Grundlage für alle DAX-Berechnungen im Prototyp.
 
 #### 6.2.2 Implementierung relevanter Kennzahlen mittels DAX
 
-*Entwurf:*
-
-- Auflistung und Erklärung der im Power BI Prototyp erstellten DAX-Measures (z.B. Turnover, Net Margin (simuliert), Durchschnittspreis, Anzeige Elastizität/Preisvorschlag).
-- Betonung der Bedeutung von DAX-Kenntnissen.
+Die Aussagekraft eines Power BI Dashboards hängt wesentlich von der Qualität und Korrektheit der definierten **DAX-Measures** ab. Im Rahmen des Prototyps wurden zentrale Kennzahlen für das Pricing-Reporting implementiert. Das Measure **Turnover** (Umsatz) berechnet den Gesamtumsatz als Summe aus Verkaufsmenge multipliziert mit dem Verkaufspreis. Die **Net Margin (simuliert)** ergibt sich aus der Differenz von Umsatz und simulierten Einstandskosten, bezogen auf den Umsatz, und gibt die prozentuale Rohertragsmarge wieder. **Durchschnittspreis** ermittelt den mengengewichteten Mittelwert der erzielten Verkaufspreise über einen gewählten Zeitraum. Weitere Measures zeigen die vom Modell berechnete **Preiselastizität** und den **empfohlenen Preis** aus `dbo.ModelOutput` in Abhängigkeit der Produktauswahl an und ermöglichen so einen direkten Vergleich zwischen Ist-Zustand und Modellempfehlung im Dashboard. Die korrekte Implementierung dieser Measures erfordert ein solides Verständnis von DAX-Evaluierungskontext und Filterlogik und verdeutlicht die Bedeutung von BI-Entwicklungskompetenzen im Rahmen eines solchen Projekts.
 
 ---
 
@@ -574,10 +536,7 @@ Diese Simulation erlaubte es, den konzeptionellen Datenfluss von der Quelle übe
 
 #### 6.3.1 Visualisierung von Preisempfehlungen und deren Einflussfaktoren
 
-*Entwurf:*
-
-- Beschreibung der im Prototyp erstellten Dashboards/Berichtsseiten in Power BI Desktop.
-- Beispiele für Visualisierungen (Trends, Vergleiche, Elastizitätsanzeige).
+Der Power BI Prototyp umfasst mehrere Berichtsseiten, die unterschiedliche Aspekte der dynamischen Preisoptimierung visualisieren. Eine **Übersichtsseite** zeigt die Entwicklung von Umsatz und Absatzmenge im Zeitverlauf, untergliedert nach Produkten und Kategorien, und ermöglicht einen schnellen Überblick über die Geschäftsentwicklung. Eine dedizierte **Pricing-Analyseseite** stellt die berechneten Preiselastizitäten je Produkt dar – etwa als Balkendiagramm –, zeigt den Ist-Preis im Vergleich zum Wettbewerbspreis sowie den vom Modell empfohlenen Preis und die erwarteten Auswirkungen auf Menge, Umsatz und Marge. Eine **Wettbewerbspreisseite** visualisiert die zeitliche Entwicklung der eigenen Preise im Vergleich zu den simulierten Marktpreisen und identifiziert Perioden, in denen Preisanpassungen besonders relevant wären. Diese Visualisierungen machen die abstrakten Modelloutputs für das Management und das E-Commerce-Team unmittelbar verständlich und handlungsrelevant.
 
 > 📓 *Dashboard-Implementierung: [`notebooks/dynamic_pricing_prototype.ipynb`](../notebooks/dynamic_pricing_prototype.ipynb)*  
 > 📖 *Dashboard-Seiten: [MODELL_DOKUMENTATION.md → Kap. 8.2](MODELL_DOKUMENTATION.md#82--dashboard-power-bi-prototyp)*
@@ -586,25 +545,19 @@ Diese Simulation erlaubte es, den konzeptionellen Datenfluss von der Quelle übe
 
 #### 6.3.2 Monitoring der Preisentwicklung und Modell-Performance
 
-*Entwurf:*
-
-- Darstellung, wie das Prototyp-Dashboard zur (simulierten) Überwachung der KPIs und Modelloutputs dient.
+Das Prototyp-Dashboard erfüllt auch die Funktion eines **Monitoring-Instruments** für die operative Steuerung von KPIs und Modelloutputs. Durch die Einbindung der Tabelle `dbo.ModelOutput` in das Power BI-Datenmodell sind Elastizitäten, Preisempfehlungen und simulierte Ergebniskennzahlen stets aktuell abrufbar und können produktübergreifend verglichen werden. Verantwortliche des Amazon-Teams können so auf einen Blick erkennen, für welche Produkte das Modell eine Preisanpassung empfiehlt, welche Auswirkungen zu erwarten sind und ob die tatsächliche Preisentwicklung im Einklang mit den Modellvorgaben steht.
 
 #### 6.3.3 Bereitstellung von Analysewerkzeugen für das Amazon-Team und Controlling
 
-*Entwurf:*
-
-- Positionierung des Power BI Prototyps als Beispiel für ein solches Werkzeug.
+Der Power BI Prototyp positioniert sich dabei als konkretes Beispiel für ein self-service-fähiges **Analysewerkzeug**, das sowohl dem Amazon-Team für operative Preisentscheidungen als auch dem Controlling für die strategische Ergebnissteuerung dient. Power BI bietet durch seine intuitiv bedienbare Oberfläche und die Möglichkeit zur Integration verschiedenster Datenquellen eine niedrigschwellige Zugangsmöglichkeit zu komplexen Analyseergebnissen, ohne dass Endanwender über tiefgehende technische Kenntnisse verfügen müssen. In einem produktiven Einsatz würde das Dashboard über den Power BI Service bereitgestellt, sodass alle berechtigten Mitarbeiter stets auf aktuelle Daten zugreifen können.
 
 ---
 
 ### 6.4 Überlegungen zur Automatisierung des Gesamtprozesses
 
-*Entwurf:*
+Die Automatisierung des Gesamtprozesses ist eine notwendige Voraussetzung für den operativen Einsatz des Preisoptimierungssystems. Im Zielsystem sind hierfür verschiedene Maßnahmen vorgesehen: Die **Datenaktualisierung** (nightly ETL-Läufe) kann durch den **SQL Server Agent** oder die **Azure Data Factory** orchestriert werden. Das regelmäßige **Modell-Retraining** lässt sich als geplanter **Python-Skript-Job** ausführen, der auf neuen Daten das Modell neu kalibriert und die Ergebnisse in `dbo.ModelOutput` fortschreibt. Die Aktualisierung des Power BI Dashboards erfolgt im Zielsystem über den **Power BI Scheduled Refresh**, der sicherstellt, dass Endanwender stets auf aktuelle Modelloutputs zugreifen können.
 
-- Diskussion der Notwendigkeit der Automatisierung im Zielsystem (Datenaktualisierung, Modell-Retraining, Reporting-Refresh).
-- Skizzierung möglicher Tools und Techniken (z.B. SQL Server Agent, Azure Data Factory, Python-Skripte, Power BI Scheduled Refresh).
-- Klarstellung, dass der Prototyp manuell ausgeführt wurde.
+Im Prototyp dieser Studienarbeit wurde der gesamte Prozess – von der Datengenerierung über das Python-Modellierungsskript bis hin zur manuellen Aktualisierung des Power BI-Berichts – ausschließlich **manuell** ausgeführt. Eine Automatisierung war für den Nachweis der methodischen Machbarkeit nicht erforderlich, ist aber als konsequente nächste Ausbaustufe im Zielsystem konzeptionell vorgesehen.
 
 > 📖 *Erweiterungen im Zielsystem: [README.md → Erweiterungen (Zielsystem)](../README.md#erweiterungen-zielsystem)*
 
@@ -614,9 +567,7 @@ Diese Simulation erlaubte es, den konzeptionellen Datenfluss von der Quelle übe
 
 ### 7.1 Darstellung des entwickelten Systems
 
-*Entwurf:*
-
-- Kurze Zusammenfassung des im Prototyp realisierten End-to-End Datenflusses und der Komponenten (Synthetische Daten → SQL Server → Python/scikit-learn → SQL Server → Power BI).
+Der im Rahmen dieser Studienarbeit entwickelte Prototyp realisiert einen vollständigen **End-to-End-Datenfluss** für ein dynamisches Preisoptimierungsmodell. Ausgehend von synthetischen Produktstamm-, Verkaufs- und Wettbewerbspreisdaten, die mittels Python generiert und im CSV-Format bereitgestellt wurden, erfolgt zunächst das Laden in eine lokale **SQL Server** Developer Edition Datenbank. Aus dieser relationalen Datenbank werden die Daten von einem **Python**-basierten Modellierungsmodul (pandas, numpy, scikit-learn) abgerufen, feature-engineered und für das Training produktspezifischer Elastizitätsregressionsmodelle verwendet. Die berechneten Preisempfehlungen werden anschließend zurück in den SQL Server (Tabelle `dbo.ModelOutput`) geschrieben. Abschließend verbindet sich **Power BI** Desktop mit der SQL Server Datenbank, liest den ModelOutput sowie die Basistabellen und stellt die Ergebnisse in interaktiven Dashboards dar. Dieser Prozess bildet die wesentlichen Architekturkomponenten eines produktiven Systems ab und demonstriert die technische Machbarkeit des Gesamtkonzepts.
 
 > 📖 *Systemarchitektur-Überblick: [MODELL_DOKUMENTATION.md → Kap. 1](MODELL_DOKUMENTATION.md#1--systemarchitektur--datenfluss) und [README.md → Systemüberblick](../README.md#systemüberblick)*
 
@@ -624,9 +575,7 @@ Diese Simulation erlaubte es, den konzeptionellen Datenfluss von der Quelle übe
 
 ### 7.2 Zusammenfassung der Kernergebnisse
 
-*Entwurf:*
-
-- Präsentation der wichtigsten simulierten Ergebnisse des Prototyps (z.B. Beispiel-Elastizitäten für ausgewählte Produkte, Darstellung der Preisvorschläge, simulierte KPI-Auswirkungen im Dashboard).
+Die wichtigsten Ergebnisse des Prototyps lassen sich anhand der berechneten Preiselastizitäten und der daraus abgeleiteten Preisempfehlungen zusammenfassen. Für die fünf simulierten Produkte wurden Elastizitäten zwischen −0,52 (Produkt P004, unelastische Nachfrage) und −1,32 (Produkt P003, hochelastische Nachfrage) ermittelt, was sowohl ökonomisch plausible Vorzeichen als auch realistische Größenordnungen für Konsumgüter aufweist. Die R²-Werte der produktspezifischen Regressionsmodelle liegen zwischen 0,42 und 0,61, was angesichts des simulierten Datencharakters eine akzeptable Modellgüte darstellt und das Potenzial eines solchen Ansatzes auf echten Produktionsdaten verdeutlicht. Die vollständige Ergebnistabelle mit allen Produkten und den simulierten KPI-Auswirkungen (ΔMenge, ΔUmsatz, ΔMarge) ist in [MODELL_DOKUMENTATION.md → Kap. 6.4](MODELL_DOKUMENTATION.md#64-gesamtergebnis-aller-produkte-modeloutput) dokumentiert und im nachfolgenden Abschnitt dieser Studienarbeit zusammenfassend dargestellt.
 
 > 📖 *Vollständige Ergebnistabelle (ModelOutput): [MODELL_DOKUMENTATION.md → Kap. 6.4](MODELL_DOKUMENTATION.md#64-gesamtergebnis-aller-produkte-modeloutput)*
 
@@ -644,19 +593,15 @@ Die wichtigsten Ergebnisse des Prototyps (Produktionslauf mit `SEED=42`, Verkauf
 
 ### 7.3 Beitrag zur datengesteuerten Entscheidungsfindung und Erreichung strategischer Ziele
 
-*Entwurf:*
-
-- Betonung, wie das (auch im Prototyp gezeigte) System die Entscheidungsfindung im E-Commerce verbessern kann.
+Das entwickelte System demonstriert eindrücklich, wie datengesteuerte Entscheidungsfindung im E-Commerce-Pricing operationalisiert werden kann. Anstelle von intuitiven Einzelentscheidungen oder starren Preisregeln ermöglicht der modellbasierte Ansatz eine systematische, skalierbare und nachvollziehbare Preisgestaltung, die Wettbewerbsdynamiken, Nachfrageelastizitäten und Margenziele gleichzeitig berücksichtigt. Für einen international tätigen, mittelständischen Branchenführer bedeutet dies konkret: Das Amazon-Team erhält für jedes Produkt eine datenbasierte Preisempfehlung mit quantifizierten Erwartungseffekten auf Umsatz und Marge, die als fundierte Entscheidungsgrundlage dienen und die bisherigen manuellen Prozesse ersetzt oder zumindest substanziell unterstützt. Der Prototyp zeigt, dass die dafür notwendigen Technologien und Methoden bereits mit einem überschaubaren Mitteleinsatz prototypisch implementiert werden können.
 
 ---
 
 ### 7.4 Ausblick auf mögliche Weiterentwicklungen und Limitationen
 
-*Entwurf:*
+Die vorliegende Arbeit unterliegt als Prototyp naturgemäß einer Reihe von Limitationen, die offen benannt werden müssen. Erstens basiert die gesamte Modellierung auf **synthetischen Daten**, die zwar realistische Preis-Mengen-Zusammenhänge simulieren, jedoch nicht die Komplexität und Heterogenität echter Produktionsdaten widerspiegeln können. Zweitens wurden bewusst **einfache Regressionsmodelle** eingesetzt; in der Praxis könnten nichtlineare Ansätze (Random Forest, XGBoost) oder Zeitreihenmodelle (Prophet, ARIMA) eine deutlich bessere Prognosequalität liefern. Drittens wurden **keine echten A/B-Tests** durchgeführt, sodass die kausalitätsstiftende Validierung der Preisempfehlungen aussteht. Viertens ist der Prototyp **manuell** ausgeführt und nicht in eine produktive Automatisierungsinfrastruktur eingebettet.
 
-- Kritische Reflexion der Limitationen des Prototyps (synthetische Daten, einfache Modelle, keine echten A/B-Tests, manuelle Prozesse).
-- Skizzierung von Weiterentwicklungsmöglichkeiten (Einsatz echter Daten, komplexere Modelle, Implementierung von A/B-Tests, Automatisierung, Nutzung von Cloud-Diensten).
-- Abschließende Bekräftigung der Notwendigkeit einer dedizierten Data Scientist Umgebung.
+Die Weiterentwicklungspotenziale des Systems sind entsprechend vielfältig. Prioritär ist der Übergang auf **echte Verkaufs- und Wettbewerbsdaten** aus den produktiven Quellsystemen. Darüber hinaus bieten sich die Implementierung von **A/B-Test-Frameworks** auf Amazon, der Einsatz komplexerer Modellierungsansätze, die vollständige Automatisierung der Pipelines (Azure Data Factory, SQL Server Agent, Power BI Scheduled Refresh) sowie die Nutzung von Cloud-Diensten (z.B. Azure Machine Learning) als konkrete nächste Schritte an. Die Umsetzung dieser Schritte erfordert zwingend eine dedizierte **Data Scientist Umgebung** mit entsprechendem Datenzugang, technischer Infrastruktur und interdisziplinärer Zusammenarbeit zwischen E-Commerce, IT und Controlling.
 
 > 📖 *Geplante Erweiterungen im Zielsystem: [README.md → Erweiterungen (Zielsystem)](../README.md#erweiterungen-zielsystem)*
 
