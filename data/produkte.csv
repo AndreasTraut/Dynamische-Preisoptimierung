@@ -1,0 +1,6 @@
+produkt_id,name,kategorie,einstandspreis,mindestpreis,listenpreis
+P001,Produkt A,Elektronik,30.0,35.0,59.99
+P002,Produkt B,Elektronik,50.0,60.0,99.99
+P003,Produkt C,Haushalt,10.0,14.0,24.99
+P004,Produkt D,Haushalt,15.0,19.0,34.99
+P005,Produkt E,Sport,20.0,25.0,44.99

@@ -1,0 +1,17 @@
+# Byte-compiled / cached Python files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# SQLite database (generated at runtime)
+*.sqlite
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
