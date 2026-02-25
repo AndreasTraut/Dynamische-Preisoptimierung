@@ -103,9 +103,14 @@ Synthetische CSV-Daten (data/)
 │   │   ├── definition.pbidataset # Dataset-Metadaten
 │   │   ├── model.bim             # Tabular Model (SSAS-kompatibel, BIM-Format)
 │   │   └── model.json            # Modell-Dokumentation als JSON
-│   └── Preisoptimierung.Report/
-│       ├── definition.pbireport  # Berichts-Metadaten
-│       └── report.json           # Berichtslayout (2 Seiten, IBCS-Styling)
+│   ├── Preisoptimierung.Report/
+│   │   ├── definition.pbireport  # Berichts-Metadaten
+│   │   └── report.json           # Berichtslayout (3 Seiten, IBCS-Styling)
+│   └── screenshots/              # Vorschaubilder der Berichtsseiten
+│       ├── page1_preisoptimierung_dashboard.png
+│       ├── page2_umsatz_preisentwicklung.png
+│       ├── page3_preisempfehlungs_dashboard.png
+│       └── datenmodell_erd.png
 │
 ├── sql/
 │   ├── create_tables.sql         # Tabellenstruktur (SQL Server)
@@ -226,7 +231,7 @@ Zusätzliche Business Rules:
 ## Power BI PBIP – Preisoptimierung Dashboard
 
 Das PBIP-Projekt (`powerbi/`) enthält ein vollständiges Power BI Desktop Projekt im
-**PBIP-Format** (Power BI Project) mit SSAS Tabular Model und zwei Berichtsseiten.
+**PBIP-Format** (Power BI Project) mit SSAS Tabular Model und drei Berichtsseiten.
 
 ### Tabular Model (`model.bim`)
 
@@ -261,6 +266,12 @@ Das Semantische Modell verbindet alle Datenschichten:
 - Filter-Slicer: Produkt & Monat
 - Zeitreihe: Täglicher Umsatz AC je Produkt (2023)
 - Zeitreihe: Täglicher Verkaufspreis AC je Produkt (Basis für ε-Schätzung)
+
+**Seite 3: „Preisempfehlungs-Dashboard"**
+- Schwarze Titelleiste mit Untertitel (Aktueller vs. Empfohlener Preis | Erwartete Umsatzänderung | Erwartete Margenänderung)
+- Clustered Column Chart: Aktueller vs. Empfohlener Preis je Produkt
+- Clustered Column Chart: Erwartete Umsatzänderung (%) – positiv/negativ je Produkt
+- Clustered Column Chart: Erwartete Margenänderung (%) – positiv/negativ je Produkt
 
 ### IBCS-Konformität
 
@@ -314,3 +325,10 @@ Im Produktivsystem sind folgende Erweiterungen vorgesehen:
 - IBCS Association, *International Business Communication Standards (IBCS)*, Version 1.2
 - Microsoft Learn, *Datentypen (Transact-SQL)*
 - Microsoft Learn, *Power BI usage scenarios*
+- Python Software Foundation, *The Python Standard Library*, https://docs.python.org/3/library/
+- scikit-learn developers, *scikit-learn: Machine Learning in Python – User Guide*, https://scikit-learn.org/stable/user_guide.html
+- scikit-learn developers, *sklearn.linear_model.Ridge*, https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html
+- The pandas development team, *pandas documentation*, https://pandas.pydata.org/docs/
+- NumPy developers, *NumPy Documentation*, https://numpy.org/doc/stable/
+- Matplotlib development team, *Matplotlib Documentation*, https://matplotlib.org/stable/index.html
+- SciPy developers, *SciPy Documentation*, https://docs.scipy.org/doc/scipy/
