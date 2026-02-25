@@ -1,0 +1,731 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1550,
+  "model": {
+    "culture": "de-DE",
+    "collation": "Latin1_General_100_BIN2_UTF8",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "de-DE",
+    "tables": [
+      {
+        "name": "Produkte",
+        "lineageTag": "t-produkte-001",
+        "columns": [
+          {
+            "name": "produkt_id",
+            "dataType": "string",
+            "lineageTag": "c-produkt-id",
+            "sourceColumn": "produkt_id",
+            "summarizeBy": "none",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "Automatic" }
+            ]
+          },
+          {
+            "name": "name",
+            "dataType": "string",
+            "lineageTag": "c-produkt-name",
+            "sourceColumn": "name",
+            "summarizeBy": "none",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "Automatic" }
+            ]
+          },
+          {
+            "name": "kategorie",
+            "dataType": "string",
+            "lineageTag": "c-produkt-kategorie",
+            "sourceColumn": "kategorie",
+            "summarizeBy": "none",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "Automatic" }
+            ]
+          },
+          {
+            "name": "einstandspreis",
+            "dataType": "decimal",
+            "lineageTag": "c-produkt-einstandspreis",
+            "sourceColumn": "einstandspreis",
+            "summarizeBy": "sum",
+            "formatString": "#,0.00\" €\"",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "Automatic" },
+              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+            ]
+          },
+          {
+            "name": "mindestpreis",
+            "dataType": "decimal",
+            "lineageTag": "c-produkt-mindestpreis",
+            "sourceColumn": "mindestpreis",
+            "summarizeBy": "sum",
+            "formatString": "#,0.00\" €\"",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "Automatic" },
+              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+            ]
+          },
+          {
+            "name": "listenpreis",
+            "dataType": "decimal",
+            "lineageTag": "c-produkt-listenpreis",
+            "sourceColumn": "listenpreis",
+            "summarizeBy": "sum",
+            "formatString": "#,0.00\" €\"",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "Automatic" },
+              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Produkte-Partition",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(",
+                "        {",
+                "            {\"P001\", \"Produkt A\", \"Elektronik\", 30.0, 35.0, 59.99},",
+                "            {\"P002\", \"Produkt B\", \"Elektronik\", 50.0, 60.0, 99.99},",
+                "            {\"P003\", \"Produkt C\", \"Haushalt\",   10.0, 14.0, 24.99},",
+                "            {\"P004\", \"Produkt D\", \"Haushalt\",   15.0, 19.0, 34.99},",
+                "            {\"P005\", \"Produkt E\", \"Sport\",      20.0, 25.0, 44.99}",
+                "        },",
+                "        type table [",
+                "            produkt_id     = Text.Type,",
+                "            name           = Text.Type,",
+                "            kategorie      = Text.Type,",
+                "            einstandspreis = Decimal.Type,",
+                "            mindestpreis   = Decimal.Type,",
+                "            listenpreis    = Decimal.Type",
+                "        ]",
+                "    )",
+                "in",
+                "    Source"
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          { "name": "PBI_ResultType", "value": "Table" }
+        ]
+      },
+      {
+        "name": "ModelOutput",
+        "lineageTag": "t-modeloutput-001",
+        "columns": [
+          {
+            "name": "produkt_id",
+            "dataType": "string",
+            "lineageTag": "c-mo-produkt-id",
+            "sourceColumn": "produkt_id",
+            "summarizeBy": "none",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "Automatic" }
+            ]
+          },
+          {
+            "name": "preiselastizitaet",
+            "dataType": "decimal",
+            "lineageTag": "c-mo-elastizitaet",
+            "sourceColumn": "preiselastizitaet",
+            "summarizeBy": "average",
+            "formatString": "0.000",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "Automatic" }
+            ]
+          },
+          {
+            "name": "modell_r2",
+            "dataType": "decimal",
+            "lineageTag": "c-mo-r2",
+            "sourceColumn": "modell_r2",
+            "summarizeBy": "average",
+            "formatString": "0.000",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "Automatic" }
+            ]
+          },
+          {
+            "name": "aktueller_preis",
+            "dataType": "decimal",
+            "lineageTag": "c-mo-akt-preis",
+            "sourceColumn": "aktueller_preis",
+            "summarizeBy": "average",
+            "formatString": "#,0.00\" €\"",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "Automatic" },
+              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+            ]
+          },
+          {
+            "name": "wettbewerbspreis",
+            "dataType": "decimal",
+            "lineageTag": "c-mo-wettbewerb",
+            "sourceColumn": "wettbewerbspreis",
+            "summarizeBy": "average",
+            "formatString": "#,0.00\" €\"",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "Automatic" },
+              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+            ]
+          },
+          {
+            "name": "empfohlener_preis",
+            "dataType": "decimal",
+            "lineageTag": "c-mo-empf-preis",
+            "sourceColumn": "empfohlener_preis",
+            "summarizeBy": "average",
+            "formatString": "#,0.00\" €\"",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "Automatic" },
+              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+            ]
+          },
+          {
+            "name": "erwartete_mengenänderung",
+            "dataType": "decimal",
+            "lineageTag": "c-mo-delta-menge",
+            "sourceColumn": "erwartete_mengenänderung",
+            "summarizeBy": "average",
+            "formatString": "+0.0%;-0.0%;0.0%",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "Automatic" }
+            ]
+          },
+          {
+            "name": "erwartete_umsatzaenderung",
+            "dataType": "decimal",
+            "lineageTag": "c-mo-delta-umsatz",
+            "sourceColumn": "erwartete_umsatzaenderung",
+            "summarizeBy": "average",
+            "formatString": "+0.0%;-0.0%;0.0%",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "Automatic" }
+            ]
+          },
+          {
+            "name": "erwartete_margenänderung",
+            "dataType": "decimal",
+            "lineageTag": "c-mo-delta-marge",
+            "sourceColumn": "erwartete_margenänderung",
+            "summarizeBy": "average",
+            "formatString": "+0.0%;-0.0%;0.0%",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "Automatic" }
+            ]
+          }
+        ],
+        "measures": [
+          {
+            "name": "Aktueller Preis Ø",
+            "lineageTag": "m-akt-preis",
+            "expression": "AVERAGE(ModelOutput[aktueller_preis])",
+            "formatString": "#,0.00 \"€\"",
+            "displayFolder": "Preise",
+            "annotations": [
+              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+            ]
+          },
+          {
+            "name": "Empfohlener Preis Ø",
+            "lineageTag": "m-empf-preis",
+            "expression": "AVERAGE(ModelOutput[empfohlener_preis])",
+            "formatString": "#,0.00 \"€\"",
+            "displayFolder": "Preise",
+            "annotations": [
+              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+            ]
+          },
+          {
+            "name": "Wettbewerbspreis Ø",
+            "lineageTag": "m-wettbewerb-preis",
+            "expression": "AVERAGE(ModelOutput[wettbewerbspreis])",
+            "formatString": "#,0.00 \"€\"",
+            "displayFolder": "Preise",
+            "annotations": [
+              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+            ]
+          },
+          {
+            "name": "Preisänderung Absolut",
+            "lineageTag": "m-preisänderung-abs",
+            "expression": "[Empfohlener Preis Ø] - [Aktueller Preis Ø]",
+            "formatString": "+#,0.00 \"€\";-#,0.00 \"€\";0,00 \"€\"",
+            "displayFolder": "Preise",
+            "annotations": [
+              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+            ]
+          },
+          {
+            "name": "Preisänderung %",
+            "lineageTag": "m-preisänderung-pct",
+            "expression": "DIVIDE([Empfohlener Preis Ø] - [Aktueller Preis Ø], [Aktueller Preis Ø])",
+            "formatString": "+0.0%;-0.0%;0.0%",
+            "displayFolder": "Preise"
+          },
+          {
+            "name": "Preiselastizität Ø",
+            "lineageTag": "m-elastizitaet",
+            "expression": "AVERAGE(ModelOutput[preiselastizitaet])",
+            "formatString": "0.000",
+            "displayFolder": "Modell"
+          },
+          {
+            "name": "Modell R² Ø",
+            "lineageTag": "m-r2",
+            "expression": "AVERAGE(ModelOutput[modell_r2])",
+            "formatString": "0.000",
+            "displayFolder": "Modell"
+          },
+          {
+            "name": "ΔMenge % Ø",
+            "lineageTag": "m-delta-menge",
+            "expression": "DIVIDE(AVERAGE(ModelOutput[erwartete_mengenänderung]), 100)",
+            "formatString": "+0.0%;-0.0%;0.0%",
+            "displayFolder": "Erwartete Änderungen"
+          },
+          {
+            "name": "ΔUmsatz % Ø",
+            "lineageTag": "m-delta-umsatz",
+            "expression": "DIVIDE(AVERAGE(ModelOutput[erwartete_umsatzaenderung]), 100)",
+            "formatString": "+0.0%;-0.0%;0.0%",
+            "displayFolder": "Erwartete Änderungen"
+          },
+          {
+            "name": "ΔMarge % Ø",
+            "lineageTag": "m-delta-marge",
+            "expression": "DIVIDE(AVERAGE(ModelOutput[erwartete_margenänderung]), 100)",
+            "formatString": "+0.0%;-0.0%;0.0%",
+            "displayFolder": "Erwartete Änderungen"
+          },
+          {
+            "name": "Gesamtumsatz AC",
+            "lineageTag": "m-gesamtumsatz",
+            "expression": "SUM(Verkaeufe[umsatz])",
+            "formatString": "#,0 \"€\"",
+            "displayFolder": "Umsatz",
+            "annotations": [
+              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+            ]
+          },
+          {
+            "name": "Ø Tagesumsatz",
+            "lineageTag": "m-avg-tagesumsatz",
+            "expression": "AVERAGEX(VALUES(Verkaeufe[datum]), SUM(Verkaeufe[umsatz]))",
+            "formatString": "#,0.00 \"€\"",
+            "displayFolder": "Umsatz",
+            "annotations": [
+              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+            ]
+          },
+          {
+            "name": "Preis-Elastizitäts-Klasse",
+            "lineageTag": "m-elastizitaet-klasse",
+            "expression": [
+              "VAR eps = [Preiselastizität Ø]",
+              "RETURN",
+              "    IF(eps >= 0, \"Positiv (Giffen)\",",
+              "    IF(eps >= -1, \"Unelastisch (|ε| < 1)\",",
+              "    IF(eps >= -1.05, \"Nahe Einheitselastizität\",",
+              "    \"Elastisch (|ε| > 1)\")))"
+            ],
+            "displayFolder": "Modell"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "ModelOutput-Partition",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(",
+                "        {",
+                "            {\"P001\", -1.183, 0.609, 63.57, 62.67,  76.28, -23.6, -8.4,   5.3},",
+                "            {\"P002\", -1.047, 0.417, 102.71, 98.27, 104.97,  -2.3, -0.2,  1.9},",
+                "            {\"P003\", -1.317, 0.570,  24.63, 22.99,  29.56, -26.4,-11.6, -1.6},",
+                "            {\"P004\", -0.525, 0.499,  30.39, 38.72,  33.95,  -6.2,  4.9, 15.6},",
+                "            {\"P005\", -0.656, 0.442,  45.37, 49.96,  48.33,  -4.3,  2.0,  6.9}",
+                "        },",
+                "        type table [",
+                "            produkt_id                = Text.Type,",
+                "            preiselastizitaet         = Decimal.Type,",
+                "            modell_r2                 = Decimal.Type,",
+                "            aktueller_preis           = Decimal.Type,",
+                "            wettbewerbspreis          = Decimal.Type,",
+                "            empfohlener_preis         = Decimal.Type,",
+                "            erwartete_mengenänderung  = Decimal.Type,",
+                "            erwartete_umsatzaenderung = Decimal.Type,",
+                "            erwartete_margenänderung  = Decimal.Type",
+                "        ]",
+                "    )",
+                "in",
+                "    Source"
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          { "name": "PBI_ResultType", "value": "Table" }
+        ]
+      },
+      {
+        "name": "Verkaeufe",
+        "lineageTag": "t-verkaeufe-001",
+        "columns": [
+          {
+            "name": "verkauf_id",
+            "dataType": "int64",
+            "lineageTag": "c-vk-id",
+            "sourceColumn": "verkauf_id",
+            "summarizeBy": "none",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "User" }
+            ]
+          },
+          {
+            "name": "produkt_id",
+            "dataType": "string",
+            "lineageTag": "c-vk-produkt-id",
+            "sourceColumn": "produkt_id",
+            "summarizeBy": "none",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "Automatic" }
+            ]
+          },
+          {
+            "name": "datum",
+            "dataType": "dateTime",
+            "lineageTag": "c-vk-datum",
+            "sourceColumn": "datum",
+            "summarizeBy": "none",
+            "formatString": "dd.MM.yyyy",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "Automatic" },
+              { "name": "UnderlyingDateTimeDataType", "value": "Date" }
+            ]
+          },
+          {
+            "name": "menge",
+            "dataType": "int64",
+            "lineageTag": "c-vk-menge",
+            "sourceColumn": "menge",
+            "summarizeBy": "sum",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "Automatic" }
+            ]
+          },
+          {
+            "name": "preis",
+            "dataType": "decimal",
+            "lineageTag": "c-vk-preis",
+            "sourceColumn": "preis",
+            "summarizeBy": "average",
+            "formatString": "#,0.00\" €\"",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "Automatic" },
+              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+            ]
+          },
+          {
+            "name": "umsatz",
+            "dataType": "decimal",
+            "lineageTag": "c-vk-umsatz",
+            "sourceColumn": "umsatz",
+            "summarizeBy": "sum",
+            "formatString": "#,0.00\" €\"",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "Automatic" },
+              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Verkaeufe-Partition",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    DataPath = try #\"DataPath\" otherwise \"../data\",",
+                "    Quelle = Csv.Document(",
+                "        File.Contents(DataPath & \"/verkaeufe.csv\"),",
+                "        [Delimiter=\",\", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.None]",
+                "    ),",
+                "    HeadersHochgestuft = Table.PromoteHeaders(Quelle, [PromoteAllScalars=true]),",
+                "    TypGeändert = Table.TransformColumnTypes(HeadersHochgestuft, {",
+                "        {\"verkauf_id\", Int64.Type},",
+                "        {\"produkt_id\", type text},",
+                "        {\"datum\",      type date},",
+                "        {\"menge\",      Int64.Type},",
+                "        {\"preis\",      type number},",
+                "        {\"umsatz\",     type number}",
+                "    })",
+                "in",
+                "    TypGeändert"
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          { "name": "PBI_ResultType", "value": "Table" }
+        ]
+      },
+      {
+        "name": "Wettbewerbspreise",
+        "lineageTag": "t-wettbewerb-001",
+        "columns": [
+          {
+            "name": "produkt_id",
+            "dataType": "string",
+            "lineageTag": "c-wb-produkt-id",
+            "sourceColumn": "produkt_id",
+            "summarizeBy": "none",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "Automatic" }
+            ]
+          },
+          {
+            "name": "datum",
+            "dataType": "dateTime",
+            "lineageTag": "c-wb-datum",
+            "sourceColumn": "datum",
+            "summarizeBy": "none",
+            "formatString": "dd.MM.yyyy",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "Automatic" },
+              { "name": "UnderlyingDateTimeDataType", "value": "Date" }
+            ]
+          },
+          {
+            "name": "wettbewerbspreis",
+            "dataType": "decimal",
+            "lineageTag": "c-wb-preis",
+            "sourceColumn": "wettbewerbspreis",
+            "summarizeBy": "average",
+            "formatString": "#,0.00\" €\"",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "Automatic" },
+              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Wettbewerbspreise-Partition",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    DataPath = try #\"DataPath\" otherwise \"../data\",",
+                "    Quelle = Csv.Document(",
+                "        File.Contents(DataPath & \"/wettbewerbspreise.csv\"),",
+                "        [Delimiter=\",\", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]",
+                "    ),",
+                "    HeadersHochgestuft = Table.PromoteHeaders(Quelle, [PromoteAllScalars=true]),",
+                "    TypGeändert = Table.TransformColumnTypes(HeadersHochgestuft, {",
+                "        {\"produkt_id\",      type text},",
+                "        {\"datum\",           type date},",
+                "        {\"wettbewerbspreis\", type number}",
+                "    })",
+                "in",
+                "    TypGeändert"
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          { "name": "PBI_ResultType", "value": "Table" }
+        ]
+      },
+      {
+        "name": "Datum",
+        "lineageTag": "t-datum-001",
+        "isHidden": false,
+        "columns": [
+          {
+            "name": "Datum",
+            "dataType": "dateTime",
+            "lineageTag": "c-datum-datum",
+            "sourceColumn": "Datum",
+            "summarizeBy": "none",
+            "isKey": true,
+            "formatString": "dd.MM.yyyy",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "Automatic" },
+              { "name": "UnderlyingDateTimeDataType", "value": "Date" }
+            ]
+          },
+          {
+            "name": "Jahr",
+            "dataType": "int64",
+            "lineageTag": "c-datum-jahr",
+            "sourceColumn": "Jahr",
+            "summarizeBy": "none",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "User" }
+            ]
+          },
+          {
+            "name": "Quartal",
+            "dataType": "string",
+            "lineageTag": "c-datum-quartal",
+            "sourceColumn": "Quartal",
+            "summarizeBy": "none",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "Automatic" }
+            ]
+          },
+          {
+            "name": "Monat Nr",
+            "dataType": "int64",
+            "lineageTag": "c-datum-monat-nr",
+            "sourceColumn": "Monat Nr",
+            "summarizeBy": "none",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "User" }
+            ]
+          },
+          {
+            "name": "Monatsname",
+            "dataType": "string",
+            "lineageTag": "c-datum-monatsname",
+            "sourceColumn": "Monatsname",
+            "summarizeBy": "none",
+            "sortByColumn": "Monat Nr",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "Automatic" }
+            ]
+          },
+          {
+            "name": "KW",
+            "dataType": "int64",
+            "lineageTag": "c-datum-kw",
+            "sourceColumn": "KW",
+            "summarizeBy": "none",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "User" }
+            ]
+          },
+          {
+            "name": "Wochentag Nr",
+            "dataType": "int64",
+            "lineageTag": "c-datum-wochentag-nr",
+            "sourceColumn": "Wochentag Nr",
+            "summarizeBy": "none",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "User" }
+            ]
+          },
+          {
+            "name": "Wochentag",
+            "dataType": "string",
+            "lineageTag": "c-datum-wochentag",
+            "sourceColumn": "Wochentag",
+            "summarizeBy": "none",
+            "sortByColumn": "Wochentag Nr",
+            "annotations": [
+              { "name": "SummarizationSetBy", "value": "Automatic" }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Datum-Partition",
+            "mode": "import",
+            "source": {
+              "type": "calculated",
+              "expression": [
+                "ADDCOLUMNS(",
+                "    CALENDAR(DATE(2023,1,1), DATE(2023,12,31)),",
+                "    \"Jahr\",        YEAR([Date]),",
+                "    \"Quartal\",     \"Q\" & FORMAT(ROUNDUP(MONTH([Date])/3,0),\"0\"),",
+                "    \"Monat Nr\",    MONTH([Date]),",
+                "    \"Monatsname\",  FORMAT([Date], \"MMMM\", \"de-DE\"),",
+                "    \"KW\",          WEEKNUM([Date], 2),",
+                "    \"Wochentag Nr\",WEEKDAY([Date], 2),",
+                "    \"Wochentag\",   FORMAT([Date], \"DDDD\", \"de-DE\")",
+                ")"
+              ]
+            }
+          }
+        ],
+        "annotations": [
+          { "name": "PBI_ResultType", "value": "Table" }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "rel-verkaeufe-produkte",
+        "fromTable": "Verkaeufe",
+        "fromColumn": "produkt_id",
+        "toTable": "Produkte",
+        "toColumn": "produkt_id",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "rel-wettbewerb-produkte",
+        "fromTable": "Wettbewerbspreise",
+        "fromColumn": "produkt_id",
+        "toTable": "Produkte",
+        "toColumn": "produkt_id",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "rel-modeloutput-produkte",
+        "fromTable": "ModelOutput",
+        "fromColumn": "produkt_id",
+        "toTable": "Produkte",
+        "toColumn": "produkt_id",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "rel-verkaeufe-datum",
+        "fromTable": "Verkaeufe",
+        "fromColumn": "datum",
+        "toTable": "Datum",
+        "toColumn": "Datum",
+        "crossFilteringBehavior": "oneDirection"
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DataPath",
+        "kind": "m",
+        "expression": [
+          "\"../data\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+        ],
+        "description": "Relativer Pfad zum data/-Verzeichnis des Projekts",
+        "annotations": [
+          { "name": "PBI_ResultType", "value": "Text" }
+        ]
+      }
+    ],
+    "annotations": [
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.126.927.0 (24.10)"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Produkte\",\"Verkaeufe\",\"Wettbewerbspreise\",\"ModelOutput\",\"Datum\",\"DataPath\"]"
+      }
+    ]
+  }
+}
