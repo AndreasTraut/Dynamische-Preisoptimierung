@@ -15,6 +15,41 @@ beschriebenen Machine-Learning-basierten Preisoptimierungssystems.
 
 ---
 
+## 👨‍💻 Über den Autor
+
+**Andreas Traut** ist ein Senior BI-Entwickler, der sich auf Data Warehousing, SQL Server und Microsoft BI Stack spezialisiert hat. Dieses Projekt ist ein privates Beispiel dafür, wie KI-gesteuerte Entwicklung und Machine Learning reale Herausforderungen im eCommerce-Pricing lösen können.
+
+🔗 [Vernetze dich auf LinkedIn](https://www.linkedin.com/in/andreas-traut-89340/)
+
+🔗 [Schaue dir weitere, interessante BI Umsetzungen an](https://github.com/AndreasTraut)
+
+---
+
+## Inhaltsverzeichnis
+
+- [Über den Autor](#-über-den-autor)
+- [Tatsächliche Modellergebnisse (Produktionslauf)](#tatsächliche-modellergebnisse-produktionslauf)
+- [Systemüberblick](#systemüberblick)
+  - [CRISP-DM Phasen](#crisp-dm-phasen)
+- [Verzeichnisstruktur](#verzeichnisstruktur)
+- [Schnellstart](#schnellstart)
+  - [1. Abhängigkeiten installieren](#1-abhängigkeiten-installieren)
+  - [2. Synthetische Daten erzeugen](#2-synthetische-daten-erzeugen)
+  - [3. Jupyter Notebook ausführen (End-to-End)](#3-jupyter-notebook-ausführen-end-to-end)
+  - [4. Einzelne Module ausführen](#4-einzelne-module-ausführen)
+- [Datenmodell (PricingPrototypeDB)](#datenmodell-pricingprototypedb)
+- [Modell – Preiselastizität](#modell--preiselastizität)
+- [Preisempfehlung – Amoroso-Robinson-Relation](#preisempfehlung--amoroso-robinson-relation)
+- [Power BI PBIP – Preisoptimierung Dashboard](#power-bi-pbip--preisoptimierung-dashboard)
+  - [Tabular Model (`model.bim`)](#tabular-model-modelbim)
+  - [Berichtsseiten (IBCS-konform)](#berichtsseiten-ibcs-konform)
+  - [IBCS-Konformität](#ibcs-konformität)
+  - [PBIP-Projekt öffnen](#pbip-projekt-öffnen)
+- [Erweiterungen (Zielsystem)](#erweiterungen-zielsystem)
+- [Literatur](#literatur)
+
+---
+
 ## Tatsächliche Modellergebnisse (Produktionslauf)
 
 ```
@@ -307,16 +342,6 @@ Im Produktivsystem sind folgende Erweiterungen vorgesehen:
 - **Modelle**: Erweiterte Modelle (XGBoost, Prophet für Zeitreihen, A/B-Testing)
 - **Frontend**: Power BI Desktop mit SSAS Tabular Model (DAX-Measures)
 - **Automatisierung**: Nächtliche Läufe via SQL Server Agent / Azure Data Factory
-
----
-
-## 👨‍💻 Über den Autor
-
-**Andreas Traut** ist ein Senior BI-Entwickler, der sich auf Data Warehousing, SQL Server und Microsoft BI Stack spezialisiert hat. Dieses Projekt ist ein privates Beispiel dafür, wie KI-gesteuerte Entwicklung und Machine Learning reale Herausforderungen im eCommerce-Pricing lösen können.
-
-🔗 [Vernetze dich auf LinkedIn](https://www.linkedin.com/in/andreas-traut-89340/)
-
-🔗 [Schaue dir weitere, interessante BI Umsetzungen an](https://github.com/AndreasTraut)
 
 ---
 
