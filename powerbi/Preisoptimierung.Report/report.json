@@ -1,0 +1,352 @@
+{
+  "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+  "resourcePackages": [],
+  "sections": [
+    {
+      "id": "s1-preisoptimierung-dashboard",
+      "name": "ReportSection",
+      "displayName": "Preisoptimierung Dashboard",
+      "visualContainers": [
+        {
+          "id": "vc-title-bar",
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "width": 1280,
+          "height": 52,
+          "config": "{\"name\":\"titleBar\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280,\"height\":52,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"shape\",\"objects\":{\"line\":[{\"properties\":{\"strokeColor\":{\"solid\":{\"color\":\"#000000\"}},\"strokeWidth\":{\"expr\":{\"Literal\":{\"Value\":\"2D\"}}},\"shape\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}},\"fill\":{\"fillType\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"fillColor\":{\"solid\":{\"color\":\"#000000\"}}}}}}]},\"vcObjects\":{}}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-title-text",
+          "x": 16,
+          "y": 8,
+          "z": 10,
+          "width": 900,
+          "height": 36,
+          "config": "{\"name\":\"titleText\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":8,\"z\":10,\"width\":900,\"height\":36,\"tabOrder\":10}}],\"singleVisual\":{\"visualType\":\"textbox\",\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Preisoptimierung Dashboard\",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"18pt\",\"bold\":true,\"color\":\"#FFFFFF\"}}],\"horizontalTextAlignment\":\"left\"}]}}]}},\"vcObjects\":{}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-subtitle-text",
+          "x": 16,
+          "y": 32,
+          "z": 10,
+          "width": 700,
+          "height": 20,
+          "config": "{\"name\":\"subtitleText\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":32,\"z\":10,\"width\":700,\"height\":20,\"tabOrder\":11}}],\"singleVisual\":{\"visualType\":\"textbox\",\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Dynamisches Preisoptimierungsmodell im eCommerce  |  IBCS-konform  |  AC = Istwert  |  PL = Empfehlung (ML-Modell)\",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"9pt\",\"color\":\"#CCCCCC\"}}],\"horizontalTextAlignment\":\"left\"}]}}]}},\"vcObjects\":{}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-ibcs-legend",
+          "x": 1000,
+          "y": 14,
+          "z": 10,
+          "width": 272,
+          "height": 24,
+          "config": "{\"name\":\"ibcsLegend\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1000,\"y\":14,\"z\":10,\"width\":272,\"height\":24,\"tabOrder\":12}}],\"singleVisual\":{\"visualType\":\"textbox\",\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"■ AC Istwert   ■ PL Empfehlung   ■ Wettbewerb\",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"9pt\",\"color\":\"#FFFFFF\"}}],\"horizontalTextAlignment\":\"right\"}]}}]}},\"vcObjects\":{}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-kpi-card-1",
+          "x": 16,
+          "y": 64,
+          "z": 0,
+          "width": 286,
+          "height": 90,
+          "config": "{\"name\":\"kpiAktuellerPreis\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":64,\"z\":0,\"width\":286,\"height\":90,\"tabOrder\":20}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"ModelOutput.Aktueller Preis Ø\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"ModelOutput\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Aktueller Preis Ø\"},\"Name\":\"ModelOutput.Aktueller Preis Ø\"}]},\"objects\":{\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":\"#000000\"}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"22D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Segoe UI'\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":\"#404040\"}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Segoe UI'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":\"#F5F5F5\"}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":\"#000000\"}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]},\"vcObjects\":{}}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-kpi-label-1",
+          "x": 16,
+          "y": 154,
+          "z": 0,
+          "width": 286,
+          "height": 20,
+          "config": "{\"name\":\"kpiLabel1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":154,\"z\":0,\"width\":286,\"height\":20,\"tabOrder\":21}}],\"singleVisual\":{\"visualType\":\"textbox\",\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"AC  Aktueller Preis (Ø je Produkt)\",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"9pt\",\"color\":\"#404040\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}},\"vcObjects\":{}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-kpi-card-2",
+          "x": 318,
+          "y": 64,
+          "z": 0,
+          "width": 286,
+          "height": 90,
+          "config": "{\"name\":\"kpiEmpfohlenerPreis\",\"layouts\":[{\"id\":0,\"position\":{\"x\":318,\"y\":64,\"z\":0,\"width\":286,\"height\":90,\"tabOrder\":22}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"ModelOutput.Empfohlener Preis Ø\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"ModelOutput\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Empfohlener Preis Ø\"},\"Name\":\"ModelOutput.Empfohlener Preis Ø\"}]},\"objects\":{\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":\"#404040\"}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"22D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Segoe UI'\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":\"#404040\"}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Segoe UI'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":\"#F5F5F5\"}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":\"#404040\"}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]},\"vcObjects\":{}}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-kpi-label-2",
+          "x": 318,
+          "y": 154,
+          "z": 0,
+          "width": 286,
+          "height": 20,
+          "config": "{\"name\":\"kpiLabel2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":318,\"y\":154,\"z\":0,\"width\":286,\"height\":20,\"tabOrder\":23}}],\"singleVisual\":{\"visualType\":\"textbox\",\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"PL  Empfohlener Preis P* (Amoroso-Robinson)\",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"9pt\",\"color\":\"#404040\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}},\"vcObjects\":{}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-kpi-card-3",
+          "x": 620,
+          "y": 64,
+          "z": 0,
+          "width": 286,
+          "height": 90,
+          "config": "{\"name\":\"kpiDeltaMarge\",\"layouts\":[{\"id\":0,\"position\":{\"x\":620,\"y\":64,\"z\":0,\"width\":286,\"height\":90,\"tabOrder\":24}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"ModelOutput.ΔMarge % Ø\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"ModelOutput\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"ΔMarge % Ø\"},\"Name\":\"ModelOutput.ΔMarge % Ø\"}]},\"objects\":{\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":\"#1F7A1F\"}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"22D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Segoe UI'\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":\"#404040\"}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Segoe UI'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":\"#F5F5F5\"}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":\"#1F7A1F\"}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]},\"vcObjects\":{}}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-kpi-label-3",
+          "x": 620,
+          "y": 154,
+          "z": 0,
+          "width": 286,
+          "height": 20,
+          "config": "{\"name\":\"kpiLabel3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":620,\"y\":154,\"z\":0,\"width\":286,\"height\":20,\"tabOrder\":25}}],\"singleVisual\":{\"visualType\":\"textbox\",\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Δ  Erwartete Margenänderung (Ø)\",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"9pt\",\"color\":\"#404040\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}},\"vcObjects\":{}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-kpi-card-4",
+          "x": 922,
+          "y": 64,
+          "z": 0,
+          "width": 342,
+          "height": 90,
+          "config": "{\"name\":\"kpiModelR2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":922,\"y\":64,\"z\":0,\"width\":342,\"height\":90,\"tabOrder\":26}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"ModelOutput.Modell R² Ø\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"ModelOutput\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Modell R² Ø\"},\"Name\":\"ModelOutput.Modell R² Ø\"}]},\"objects\":{\"labels\":[{\"properties\":{\"color\":{\"solid\":{\"color\":\"#000000\"}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"22D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Segoe UI'\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":\"#404040\"}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Segoe UI'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":\"#F5F5F5\"}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":\"#000000\"}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]},\"vcObjects\":{}}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-kpi-label-4",
+          "x": 922,
+          "y": 154,
+          "z": 0,
+          "width": 342,
+          "height": 20,
+          "config": "{\"name\":\"kpiLabel4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":922,\"y\":154,\"z\":0,\"width\":342,\"height\":20,\"tabOrder\":27}}],\"singleVisual\":{\"visualType\":\"textbox\",\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Modellgüte R² (Elastizitätsmodell Ridge-Regression)\",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"9pt\",\"color\":\"#404040\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}},\"vcObjects\":{}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-chart-title-preisvergleich",
+          "x": 16,
+          "y": 182,
+          "z": 0,
+          "width": 612,
+          "height": 20,
+          "config": "{\"name\":\"chartTitlePreis\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":182,\"z\":0,\"width\":612,\"height\":20,\"tabOrder\":30}}],\"singleVisual\":{\"visualType\":\"textbox\",\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Preisvergleich je Produkt  (AC vs. PL vs. Wettbewerb)\",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"11pt\",\"bold\":true,\"color\":\"#000000\"}}],\"horizontalTextAlignment\":\"left\"}]}}]}},\"vcObjects\":{}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-bar-preisvergleich",
+          "x": 16,
+          "y": 202,
+          "z": 0,
+          "width": 612,
+          "height": 240,
+          "config": "{\"name\":\"barPreisvergleich\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":202,\"z\":0,\"width\":612,\"height\":240,\"tabOrder\":31}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Produkte.produkt_id\",\"active\":true}],\"Y\":[{\"queryRef\":\"ModelOutput.Aktueller Preis Ø\"},{\"queryRef\":\"ModelOutput.Empfohlener Preis Ø\"},{\"queryRef\":\"ModelOutput.Wettbewerbspreis Ø\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Produkte\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"ModelOutput\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"produkt_id\"},\"Name\":\"Produkte.produkt_id\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Aktueller Preis Ø\"},\"Name\":\"ModelOutput.Aktueller Preis Ø\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Empfohlener Preis Ø\"},\"Name\":\"ModelOutput.Empfohlener Preis Ø\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Wettbewerbspreis Ø\"},\"Name\":\"ModelOutput.Wettbewerbspreis Ø\"}]},\"objects\":{\"dataColors\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":\"#000000\"}}}},{\"properties\":{\"fill\":{\"solid\":{\"color\":\"#808080\"}}}},{\"properties\":{\"fill\":{\"solid\":{\"color\":\"#BFBFBF\"}}}}],\"categoryAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Segoe UI'\"}}}}}],\"valueAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Segoe UI'\"}}}}}],\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":\"#000000\"}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":\"#FFFFFF\"}}}}]},\"vcObjects\":{}}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-chart-title-abweichungen",
+          "x": 652,
+          "y": 182,
+          "z": 0,
+          "width": 612,
+          "height": 20,
+          "config": "{\"name\":\"chartTitleAbw\",\"layouts\":[{\"id\":0,\"position\":{\"x\":652,\"y\":182,\"z\":0,\"width\":612,\"height\":20,\"tabOrder\":32}}],\"singleVisual\":{\"visualType\":\"textbox\",\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Erwartete Abweichungen bei Preisumsetzung  (Δ Marge / Umsatz / Menge)\",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"11pt\",\"bold\":true,\"color\":\"#000000\"}}],\"horizontalTextAlignment\":\"left\"}]}}]}},\"vcObjects\":{}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-bar-abweichungen",
+          "x": 652,
+          "y": 202,
+          "z": 0,
+          "width": 612,
+          "height": 240,
+          "config": "{\"name\":\"barAbweichungen\",\"layouts\":[{\"id\":0,\"position\":{\"x\":652,\"y\":202,\"z\":0,\"width\":612,\"height\":240,\"tabOrder\":33}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Produkte.produkt_id\",\"active\":true}],\"Y\":[{\"queryRef\":\"ModelOutput.ΔMarge % Ø\"},{\"queryRef\":\"ModelOutput.ΔUmsatz % Ø\"},{\"queryRef\":\"ModelOutput.ΔMenge % Ø\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Produkte\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"ModelOutput\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"produkt_id\"},\"Name\":\"Produkte.produkt_id\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"ΔMarge % Ø\"},\"Name\":\"ModelOutput.ΔMarge % Ø\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"ΔUmsatz % Ø\"},\"Name\":\"ModelOutput.ΔUmsatz % Ø\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"ΔMenge % Ø\"},\"Name\":\"ModelOutput.ΔMenge % Ø\"}]},\"objects\":{\"dataColors\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":\"#1F7A1F\"}}}},{\"properties\":{\"fill\":{\"solid\":{\"color\":\"#2E75B6\"}}}},{\"properties\":{\"fill\":{\"solid\":{\"color\":\"#808080\"}}}}],\"categoryAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Segoe UI'\"}}}}}],\"valueAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Segoe UI'\"}}}}}],\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":\"#000000\"}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":\"#FFFFFF\"}}}}]},\"vcObjects\":{}}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-separator-h1",
+          "x": 0,
+          "y": 450,
+          "z": 0,
+          "width": 1280,
+          "height": 2,
+          "config": "{\"name\":\"separatorH1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":450,\"z\":0,\"width\":1280,\"height\":2,\"tabOrder\":60}}],\"singleVisual\":{\"visualType\":\"shape\",\"objects\":{\"line\":[{\"properties\":{\"strokeColor\":{\"solid\":{\"color\":\"#BFBFBF\"}},\"strokeWidth\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"shape\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}},\"fill\":{\"fillType\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"fillColor\":{\"solid\":{\"color\":\"#BFBFBF\"}}}}}}]},\"vcObjects\":{}}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-chart-title-elastizitaet",
+          "x": 16,
+          "y": 460,
+          "z": 0,
+          "width": 400,
+          "height": 20,
+          "config": "{\"name\":\"chartTitleElas\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":460,\"z\":0,\"width\":400,\"height\":20,\"tabOrder\":40}}],\"singleVisual\":{\"visualType\":\"textbox\",\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Preiselastizität ε je Produkt\",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"11pt\",\"bold\":true,\"color\":\"#000000\"}}],\"horizontalTextAlignment\":\"left\"}]}}]}},\"vcObjects\":{}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-bar-elastizitaet",
+          "x": 16,
+          "y": 480,
+          "z": 0,
+          "width": 400,
+          "height": 214,
+          "config": "{\"name\":\"barElastizitaet\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":480,\"z\":0,\"width\":400,\"height\":214,\"tabOrder\":41}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Produkte.produkt_id\",\"active\":true}],\"Y\":[{\"queryRef\":\"ModelOutput.Preiselastizität Ø\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Produkte\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"ModelOutput\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"produkt_id\"},\"Name\":\"Produkte.produkt_id\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Preiselastizität Ø\"},\"Name\":\"ModelOutput.Preiselastizität Ø\"}]},\"objects\":{\"dataColors\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":\"#000000\"}}}}],\"categoryAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Segoe UI'\"}}}}}],\"valueAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Segoe UI'\"}}}}}],\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":\"#000000\"}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":\"#FFFFFF\"}}}}]},\"vcObjects\":{}}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-chart-title-tabelle",
+          "x": 432,
+          "y": 460,
+          "z": 0,
+          "width": 832,
+          "height": 20,
+          "config": "{\"name\":\"chartTitleTabelle\",\"layouts\":[{\"id\":0,\"position\":{\"x\":432,\"y\":460,\"z\":0,\"width\":832,\"height\":20,\"tabOrder\":50}}],\"singleVisual\":{\"visualType\":\"textbox\",\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Preisempfehlungen – Detail  (ModelOutput)\",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"11pt\",\"bold\":true,\"color\":\"#000000\"}}],\"horizontalTextAlignment\":\"left\"}]}}]}},\"vcObjects\":{}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-matrix-modeloutput",
+          "x": 432,
+          "y": 480,
+          "z": 0,
+          "width": 832,
+          "height": 214,
+          "config": "{\"name\":\"matrixModelOutput\",\"layouts\":[{\"id\":0,\"position\":{\"x\":432,\"y\":480,\"z\":0,\"width\":832,\"height\":214,\"tabOrder\":51}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Produkte.name\",\"active\":true},{\"queryRef\":\"Produkte.kategorie\"},{\"queryRef\":\"ModelOutput.Preiselastizität Ø\"},{\"queryRef\":\"ModelOutput.Modell R² Ø\"},{\"queryRef\":\"ModelOutput.Aktueller Preis Ø\"},{\"queryRef\":\"ModelOutput.Wettbewerbspreis Ø\"},{\"queryRef\":\"ModelOutput.Empfohlener Preis Ø\"},{\"queryRef\":\"ModelOutput.ΔUmsatz % Ø\"},{\"queryRef\":\"ModelOutput.ΔMarge % Ø\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Produkte\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"ModelOutput\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"name\"},\"Name\":\"Produkte.name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"kategorie\"},\"Name\":\"Produkte.kategorie\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Preiselastizität Ø\"},\"Name\":\"ModelOutput.Preiselastizität Ø\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Modell R² Ø\"},\"Name\":\"ModelOutput.Modell R² Ø\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Aktueller Preis Ø\"},\"Name\":\"ModelOutput.Aktueller Preis Ø\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Wettbewerbspreis Ø\"},\"Name\":\"ModelOutput.Wettbewerbspreis Ø\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Empfohlener Preis Ø\"},\"Name\":\"ModelOutput.Empfohlener Preis Ø\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"ΔUmsatz % Ø\"},\"Name\":\"ModelOutput.ΔUmsatz % Ø\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"ΔMarge % Ø\"},\"Name\":\"ModelOutput.ΔMarge % Ø\"}]},\"objects\":{\"grid\":[{\"properties\":{\"gridVertical\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"rowPadding\":{\"expr\":{\"Literal\":{\"Value\":\"3D\"}}},\"fontColor\":{\"solid\":{\"color\":\"#000000\"}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Segoe UI'\"}}}}}],\"columnHeaders\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":\"#FFFFFF\"}},\"backColor\":{\"solid\":{\"color\":\"#000000\"}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Segoe UI'\"}}}}}],\"values\":[{\"properties\":{\"backColor\":{\"solid\":{\"color\":\"#FFFFFF\"}},\"fontColorPrimary\":{\"solid\":{\"color\":\"#000000\"}},\"fontColorSecondary\":{\"solid\":{\"color\":\"#404040\"}},\"backColorSecondary\":{\"solid\":{\"color\":\"#F5F5F5\"}}}}]},\"vcObjects\":{}}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-footer",
+          "x": 0,
+          "y": 704,
+          "z": 0,
+          "width": 1280,
+          "height": 16,
+          "config": "{\"name\":\"footer\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":704,\"z\":0,\"width\":1280,\"height\":16,\"tabOrder\":70}}],\"singleVisual\":{\"visualType\":\"textbox\",\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Quelle: PricingPrototypeDB  |  Modell: Ridge-Regression (Log-Log)  |  Preisempfehlung: Amoroso-Robinson  |  IBCS Version 1.2  |  Andreas Traut\",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"8pt\",\"color\":\"#808080\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}},\"vcObjects\":{}}",
+          "filters": "[]"
+        }
+      ],
+      "filters": "[]",
+      "ordinal": 0,
+      "width": 1280,
+      "height": 720,
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":\"#FFFFFF\"}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"wallpaper\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"defaultDrillFilterOtherVisuals\":true}"
+    },
+    {
+      "id": "s2-zeitreihe-umsatz",
+      "name": "ReportSection2",
+      "displayName": "Umsatz & Preisentwicklung",
+      "visualContainers": [
+        {
+          "id": "vc-s2-title-bar",
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "width": 1280,
+          "height": 52,
+          "config": "{\"name\":\"s2TitleBar\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280,\"height\":52,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"shape\",\"objects\":{\"line\":[{\"properties\":{\"strokeColor\":{\"solid\":{\"color\":\"#000000\"}},\"strokeWidth\":{\"expr\":{\"Literal\":{\"Value\":\"2D\"}}},\"shape\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}},\"fill\":{\"fillType\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"fillColor\":{\"solid\":{\"color\":\"#000000\"}}}}}}]},\"vcObjects\":{}}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-s2-title-text",
+          "x": 16,
+          "y": 8,
+          "z": 10,
+          "width": 900,
+          "height": 36,
+          "config": "{\"name\":\"s2TitleText\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":8,\"z\":10,\"width\":900,\"height\":36,\"tabOrder\":10}}],\"singleVisual\":{\"visualType\":\"textbox\",\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Umsatz & Preisentwicklung 2023\",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"18pt\",\"bold\":true,\"color\":\"#FFFFFF\"}}],\"horizontalTextAlignment\":\"left\"}]}}]}},\"vcObjects\":{}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-s2-subtitle",
+          "x": 16,
+          "y": 32,
+          "z": 10,
+          "width": 700,
+          "height": 20,
+          "config": "{\"name\":\"s2Subtitle\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":32,\"z\":10,\"width\":700,\"height\":20,\"tabOrder\":11}}],\"singleVisual\":{\"visualType\":\"textbox\",\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Tägliche Verkaufsdaten (Verkaeufe)  |  Zeitreihe AC  |  Quelle: data/verkaeufe.csv\",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"9pt\",\"color\":\"#CCCCCC\"}}],\"horizontalTextAlignment\":\"left\"}]}}]}},\"vcObjects\":{}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-s2-filter-produkt",
+          "x": 16,
+          "y": 64,
+          "z": 0,
+          "width": 240,
+          "height": 250,
+          "config": "{\"name\":\"filterProdukt\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":64,\"z\":0,\"width\":240,\"height\":250,\"tabOrder\":20}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Produkte.name\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Produkte\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"name\"},\"Name\":\"Produkte.name\"}]},\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":\"#000000\"}},\"background\":{\"solid\":{\"color\":\"#F5F5F5\"}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Segoe UI'\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Produkt auswählen'\"}}}}}],\"items\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":\"#000000\"}},\"background\":{\"solid\":{\"color\":\"#FFFFFF\"}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Segoe UI'\"}}}}}]},\"vcObjects\":{}}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-s2-filter-monat",
+          "x": 16,
+          "y": 326,
+          "z": 0,
+          "width": 240,
+          "height": 250,
+          "config": "{\"name\":\"filterMonat\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":326,\"z\":0,\"width\":240,\"height\":250,\"tabOrder\":21}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Datum.Monatsname\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"Datum\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Monatsname\"},\"Name\":\"Datum.Monatsname\"}]},\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontColor\":{\"solid\":{\"color\":\"#000000\"}},\"background\":{\"solid\":{\"color\":\"#F5F5F5\"}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Segoe UI'\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Monat auswählen'\"}}}}}],\"items\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":\"#000000\"}},\"background\":{\"solid\":{\"color\":\"#FFFFFF\"}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Segoe UI'\"}}}}}]},\"vcObjects\":{}}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-s2-chart-title-umsatz",
+          "x": 272,
+          "y": 64,
+          "z": 0,
+          "width": 992,
+          "height": 20,
+          "config": "{\"name\":\"s2ChartTitleUmsatz\",\"layouts\":[{\"id\":0,\"position\":{\"x\":272,\"y\":64,\"z\":0,\"width\":992,\"height\":20,\"tabOrder\":30}}],\"singleVisual\":{\"visualType\":\"textbox\",\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Täglicher Umsatz AC je Produkt (2023)\",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"11pt\",\"bold\":true,\"color\":\"#000000\"}}],\"horizontalTextAlignment\":\"left\"}]}}]}},\"vcObjects\":{}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-s2-line-umsatz",
+          "x": 272,
+          "y": 84,
+          "z": 0,
+          "width": 992,
+          "height": 280,
+          "config": "{\"name\":\"lineUmsatz\",\"layouts\":[{\"id\":0,\"position\":{\"x\":272,\"y\":84,\"z\":0,\"width\":992,\"height\":280,\"tabOrder\":31}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Datum.Datum\",\"active\":true}],\"Series\":[{\"queryRef\":\"Produkte.name\"}],\"Y\":[{\"queryRef\":\"Verkaeufe.Gesamtumsatz AC\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Datum\",\"Type\":0},{\"Name\":\"p\",\"Entity\":\"Produkte\",\"Type\":0},{\"Name\":\"v\",\"Entity\":\"Verkaeufe\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Datum\"},\"Name\":\"Datum.Datum\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"name\"},\"Name\":\"Produkte.name\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Gesamtumsatz AC\"},\"Name\":\"Verkaeufe.Gesamtumsatz AC\"}]},\"objects\":{\"dataColors\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":\"#000000\"}}}},{\"properties\":{\"fill\":{\"solid\":{\"color\":\"#404040\"}}}},{\"properties\":{\"fill\":{\"solid\":{\"color\":\"#808080\"}}}},{\"properties\":{\"fill\":{\"solid\":{\"color\":\"#BFBFBF\"}}}},{\"properties\":{\"fill\":{\"solid\":{\"color\":\"#2E75B6\"}}}}],\"categoryAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Segoe UI'\"}}}}}],\"valueAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Segoe UI'\"}}}}}],\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":\"#FFFFFF\"}}}}]},\"vcObjects\":{}}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-s2-chart-title-preis",
+          "x": 272,
+          "y": 376,
+          "z": 0,
+          "width": 992,
+          "height": 20,
+          "config": "{\"name\":\"s2ChartTitlePreis\",\"layouts\":[{\"id\":0,\"position\":{\"x\":272,\"y\":376,\"z\":0,\"width\":992,\"height\":20,\"tabOrder\":40}}],\"singleVisual\":{\"visualType\":\"textbox\",\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Täglicher Verkaufspreis AC je Produkt (2023)  –  Grundlage für Preiselastizitätsschätzung\",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"11pt\",\"bold\":true,\"color\":\"#000000\"}}],\"horizontalTextAlignment\":\"left\"}]}}]}},\"vcObjects\":{}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-s2-line-preis",
+          "x": 272,
+          "y": 396,
+          "z": 0,
+          "width": 992,
+          "height": 278,
+          "config": "{\"name\":\"linePreis\",\"layouts\":[{\"id\":0,\"position\":{\"x\":272,\"y\":396,\"z\":0,\"width\":992,\"height\":278,\"tabOrder\":41}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Datum.Datum\",\"active\":true}],\"Series\":[{\"queryRef\":\"Produkte.name\"}],\"Y\":[{\"queryRef\":\"Verkaeufe.preis\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Datum\",\"Type\":0},{\"Name\":\"p\",\"Entity\":\"Produkte\",\"Type\":0},{\"Name\":\"v\",\"Entity\":\"Verkaeufe\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Datum\"},\"Name\":\"Datum.Datum\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"name\"},\"Name\":\"Produkte.name\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"preis\"},\"Name\":\"Verkaeufe.preis\"}]},\"objects\":{\"dataColors\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":\"#000000\"}}}},{\"properties\":{\"fill\":{\"solid\":{\"color\":\"#404040\"}}}},{\"properties\":{\"fill\":{\"solid\":{\"color\":\"#808080\"}}}},{\"properties\":{\"fill\":{\"solid\":{\"color\":\"#BFBFBF\"}}}},{\"properties\":{\"fill\":{\"solid\":{\"color\":\"#2E75B6\"}}}}],\"categoryAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Segoe UI'\"}}}}}],\"valueAxis\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"9D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'Segoe UI'\"}}}}}],\"legend\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":\"#FFFFFF\"}}}}]},\"vcObjects\":{}}}",
+          "filters": "[]"
+        },
+        {
+          "id": "vc-s2-footer",
+          "x": 0,
+          "y": 704,
+          "z": 0,
+          "width": 1280,
+          "height": 16,
+          "config": "{\"name\":\"s2Footer\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":704,\"z\":0,\"width\":1280,\"height\":16,\"tabOrder\":70}}],\"singleVisual\":{\"visualType\":\"textbox\",\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Quelle: data/verkaeufe.csv  |  365 Tage × 5 Produkte  |  IBCS Version 1.2  |  Andreas Traut\",\"textStyle\":{\"fontFamily\":\"Segoe UI\",\"fontSize\":\"8pt\",\"color\":\"#808080\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}},\"vcObjects\":{}}",
+          "filters": "[]"
+        }
+      ],
+      "filters": "[]",
+      "ordinal": 1,
+      "width": 1280,
+      "height": 720,
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":\"#FFFFFF\"}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"wallpaper\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"defaultDrillFilterOtherVisuals\":true}"
+    }
+  ],
+  "config": "{\"version\":\"5.51\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.51\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"filterPanelEnabled\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1}}",
+  "filters": "[]"
+}

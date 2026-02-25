@@ -97,6 +97,16 @@ Synthetische CSV-Daten (data/)
 │   ├── verkaeufe.csv             # Tägliche Verkaufsdaten (365 Tage)
 │   └── wettbewerbspreise.csv     # Wöchentliche Wettbewerbspreise
 │
+├── powerbi/                      # ← NEU: Power BI PBIP-Projekt (IBCS-konform)
+│   ├── Preisoptimierung.pbip     # Projekteinstiegspunkt
+│   ├── Preisoptimierung.Dataset/
+│   │   ├── definition.pbidataset # Dataset-Metadaten
+│   │   ├── model.bim             # Tabular Model (SSAS-kompatibel, BIM-Format)
+│   │   └── model.json            # Modell-Dokumentation als JSON
+│   └── Preisoptimierung.Report/
+│       ├── definition.pbireport  # Berichts-Metadaten
+│       └── report.json           # Berichtslayout (2 Seiten, IBCS-Styling)
+│
 ├── sql/
 │   ├── create_tables.sql         # Tabellenstruktur (SQL Server)
 │   └── load_data.sql             # BULK INSERT-Skripte (SQL Server)
@@ -210,6 +220,69 @@ Zusätzliche Business Rules:
 - Maximale Preisänderung **±20 %** je Empfehlung
 - **Mindestmarge** 10 % auf Einstandspreis
 - **30 % Gewichtung** des Wettbewerbspreises
+
+---
+
+## Power BI PBIP – Preisoptimierung Dashboard
+
+Das PBIP-Projekt (`powerbi/`) enthält ein vollständiges Power BI Desktop Projekt im
+**PBIP-Format** (Power BI Project) mit SSAS Tabular Model und zwei Berichtsseiten.
+
+### Tabular Model (`model.bim`)
+
+Das Semantische Modell verbindet alle Datenschichten:
+
+| Tabelle | Schicht | Quelle | Beschreibung |
+|---|---|---|---|
+| `Produkte` | Core / Stammdaten | Inline (M-Query) | 5 Produkte, Einstandspreise, Kategorien |
+| `Verkaeufe` | Core / Faktdaten | CSV | 365 Tage × 5 Produkte, Preis + Umsatz |
+| `Wettbewerbspreise` | Core / Extern | CSV | Wöchentliche Wettbewerbspreise |
+| `ModelOutput` | Datamart | Inline (M-Query) | ML-Ergebnisse: ε, R², P*, Δ-Kennzahlen |
+| `Datum` | Dimension | DAX CALENDAR | Datumsdimension 2023 (KW, Monat, Quartal) |
+
+**DAX-Measures (Auszug):**
+- `Aktueller Preis Ø` / `Empfohlener Preis Ø` / `Wettbewerbspreis Ø`
+- `Preisänderung %` = `DIVIDE([Empfohlener Preis Ø] - [Aktueller Preis Ø], [Aktueller Preis Ø])`
+- `ΔMarge % Ø` / `ΔUmsatz % Ø` / `ΔMenge % Ø`
+- `Preiselastizität Ø` / `Modell R² Ø` / `Preis-Elastizitäts-Klasse`
+- `Gesamtumsatz AC` / `Ø Tagesumsatz`
+
+### Berichtsseiten (IBCS-konform)
+
+**Seite 1: „Preisoptimierung Dashboard"**
+- Schwarze Titelleiste mit IBCS-Legende (AC / PL / Wettbewerb)
+- 4 KPI-Karten: Ø Akt. Preis, Ø Empf. Preis, Ø ΔMarge, Modell-R²
+- Clustered Bar Chart: Preisvergleich AC vs. PL vs. Wettbewerb je Produkt
+- Clustered Bar Chart: Erwartete Δ-Änderungen (Marge / Umsatz / Menge) je Produkt
+- Bar Chart: Preiselastizität ε je Produkt
+- Detail-Tabelle: Alle ModelOutput-Kennzahlen mit IBCS-Spaltenformatierung
+
+**Seite 2: „Umsatz & Preisentwicklung"**
+- Filter-Slicer: Produkt & Monat
+- Zeitreihe: Täglicher Umsatz AC je Produkt (2023)
+- Zeitreihe: Täglicher Verkaufspreis AC je Produkt (Basis für ε-Schätzung)
+
+### IBCS-Konformität
+
+| IBCS-Prinzip | Umsetzung |
+|---|---|
+| Einheitliche Notation | AC = Istwert, PL = Empfehlung (ML-Modell), Δ = Abweichung |
+| Skalierung & Farben | Schwarz (#000000) für AC, Dunkelgrau (#404040) für PL, Grün für positives Δ |
+| Diagrammtypen | Nur Balken (kein Torten-/Ringdiagramm), Linien für Zeitreihen |
+| Schriftart | Segoe UI durchgängig, 10–18pt |
+| Hintergrund | Weiß (#FFFFFF), keine Füllfarben im Hintergrund |
+| Datenquellen-Transparenz | Fußzeile mit Quellenangabe auf jeder Seite |
+
+### PBIP-Projekt öffnen
+
+```bash
+# In Power BI Desktop (ab Version 2.113 / Oktober 2023):
+# Datei → Öffnen → Durchsuchen → powerbi/Preisoptimierung.pbip
+```
+
+> **Datenquellen-Konfiguration:** Für die CSV-Tabellen (Verkaeufe, Wettbewerbspreise)
+> muss der Parameter `DataPath` in Power BI Desktop auf das `data/`-Verzeichnis
+> des Projekts gesetzt werden (Power Query Editor → Parameter verwalten).
 
 ---
 
