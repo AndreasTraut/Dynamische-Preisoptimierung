@@ -8,6 +8,10 @@ beschriebenen Machine-Learning-basierten Preisoptimierungssystems.
 > **[docs/MODELL_DOKUMENTATION.md](docs/MODELL_DOKUMENTATION.md)**  
 > (Formeln, Schritt-für-Schritt-Berechnungen, alle Ergebnisse mit echten Zahlen,  
 > Verlinkungen zu Studienarbeit-Kapiteln und Quellcode-Funktionen)
+>
+> 📄 **Studienarbeit als Markdown:**  
+> **[docs/STUDIENARBEIT.md](docs/STUDIENARBEIT.md)**  
+> (Vollständige Markdown-Konvertierung der Studienarbeit mit Verlinkungen zu Quellcode und Modell-Dokumentation)
 
 ---
 
@@ -105,6 +109,11 @@ Synthetische CSV-Daten (data/)
 ├── notebooks/
 │   └── dynamic_pricing_prototype.ipynb  # End-to-End Notebook
 │
+├── docs/
+│   ├── MODELL_DOKUMENTATION.md  # Detaillierte Modell-Dokumentation (Formeln, Berechnungen)
+│   └── STUDIENARBEIT.md         # Studienarbeit als Markdown (Kapitelstruktur, Konzepte)
+│
+├── Studienarbeit Dynamisches Preisoptimierungsmodell im eCommerce- Andreas Traut.docx
 ├── dashboard_preview.png         # Vorschau: Preisempfehlungs-Dashboard
 ├── requirements.txt
 └── README.md
