@@ -22,7 +22,10 @@
             "sourceColumn": "produkt_id",
             "summarizeBy": "none",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "Automatic" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
             ]
           },
           {
@@ -32,7 +35,10 @@
             "sourceColumn": "name",
             "summarizeBy": "none",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "Automatic" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
             ]
           },
           {
@@ -42,7 +48,10 @@
             "sourceColumn": "kategorie",
             "summarizeBy": "none",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "Automatic" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
             ]
           },
           {
@@ -53,8 +62,14 @@
             "summarizeBy": "sum",
             "formatString": "#,0.00\" €\"",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "Automatic" },
-              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"de-DE\"}"
+              }
             ]
           },
           {
@@ -65,8 +80,14 @@
             "summarizeBy": "sum",
             "formatString": "#,0.00\" €\"",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "Automatic" },
-              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"de-DE\"}"
+              }
             ]
           },
           {
@@ -77,8 +98,14 @@
             "summarizeBy": "sum",
             "formatString": "#,0.00\" €\"",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "Automatic" },
-              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"de-DE\"}"
+              }
             ]
           }
         ],
@@ -114,7 +141,10 @@
           }
         ],
         "annotations": [
-          { "name": "PBI_ResultType", "value": "Table" }
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
         ]
       },
       {
@@ -128,7 +158,10 @@
             "sourceColumn": "produkt_id",
             "summarizeBy": "none",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "Automatic" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
             ]
           },
           {
@@ -139,7 +172,10 @@
             "summarizeBy": "average",
             "formatString": "0.000",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "Automatic" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
             ]
           },
           {
@@ -150,7 +186,10 @@
             "summarizeBy": "average",
             "formatString": "0.000",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "Automatic" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
             ]
           },
           {
@@ -161,8 +200,14 @@
             "summarizeBy": "average",
             "formatString": "#,0.00\" €\"",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "Automatic" },
-              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"de-DE\"}"
+              }
             ]
           },
           {
@@ -173,8 +218,14 @@
             "summarizeBy": "average",
             "formatString": "#,0.00\" €\"",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "Automatic" },
-              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"de-DE\"}"
+              }
             ]
           },
           {
@@ -185,8 +236,14 @@
             "summarizeBy": "average",
             "formatString": "#,0.00\" €\"",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "Automatic" },
-              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"de-DE\"}"
+              }
             ]
           },
           {
@@ -197,7 +254,10 @@
             "summarizeBy": "average",
             "formatString": "+0.0%;-0.0%;0.0%",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "Automatic" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
             ]
           },
           {
@@ -208,7 +268,10 @@
             "summarizeBy": "average",
             "formatString": "+0.0%;-0.0%;0.0%",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "Automatic" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
             ]
           },
           {
@@ -219,7 +282,10 @@
             "summarizeBy": "average",
             "formatString": "+0.0%;-0.0%;0.0%",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "Automatic" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
             ]
           }
         ],
@@ -231,7 +297,10 @@
             "formatString": "#,0.00 \"€\"",
             "displayFolder": "Preise",
             "annotations": [
-              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"de-DE\"}"
+              }
             ]
           },
           {
@@ -241,7 +310,10 @@
             "formatString": "#,0.00 \"€\"",
             "displayFolder": "Preise",
             "annotations": [
-              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"de-DE\"}"
+              }
             ]
           },
           {
@@ -251,7 +323,10 @@
             "formatString": "#,0.00 \"€\"",
             "displayFolder": "Preise",
             "annotations": [
-              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"de-DE\"}"
+              }
             ]
           },
           {
@@ -261,7 +336,10 @@
             "formatString": "+#,0.00 \"€\";-#,0.00 \"€\";0,00 \"€\"",
             "displayFolder": "Preise",
             "annotations": [
-              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"de-DE\"}"
+              }
             ]
           },
           {
@@ -313,7 +391,10 @@
             "formatString": "#,0 \"€\"",
             "displayFolder": "Umsatz",
             "annotations": [
-              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"de-DE\"}"
+              }
             ]
           },
           {
@@ -323,7 +404,10 @@
             "formatString": "#,0.00 \"€\"",
             "displayFolder": "Umsatz",
             "annotations": [
-              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"de-DE\"}"
+              }
             ]
           },
           {
@@ -338,6 +422,34 @@
               "    \"Elastisch (|ε| > 1)\")))"
             ],
             "displayFolder": "Modell"
+          },
+          {
+            "name": "ΔUmsatz positiv Ø",
+            "lineageTag": "m-delta-umsatz-pos",
+            "expression": "IF([ΔUmsatz % Ø] >= 0, [ΔUmsatz % Ø], BLANK())",
+            "formatString": "+0.0%;-0.0%;0.0%",
+            "displayFolder": "Erwartete Änderungen"
+          },
+          {
+            "name": "ΔUmsatz negativ Ø",
+            "lineageTag": "m-delta-umsatz-neg",
+            "expression": "IF([ΔUmsatz % Ø] < 0, [ΔUmsatz % Ø], BLANK())",
+            "formatString": "+0.0%;-0.0%;0.0%",
+            "displayFolder": "Erwartete Änderungen"
+          },
+          {
+            "name": "ΔMarge positiv Ø",
+            "lineageTag": "m-delta-marge-pos",
+            "expression": "IF([ΔMarge % Ø] >= 0, [ΔMarge % Ø], BLANK())",
+            "formatString": "+0.0%;-0.0%;0.0%",
+            "displayFolder": "Erwartete Änderungen"
+          },
+          {
+            "name": "ΔMarge negativ Ø",
+            "lineageTag": "m-delta-marge-neg",
+            "expression": "IF([ΔMarge % Ø] < 0, [ΔMarge % Ø], BLANK())",
+            "formatString": "+0.0%;-0.0%;0.0%",
+            "displayFolder": "Erwartete Änderungen"
           }
         ],
         "partitions": [
@@ -375,7 +487,10 @@
           }
         ],
         "annotations": [
-          { "name": "PBI_ResultType", "value": "Table" }
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
         ]
       },
       {
@@ -389,7 +504,10 @@
             "sourceColumn": "verkauf_id",
             "summarizeBy": "none",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "User" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
             ]
           },
           {
@@ -399,7 +517,10 @@
             "sourceColumn": "produkt_id",
             "summarizeBy": "none",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "Automatic" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
             ]
           },
           {
@@ -410,8 +531,14 @@
             "summarizeBy": "none",
             "formatString": "dd.MM.yyyy",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "Automatic" },
-              { "name": "UnderlyingDateTimeDataType", "value": "Date" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
             ]
           },
           {
@@ -421,7 +548,10 @@
             "sourceColumn": "menge",
             "summarizeBy": "sum",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "Automatic" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
             ]
           },
           {
@@ -432,8 +562,14 @@
             "summarizeBy": "average",
             "formatString": "#,0.00\" €\"",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "Automatic" },
-              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"de-DE\"}"
+              }
             ]
           },
           {
@@ -444,8 +580,14 @@
             "summarizeBy": "sum",
             "formatString": "#,0.00\" €\"",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "Automatic" },
-              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"de-DE\"}"
+              }
             ]
           }
         ],
@@ -478,7 +620,10 @@
           }
         ],
         "annotations": [
-          { "name": "PBI_ResultType", "value": "Table" }
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
         ]
       },
       {
@@ -492,7 +637,10 @@
             "sourceColumn": "produkt_id",
             "summarizeBy": "none",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "Automatic" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
             ]
           },
           {
@@ -503,8 +651,14 @@
             "summarizeBy": "none",
             "formatString": "dd.MM.yyyy",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "Automatic" },
-              { "name": "UnderlyingDateTimeDataType", "value": "Date" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
             ]
           },
           {
@@ -515,8 +669,14 @@
             "summarizeBy": "average",
             "formatString": "#,0.00\" €\"",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "Automatic" },
-              { "name": "PBI_FormatHint", "value": "{\"currencyCulture\":\"de-DE\"}" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"de-DE\"}"
+              }
             ]
           }
         ],
@@ -546,7 +706,10 @@
           }
         ],
         "annotations": [
-          { "name": "PBI_ResultType", "value": "Table" }
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
         ]
       },
       {
@@ -563,8 +726,14 @@
             "isKey": true,
             "formatString": "dd.MM.yyyy",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "Automatic" },
-              { "name": "UnderlyingDateTimeDataType", "value": "Date" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
             ]
           },
           {
@@ -574,7 +743,10 @@
             "sourceColumn": "Jahr",
             "summarizeBy": "none",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "User" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
             ]
           },
           {
@@ -584,7 +756,10 @@
             "sourceColumn": "Quartal",
             "summarizeBy": "none",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "Automatic" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
             ]
           },
           {
@@ -594,7 +769,10 @@
             "sourceColumn": "Monat Nr",
             "summarizeBy": "none",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "User" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
             ]
           },
           {
@@ -605,7 +783,10 @@
             "summarizeBy": "none",
             "sortByColumn": "Monat Nr",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "Automatic" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
             ]
           },
           {
@@ -615,7 +796,10 @@
             "sourceColumn": "KW",
             "summarizeBy": "none",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "User" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
             ]
           },
           {
@@ -625,7 +809,10 @@
             "sourceColumn": "Wochentag Nr",
             "summarizeBy": "none",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "User" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
             ]
           },
           {
@@ -636,7 +823,10 @@
             "summarizeBy": "none",
             "sortByColumn": "Wochentag Nr",
             "annotations": [
-              { "name": "SummarizationSetBy", "value": "Automatic" }
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
             ]
           }
         ],
@@ -662,7 +852,10 @@
           }
         ],
         "annotations": [
-          { "name": "PBI_ResultType", "value": "Table" }
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
         ]
       }
     ],
@@ -709,7 +902,10 @@
         ],
         "description": "Relativer Pfad zum data/-Verzeichnis des Projekts",
         "annotations": [
-          { "name": "PBI_ResultType", "value": "Text" }
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          }
         ]
       }
     ],
