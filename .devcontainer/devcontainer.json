@@ -1,0 +1,42 @@
+{
+  "name": "Dynamisches Preisoptimierungsmodell",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.11-bookworm",
+
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "README.md",
+        "notebooks/dynamic_pricing_prototype.ipynb"
+      ]
+    },
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": true
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  },
+
+  // Installation aller Dependencies
+  "updateContentCommand": "pip3 install --user -r requirements.txt && echo '✅ All dependencies installed'",
+
+  // Port Configuration für Jupyter Notebook
+  "portsAttributes": {
+    "8888": {
+      "label": "Jupyter Notebook - Preisoptimierung",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "forwardPorts": [8888],
+
+  // Features für erweiterte Funktionalität
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  }
+}

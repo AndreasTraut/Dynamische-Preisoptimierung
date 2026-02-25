@@ -299,6 +299,16 @@ Im Produktivsystem sind folgende Erweiterungen vorgesehen:
 
 ---
 
+## 👨‍💻 Über den Autor
+
+**Andreas Traut** ist ein Senior BI-Entwickler, der sich auf Data Warehousing, SQL Server und Microsoft BI Stack spezialisiert hat. Dieses Projekt ist ein privates Beispiel dafür, wie KI-gesteuerte Entwicklung und Machine Learning reale Herausforderungen im eCommerce-Pricing lösen können.
+
+🔗 [Vernetze dich auf LinkedIn](https://www.linkedin.com/in/andreas-traut-89340/)
+
+🔗 [Schaue dir weitere, interessante BI Umsetzungen an](https://github.com/AndreasTraut)
+
+---
+
 ## Literatur
 
 - IBCS Association, *International Business Communication Standards (IBCS)*, Version 1.2
