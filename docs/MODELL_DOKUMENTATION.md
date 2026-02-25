@@ -3,6 +3,9 @@
 > **Referenz:** *Studienarbeit „Dynamisches Preisoptimierungsmodell im eCommerce" – Andreas Traut*  
 > Diese Dokumentation folgt exakt der Kapitelstruktur der Studienarbeit und verlinkt  
 > jeden Abschnitt mit dem zugehörigen Quellcode.
+>
+> 📄 **Studienarbeit als Markdown:** [`docs/STUDIENARBEIT.md`](STUDIENARBEIT.md)  
+> 📄 **Original-Dokument (Word):** [`Studienarbeit Dynamisches Preisoptimierungsmodell im eCommerce- Andreas Traut.docx`](../Studienarbeit%20Dynamisches%20Preisoptimierungsmodell%20im%20eCommerce-%20Andreas%20Traut.docx)
 
 ---
 
