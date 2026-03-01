@@ -1,0 +1,86 @@
+table Datum
+	lineageTag: d73421dc-fb7f-4623-9e14-52dbe45e771f
+
+	column Date
+		lineageTag: da54ef18-0f2c-4ca8-849e-bc6c0e335ddf
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: 67dcf1d6-b8ae-4365-a882-03e2b804cbe3
+			defaultHierarchy: LocalDateTable_1a245216-a98a-40bf-bc9d-dc0d92791646.Datumshierarchie
+
+		annotation SummarizationSetBy = Automatic
+
+	column Jahr
+		lineageTag: d2da4d8e-8b7d-447a-b698-8c75af2579c4
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Jahr]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quartal
+		lineageTag: 1e451928-63ba-44ba-a4d4-24a6b01e7262
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quartal]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Monat Nr'
+		lineageTag: b0431e00-20b5-42bb-bc1e-67750e0e6014
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Monat Nr]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Monatsname
+		lineageTag: a39ebc8b-122a-4ee2-809c-d52a53f4047b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Monatsname]
+
+		annotation SummarizationSetBy = Automatic
+
+	column KW
+		lineageTag: 94878d82-3ee6-4d68-a4bf-da751040e5be
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [KW]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Wochentag Nr'
+		lineageTag: 7a569175-b81c-4857-b270-8d8b2b8f9337
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Wochentag Nr]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Wochentag
+		lineageTag: f8267245-66f5-46cf-84ed-6388b58a0903
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Wochentag]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Datum = calculated
+		mode: import
+		source =
+				ADDCOLUMNS(
+				    CALENDAR(DATE(2023,1,1), DATE(2023,12,31)),
+				    "Jahr",        YEAR([Date]),
+				    "Quartal",     "Q" & FORMAT(ROUNDUP(MONTH([Date])/3,0),"0"),
+				    "Monat Nr",    MONTH([Date]),
+				    "Monatsname",  FORMAT([Date], "MMMM", "de-DE"),
+				    "KW",          WEEKNUM([Date], 2),
+				    "Wochentag Nr",WEEKDAY([Date], 2),
+				    "Wochentag",   FORMAT([Date], "DDDD", "de-DE")
+				)
+

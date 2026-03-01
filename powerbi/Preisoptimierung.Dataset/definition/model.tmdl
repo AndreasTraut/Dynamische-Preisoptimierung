@@ -1,0 +1,25 @@
+model Model
+	culture: de-DE
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: de-DE
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_ProTooling = ["DevMode"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Produkte","Verkaeufe","Wettbewerbspreise","ModelOutput","DataPath"]
+
+ref table Produkte
+ref table Verkaeufe
+ref table Wettbewerbspreise
+ref table ModelOutput
+ref table Datum
+ref table DateTableTemplate_aaa6e4d8-966b-4d17-ae6d-b893a4edf74a
+ref table LocalDateTable_8a0d6ba5-925a-44ce-b508-6dfeb93a406a
+ref table LocalDateTable_1a245216-a98a-40bf-bc9d-dc0d92791646
+
+ref cultureInfo de-DE
+

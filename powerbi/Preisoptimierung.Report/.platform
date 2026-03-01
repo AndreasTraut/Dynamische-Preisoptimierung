@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Preisoptimierung"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "9c692ed7-254a-4af9-a5b8-37b9d8817d23"
+  }
+}
