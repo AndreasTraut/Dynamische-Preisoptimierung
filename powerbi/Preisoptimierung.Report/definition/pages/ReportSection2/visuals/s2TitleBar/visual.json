@@ -1,0 +1,15 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "s2TitleBar",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 63.827493261455523,
+    "width": 1280,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "shape"
+  }
+}

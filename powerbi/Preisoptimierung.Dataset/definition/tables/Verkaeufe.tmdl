@@ -1,0 +1,91 @@
+table Verkaeufe
+	lineageTag: 7c8c847e-6e61-4eaf-9b60-074f12d60a74
+
+	measure 'Gesamtumsatz AC' = SUM(Verkaeufe[umsatz])
+		formatString: #,0 "€"
+		displayFolder: Umsatz
+		lineageTag: 77610842-3118-4f9a-ac28-68ed32da9e36
+
+	measure 'Ø Tagesumsatz' = AVERAGEX(VALUES(Verkaeufe[datum]), SUM(Verkaeufe[umsatz]))
+		formatString: #,0.00 "€"
+		displayFolder: Umsatz
+		lineageTag: ea74442f-330d-46bb-9187-694708e0d613
+
+	column verkauf_id
+		dataType: int64
+		lineageTag: c91067ff-ac53-47e1-9581-6aeca670d76e
+		summarizeBy: sum
+		sourceColumn: verkauf_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column produkt_id
+		dataType: string
+		lineageTag: 9db80058-01c7-488d-ad7a-865f54c5b192
+		summarizeBy: none
+		sourceColumn: produkt_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column datum
+		dataType: dateTime
+		formatString: dd.MM.yyyy
+		lineageTag: abbf4393-d4d9-4c41-97ef-6bafd3109ff0
+		summarizeBy: none
+		sourceColumn: datum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column menge
+		dataType: int64
+		lineageTag: 735ffada-6748-4bba-901f-f3122f859cd7
+		summarizeBy: sum
+		sourceColumn: menge
+
+		annotation SummarizationSetBy = Automatic
+
+	column preis
+		dataType: double
+		formatString: #,0.00" €"
+		lineageTag: c88999e5-f564-4ee3-bf89-42a1999ca008
+		summarizeBy: sum
+		sourceColumn: preis
+
+		annotation SummarizationSetBy = Automatic
+
+	column umsatz
+		dataType: double
+		formatString: #,0.00" €"
+		lineageTag: 24abb154-58e6-4633-9d70-e5fb9a2a992d
+		summarizeBy: sum
+		sourceColumn: umsatz
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Verkaeufe = m
+		mode: import
+		source =
+				let
+				    DataPath = try #"DataPath" otherwise "../data",
+				    Quelle = Csv.Document(
+				        File.Contents(DataPath & "/verkaeufe.csv"),
+				        [Delimiter=",", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.None]
+				    ),
+				    HeadersHochgestuft = Table.PromoteHeaders(Quelle, [PromoteAllScalars=true]),
+				    TypGeändert = Table.TransformColumnTypes(HeadersHochgestuft, {
+				        {"verkauf_id", Int64.Type},
+				        {"produkt_id", type text},
+				        {"datum",      type date},
+				        {"menge",      Int64.Type},
+				        {"preis",      type number},
+				        {"umsatz",     type number}
+				    })
+				in
+				    TypGeändert
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

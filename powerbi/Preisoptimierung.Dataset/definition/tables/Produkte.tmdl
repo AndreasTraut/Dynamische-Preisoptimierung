@@ -1,0 +1,73 @@
+table Produkte
+	lineageTag: e3f9c5e5-eee8-4373-8ec8-c01861a06465
+
+	column produkt_id
+		dataType: string
+		lineageTag: de0c4a5c-826a-4b92-a83b-a3b35c54bc76
+		sourceColumn: produkt_id
+
+	column name
+		dataType: string
+		lineageTag: 8363036b-7aad-489c-9b67-d222b01d6cea
+		sourceColumn: name
+
+	column kategorie
+		dataType: string
+		lineageTag: def73009-8714-4765-b9f9-a2c78ed05acf
+		sourceColumn: kategorie
+
+	column einstandspreis
+		dataType: double
+		formatString: #,0.00" €"
+		lineageTag: 11b8b022-0eda-44d0-8dda-346eb96e120f
+		summarizeBy: sum
+		sourceColumn: einstandspreis
+
+		annotation SummarizationSetBy = Automatic
+
+	column mindestpreis
+		dataType: double
+		formatString: #,0.00" €"
+		lineageTag: 3bccbffe-5c59-458d-970b-f51f09c1493f
+		summarizeBy: sum
+		sourceColumn: mindestpreis
+
+		annotation SummarizationSetBy = Automatic
+
+	column listenpreis
+		dataType: double
+		formatString: #,0.00" €"
+		lineageTag: 6dd608c6-b13c-4093-83f5-ae0fd537babb
+		summarizeBy: sum
+		sourceColumn: listenpreis
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Produkte = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(
+				        {
+				            {"P001", "Produkt A", "Elektronik", 30.0, 35.0, 59.99},
+				            {"P002", "Produkt B", "Elektronik", 50.0, 60.0, 99.99},
+				            {"P003", "Produkt C", "Haushalt",   10.0, 14.0, 24.99},
+				            {"P004", "Produkt D", "Haushalt",   15.0, 19.0, 34.99},
+				            {"P005", "Produkt E", "Sport",      20.0, 25.0, 44.99}
+				        },
+				        type table [
+				            produkt_id     = Text.Type,
+				            name           = Text.Type,
+				            kategorie      = Text.Type,
+				            einstandspreis = Number.Type,
+				            mindestpreis   = Number.Type,
+				            listenpreis    = Number.Type
+				        ]
+				    )
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,191 @@
+table ModelOutput
+	lineageTag: 4933c586-8592-4f4f-ae8b-6afc38c53f6e
+
+	measure 'Aktueller Preis Ø' = AVERAGE(ModelOutput[aktueller_preis])
+		formatString: #,0.00 "€"
+		displayFolder: Preise
+		lineageTag: e261470b-3e6a-4ecb-a06e-d427e3ed4489
+
+	measure 'Empfohlener Preis Ø' = AVERAGE(ModelOutput[empfohlener_preis])
+		formatString: #,0.00 "€"
+		displayFolder: Preise
+		lineageTag: 093d9728-7fb4-4070-ba04-b72c893c6d4e
+
+	measure 'Wettbewerbspreis Ø' = AVERAGE(ModelOutput[wettbewerbspreis])
+		formatString: #,0.00 "€"
+		displayFolder: Preise
+		lineageTag: 4fe92434-0ece-4a32-a004-ebb6504e5f7c
+
+	measure 'Preisänderung Absolut' = [Empfohlener Preis Ø] - [Aktueller Preis Ø]
+		formatString: +#,0.00 "€";-#,0.00 "€";0,00 "€"
+		displayFolder: Preise
+		lineageTag: b4edd876-f11a-4158-8fed-bd29b601e0e6
+
+	measure 'Preisänderung %' = DIVIDE([Empfohlener Preis Ø] - [Aktueller Preis Ø], [Aktueller Preis Ø])
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: Preise
+		lineageTag: bb101d45-0090-484a-8502-556e667c4146
+
+	measure 'Preiselastizität Ø' = AVERAGE(ModelOutput[preiselastizitaet])
+		formatString: 0.000
+		displayFolder: Modell
+		lineageTag: 4bc8514c-3f98-4e52-9756-70ca78b52d0a
+
+	measure 'Modell R² Ø' = AVERAGE(ModelOutput[modell_r2])
+		formatString: 0.000
+		displayFolder: Modell
+		lineageTag: 5fc2a131-8b07-4263-9b16-d81b9e31d18d
+
+	measure 'ΔMenge % Ø' = DIVIDE(AVERAGE(ModelOutput[erwartete_mengenänderung]), 100)
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: Erwartete Änderungen
+		lineageTag: 404a73a2-77bd-47f3-9be2-cca85b5f25fa
+
+	measure 'ΔUmsatz % Ø' = DIVIDE(AVERAGE(ModelOutput[erwartete_umsatzaenderung]), 100)
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: Erwartete Änderungen
+		lineageTag: f3c0e0ce-7246-4762-9867-16b4c8ba9884
+
+	measure 'ΔMarge % Ø' = DIVIDE(AVERAGE(ModelOutput[erwartete_margenänderung]), 100)
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: Erwartete Änderungen
+		lineageTag: 9386c341-69c7-4981-b90e-2eb8e7fd1534
+
+	measure Preis-Elastizitäts-Klasse =
+			VAR eps = [Preiselastizität Ø]
+			RETURN
+			    IF(eps >= 0, "Positiv (Giffen)",
+			    IF(eps >= -1, "Unelastisch (|ε| < 1)",
+			    IF(eps >= -1.05, "Nahe Einheitselastizität",
+			    "Elastisch (|ε| > 1)")))
+		displayFolder: Modell
+		lineageTag: 83d8918a-72cd-4455-a966-af44d580e367
+
+	measure 'ΔUmsatz positiv Ø' = IF([ΔUmsatz % Ø] >= 0, [ΔUmsatz % Ø], BLANK())
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: Erwartete Änderungen
+		lineageTag: 7e51a45d-1711-4893-89e5-cd841ea1f944
+
+	measure 'ΔUmsatz negativ Ø' = IF([ΔUmsatz % Ø] < 0, [ΔUmsatz % Ø], BLANK())
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: Erwartete Änderungen
+		lineageTag: c68f7f1a-fda5-4e96-9470-473640892d08
+
+	measure 'ΔMarge positiv Ø' = IF([ΔMarge % Ø] >= 0, [ΔMarge % Ø], BLANK())
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: Erwartete Änderungen
+		lineageTag: 9df63c20-3ef3-4d96-a547-69883859f365
+
+	measure 'ΔMarge negativ Ø' = IF([ΔMarge % Ø] < 0, [ΔMarge % Ø], BLANK())
+		formatString: +0.0%;-0.0%;0.0%
+		displayFolder: Erwartete Änderungen
+		lineageTag: 455d3d10-1991-4736-b942-5d6b95189f25
+
+	column produkt_id
+		dataType: string
+		lineageTag: 66aa80d1-4f1b-4213-8f5a-76995f335a57
+		sourceColumn: produkt_id
+
+	column preiselastizitaet
+		dataType: double
+		formatString: 0.000
+		lineageTag: 71e1455e-29b4-4546-b409-1666cf731fb5
+		summarizeBy: sum
+		sourceColumn: preiselastizitaet
+
+		annotation SummarizationSetBy = Automatic
+
+	column modell_r2
+		dataType: double
+		formatString: 0.000
+		lineageTag: 385bbbab-8d94-43b2-a0cf-b767b6aada5c
+		summarizeBy: sum
+		sourceColumn: modell_r2
+
+		annotation SummarizationSetBy = Automatic
+
+	column aktueller_preis
+		dataType: double
+		formatString: #,0.00" €"
+		lineageTag: 59225d7d-4a8b-4df3-bdfb-ec12a3015595
+		summarizeBy: sum
+		sourceColumn: aktueller_preis
+
+		annotation SummarizationSetBy = Automatic
+
+	column wettbewerbspreis
+		dataType: double
+		formatString: #,0.00" €"
+		lineageTag: efdc34b4-d6ba-48ba-9092-806fee82494f
+		summarizeBy: sum
+		sourceColumn: wettbewerbspreis
+
+		annotation SummarizationSetBy = Automatic
+
+	column empfohlener_preis
+		dataType: double
+		formatString: #,0.00" €"
+		lineageTag: c9a56d3f-1931-4f4f-a68f-e4a16ac91a7e
+		summarizeBy: sum
+		sourceColumn: empfohlener_preis
+
+		annotation SummarizationSetBy = Automatic
+
+	column erwartete_mengenänderung
+		dataType: double
+		formatString: +0.0%;-0.0%;0.0%
+		lineageTag: 146c262c-8161-490d-8ab9-63e970de6843
+		summarizeBy: sum
+		sourceColumn: erwartete_mengenänderung
+
+		annotation SummarizationSetBy = Automatic
+
+	column erwartete_umsatzaenderung
+		dataType: double
+		formatString: +0.0%;-0.0%;0.0%
+		lineageTag: cafd0d77-9b66-4afe-af90-dc33e22af0da
+		summarizeBy: sum
+		sourceColumn: erwartete_umsatzaenderung
+
+		annotation SummarizationSetBy = Automatic
+
+	column erwartete_margenänderung
+		dataType: double
+		formatString: +0.0%;-0.0%;0.0%
+		lineageTag: 81c9715d-226e-4c00-8e87-2f1b06ee0aaf
+		summarizeBy: sum
+		sourceColumn: erwartete_margenänderung
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ModelOutput = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(
+				        {
+				            {"P001", -1.183, 0.609, 63.57, 62.67,  76.28, -23.6, -8.4,   5.3},
+				            {"P002", -1.047, 0.417, 102.71, 98.27, 104.97,  -2.3, -0.2,  1.9},
+				            {"P003", -1.317, 0.570,  24.63, 22.99,  29.56, -26.4,-11.6, -1.6},
+				            {"P004", -0.525, 0.499,  30.39, 38.72,  33.95,  -6.2,  4.9, 15.6},
+				            {"P005", -0.656, 0.442,  45.37, 49.96,  48.33,  -4.3,  2.0,  6.9}
+				        },
+				        type table [
+				            produkt_id                = Text.Type,
+				            preiselastizitaet         = Number.Type,
+				            modell_r2                 = Number.Type,
+				            aktueller_preis           = Number.Type,
+				            wettbewerbspreis          = Number.Type,
+				            empfohlener_preis         = Number.Type,
+				            erwartete_mengenänderung  = Number.Type,
+				            erwartete_umsatzaenderung = Number.Type,
+				            erwartete_margenänderung  = Number.Type
+				        ]
+				    )
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

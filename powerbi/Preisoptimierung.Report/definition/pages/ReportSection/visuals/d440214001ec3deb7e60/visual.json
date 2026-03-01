@@ -1,0 +1,215 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "d440214001ec3deb7e60",
+  "position": {
+    "x": 432.12938005390833,
+    "y": 497.68194070080858,
+    "z": 20000,
+    "height": 197.52021563342316,
+    "width": 830.61994609164412,
+    "tabOrder": 20000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Produkte"
+                    }
+                  },
+                  "Property": "name"
+                }
+              },
+              "queryRef": "Produkte.name",
+              "nativeQueryRef": "name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Produkte"
+                    }
+                  },
+                  "Property": "kategorie"
+                }
+              },
+              "queryRef": "Produkte.kategorie",
+              "nativeQueryRef": "kategorie"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ModelOutput"
+                        }
+                      },
+                      "Property": "modell_r2"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(ModelOutput.modell_r2)",
+              "nativeQueryRef": "modell_r2"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ModelOutput"
+                    }
+                  },
+                  "Property": "Aktueller Preis Ø"
+                }
+              },
+              "queryRef": "ModelOutput.Aktueller Preis Ø",
+              "nativeQueryRef": "Aktueller Preis Ø"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ModelOutput"
+                    }
+                  },
+                  "Property": "Wettbewerbspreis Ø"
+                }
+              },
+              "queryRef": "ModelOutput.Wettbewerbspreis Ø",
+              "nativeQueryRef": "Wettb.preis Ø",
+              "displayName": "Wettb.preis Ø"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ModelOutput"
+                    }
+                  },
+                  "Property": "ΔUmsatz % Ø"
+                }
+              },
+              "queryRef": "ModelOutput.ΔUmsatz % Ø",
+              "nativeQueryRef": "ΔUmsatz % Ø"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ModelOutput"
+                    }
+                  },
+                  "Property": "ΔMarge % Ø"
+                }
+              },
+              "queryRef": "ModelOutput.ΔMarge % Ø",
+              "nativeQueryRef": "ΔMarge % Ø"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ModelOutput"
+                    }
+                  },
+                  "Property": "Preiselastizität Ø"
+                }
+              },
+              "queryRef": "ModelOutput.Preiselastizität Ø",
+              "nativeQueryRef": "Preiselastizität Ø"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ModelOutput"
+                    }
+                  },
+                  "Property": "Preis-Elastizitäts-Klasse"
+                }
+              },
+              "queryRef": "ModelOutput.Preis-Elastizitäts-Klasse",
+              "nativeQueryRef": "Preis-Elastizitäts-Klasse"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "65.17041353144653D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ModelOutput.ΔUmsatz % Ø"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "66.86698640479281D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ModelOutput.ΔMarge % Ø"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "95.56353303215957D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "ModelOutput.Preiselastizität Ø"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,4606 @@
+cultureInfo de-DE
+
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "produkte": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Produkte"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "produkte": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "produkte.produkt_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Produkte",
+			          "ConceptualProperty": "produkt_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "produkt id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "produkt_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "produkt identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "produkt identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "produkt identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "produkt credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "produkte.name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Produkte",
+			          "ConceptualProperty": "name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "produkte.kategorie": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Produkte",
+			          "ConceptualProperty": "kategorie"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "kategorie": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "produkte.einstandspreis": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Produkte",
+			          "ConceptualProperty": "einstandspreis"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "einstandspreis": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "produkte.mindestpreis": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Produkte",
+			          "ConceptualProperty": "mindestpreis"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mindestpreis": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "produkte.listenpreis": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Produkte",
+			          "ConceptualProperty": "listenpreis"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "listenpreis": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "verkaeufe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Verkaeufe"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "verkaeufe": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "verkaeufe.verkauf_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Verkaeufe",
+			          "ConceptualProperty": "verkauf_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "verkauf id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "verkauf_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "verkauf identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "verkauf identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "verkauf identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "verkauf credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "verkaeufe.produkt_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Verkaeufe",
+			          "ConceptualProperty": "produkt_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "produkt id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "produkt_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "produkt identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "produkt identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "produkt identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "produkt credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "verkaeufe.datum": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Verkaeufe",
+			          "ConceptualProperty": "datum"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "datum": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "verkaeufe.menge": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Verkaeufe",
+			          "ConceptualProperty": "menge"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "menge": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "verkaeufe.preis": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Verkaeufe",
+			          "ConceptualProperty": "preis"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "preis": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "verkaeufe.umsatz": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Verkaeufe",
+			          "ConceptualProperty": "umsatz"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "umsatz": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "verkaeufe.gesamtumsatz_AC": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Verkaeufe",
+			          "ConceptualProperty": "Gesamtumsatz AC"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "gesamtumsatz AC": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "verkaeufe.ø_tagesumsatz": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Verkaeufe",
+			          "ConceptualProperty": "Ø Tagesumsatz"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ø tagesumsatz": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "wettbewerbspreise": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Wettbewerbspreise"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "wettbewerbspreise": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "wettbewerbspreise.produkt_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Wettbewerbspreise",
+			          "ConceptualProperty": "produkt_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "produkt id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "produkt_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "produkt identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "produkt identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "produkt identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "produkt credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "wettbewerbspreise.datum": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Wettbewerbspreise",
+			          "ConceptualProperty": "datum"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "datum": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "wettbewerbspreise.datum.datumshierarchie": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Wettbewerbspreise",
+			          "VariationSource": "datum",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Datumshierarchie"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "datumshierarchie": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "wettbewerbspreise.datum.jahr": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Wettbewerbspreise",
+			          "VariationSource": "datum",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Datumshierarchie",
+			          "HierarchyLevel": "Jahr"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "jahr": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "datum jahr": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "wettbewerbspreise.datum.quartal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Wettbewerbspreise",
+			          "VariationSource": "datum",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Datumshierarchie",
+			          "HierarchyLevel": "Quartal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quartal": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "datum quartal": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "wettbewerbspreise.datum.monat": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Wettbewerbspreise",
+			          "VariationSource": "datum",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Datumshierarchie",
+			          "HierarchyLevel": "Monat"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "monat": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "datum monat": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "wettbewerbspreise.datum.tag": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Wettbewerbspreise",
+			          "VariationSource": "datum",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Datumshierarchie",
+			          "HierarchyLevel": "Tag"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tag": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "datum tag": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "datum identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "datum device": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "device": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "datum label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "datum ticket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "datum tab": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "datum docket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "datum code": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "datum chip": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "datum mark": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "wettbewerbspreise.wettbewerbspreis": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Wettbewerbspreise",
+			          "ConceptualProperty": "wettbewerbspreis"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "wettbewerbspreis": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "model_output": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ModelOutput"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "model output": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ModelOutput": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "output": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "model production": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "model productivity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "production": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "productivity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "model yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "model harvest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "model crop": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "harvest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "crop": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "model_output.produkt_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ModelOutput",
+			          "ConceptualProperty": "produkt_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "produkt id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "produkt_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "produkt identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "produkt identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "produkt identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "produkt credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "model_output.preiselastizitaet": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ModelOutput",
+			          "ConceptualProperty": "preiselastizitaet"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "preiselastizitaet": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "model_output.modell_r_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ModelOutput",
+			          "ConceptualProperty": "modell_r2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "modell r 2": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "modell_r2": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "r 2": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "model_output.aktueller_preis": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ModelOutput",
+			          "ConceptualProperty": "aktueller_preis"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "aktueller preis": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aktueller_preis": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "model_output.wettbewerbspreis": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ModelOutput",
+			          "ConceptualProperty": "wettbewerbspreis"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "wettbewerbspreis": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "model_output.empfohlener_preis": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ModelOutput",
+			          "ConceptualProperty": "empfohlener_preis"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "empfohlener preis": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "empfohlener_preis": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "model_output.erwartete_mengenänderung": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ModelOutput",
+			          "ConceptualProperty": "erwartete_mengenänderung"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "erwartete mengenänderung": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "erwartete_mengenänderung": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "model_output.erwartete_umsatzaenderung": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ModelOutput",
+			          "ConceptualProperty": "erwartete_umsatzaenderung"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "erwartete umsatzaenderung": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "erwartete_umsatzaenderung": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "model_output.erwartete_margenänderung": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ModelOutput",
+			          "ConceptualProperty": "erwartete_margenänderung"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "erwartete margenänderung": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "erwartete_margenänderung": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "model_output.aktueller_preis_ø": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ModelOutput",
+			          "ConceptualProperty": "Aktueller Preis Ø"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "aktueller preis ø": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "model_output.empfohlener_preis_ø": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ModelOutput",
+			          "ConceptualProperty": "Empfohlener Preis Ø"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "empfohlener preis ø": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "model_output.wettbewerbspreis_ø": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ModelOutput",
+			          "ConceptualProperty": "Wettbewerbspreis Ø"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "wettbewerbspreis ø": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Wettb.preis Ø": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "model_output.preisänderung_absolut": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ModelOutput",
+			          "ConceptualProperty": "Preisänderung Absolut"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "preisänderung absolut": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "model_output.preisänderung_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ModelOutput",
+			          "ConceptualProperty": "Preisänderung %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "preisänderung %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "preisänderung percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "preisänderung pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "model_output.preiselastizität_ø": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ModelOutput",
+			          "ConceptualProperty": "Preiselastizität Ø"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "preiselastizität ø": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "model_output.modell_r_ø": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ModelOutput",
+			          "ConceptualProperty": "Modell R² Ø"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "modell r² ø": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "model_output.ΔMenge__ø": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ModelOutput",
+			          "ConceptualProperty": "ΔMenge % Ø"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ΔMenge % ø": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "δmenge percentage ø": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "δmenge pct ø": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "model_output.ΔUmsatz__ø": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ModelOutput",
+			          "ConceptualProperty": "ΔUmsatz % Ø"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ΔUmsatz % ø": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "δumsatz percentage ø": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "δumsatz pct ø": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "model_output.ΔMarge__ø": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ModelOutput",
+			          "ConceptualProperty": "ΔMarge % Ø"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ΔMarge % ø": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "δmarge percentage ø": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "δmarge pct ø": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "model_output.preiselastizitätsklasse": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ModelOutput",
+			          "ConceptualProperty": "Preis-Elastizitäts-Klasse"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "preis-elastizitäts-klasse": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "preis elastizitäts klasse": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "model_output.ΔUmsatz_positiv_ø": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ModelOutput",
+			          "ConceptualProperty": "ΔUmsatz positiv Ø"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ΔUmsatz positiv ø": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "model_output.ΔUmsatz_negativ_ø": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ModelOutput",
+			          "ConceptualProperty": "ΔUmsatz negativ Ø"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ΔUmsatz negativ ø": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "model_output.ΔMarge_positiv_ø": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ModelOutput",
+			          "ConceptualProperty": "ΔMarge positiv Ø"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ΔMarge positiv ø": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "model_output.ΔMarge_negativ_ø": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ModelOutput",
+			          "ConceptualProperty": "ΔMarge negativ Ø"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ΔMarge negativ ø": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "datum": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Datum"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "datum": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "datum.date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Datum",
+			          "ConceptualProperty": "Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "datum.date.datumshierarchie": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Datum",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Datumshierarchie"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "datumshierarchie": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "datum.date.jahr": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Datum",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Datumshierarchie",
+			          "HierarchyLevel": "Jahr"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "jahr": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date jahr": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment jahr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period jahr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "datum.date.quartal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Datum",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Datumshierarchie",
+			          "HierarchyLevel": "Quartal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quartal": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date quartal": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment quartal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period quartal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "datum.date.monat": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Datum",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Datumshierarchie",
+			          "HierarchyLevel": "Monat"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "monat": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date monat": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment monat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period monat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "datum.date.tag": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Datum",
+			          "VariationSource": "Date",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Datumshierarchie",
+			          "HierarchyLevel": "Tag"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tag": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date tag": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "date identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "date device": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "device": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "date label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "date ticket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "date tab": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "date docket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "date code": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "datum.jahr": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Datum",
+			          "ConceptualProperty": "Jahr"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "jahr": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "datum.quartal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Datum",
+			          "ConceptualProperty": "Quartal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quartal": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "datum.monat_nr": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Datum",
+			          "ConceptualProperty": "Monat Nr"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "monat nr": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "datum.monatsname": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Datum",
+			          "ConceptualProperty": "Monatsname"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "monatsname": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "datum.kw": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Datum",
+			          "ConceptualProperty": "KW"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "kw": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "datum.wochentag_nr": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Datum",
+			          "ConceptualProperty": "Wochentag Nr"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "wochentag nr": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "datum.wochentag": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Datum",
+			          "ConceptualProperty": "Wochentag"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "wochentag": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "produkte_is_named_name": {
+			      "Binding": {
+			        "ConceptualEntity": "Produkte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "produkte": {
+			          "Target": {
+			            "Entity": "produkte"
+			          }
+			        },
+			        "produkte.name": {
+			          "Target": {
+			            "Entity": "produkte.name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "produkte"
+			            },
+			            "Name": {
+			              "Role": "produkte.name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "names_are_names_IDs_of_produktes"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "produkte"
+			            },
+			            "Object": {
+			              "Role": "produkte.name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "produktes_have_names"
+			        }
+			      ]
+			    },
+			    "produkte_is_expensive": {
+			      "Binding": {
+			        "ConceptualEntity": "Produkte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "produkte": {
+			          "Target": {
+			            "Entity": "produkte"
+			          }
+			        },
+			        "produkte.einstandspreis": {
+			          "Target": {
+			            "Entity": "produkte.einstandspreis"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "produkte"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "produkte.einstandspreis"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "einstandspreis_indicates_how_expensive_produktes_are"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "produkte"
+			            },
+			            "Object": {
+			              "Role": "produkte.einstandspreis"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "produktes_have_einstandspreises"
+			        }
+			      ]
+			    },
+			    "produkte_is_expensive1": {
+			      "Binding": {
+			        "ConceptualEntity": "Produkte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "produkte": {
+			          "Target": {
+			            "Entity": "produkte"
+			          }
+			        },
+			        "produkte.mindestpreis": {
+			          "Target": {
+			            "Entity": "produkte.mindestpreis"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "produkte"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "produkte.mindestpreis"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mindestpreis_indicates_how_expensive_produktes_are"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "produkte"
+			            },
+			            "Object": {
+			              "Role": "produkte.mindestpreis"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "produktes_have_mindestpreises"
+			        }
+			      ]
+			    },
+			    "produkte_is_expensive2": {
+			      "Binding": {
+			        "ConceptualEntity": "Produkte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "produkte": {
+			          "Target": {
+			            "Entity": "produkte"
+			          }
+			        },
+			        "produkte.listenpreis": {
+			          "Target": {
+			            "Entity": "produkte.listenpreis"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "produkte"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "produkte.listenpreis"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "listenpreis_indicates_how_expensive_produktes_are"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "produkte"
+			            },
+			            "Object": {
+			              "Role": "produkte.listenpreis"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "produktes_have_listenpreises"
+			        }
+			      ]
+			    },
+			    "verkaeufe_is_expensive": {
+			      "Binding": {
+			        "ConceptualEntity": "Verkaeufe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "verkaeufe": {
+			          "Target": {
+			            "Entity": "verkaeufe"
+			          }
+			        },
+			        "verkaeufe.preis": {
+			          "Target": {
+			            "Entity": "verkaeufe.preis"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "verkaeufe"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "verkaeufe.preis"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "preis_indicates_how_expensive_verkaeufes_are"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "verkaeufe"
+			            },
+			            "Object": {
+			              "Role": "verkaeufe.preis"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "verkaeufes_have_preises"
+			        }
+			      ]
+			    },
+			    "verkaeufe_is_expensive1": {
+			      "Binding": {
+			        "ConceptualEntity": "Verkaeufe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "verkaeufe": {
+			          "Target": {
+			            "Entity": "verkaeufe"
+			          }
+			        },
+			        "verkaeufe.umsatz": {
+			          "Target": {
+			            "Entity": "verkaeufe.umsatz"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "verkaeufe"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "verkaeufe.umsatz"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "umsatz_indicates_how_expensive_verkaeufes_are"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "verkaeufe"
+			            },
+			            "Object": {
+			              "Role": "verkaeufe.umsatz"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "verkaeufes_have_umsatzes"
+			        }
+			      ]
+			    },
+			    "wettbewerbspreise_is_expensive": {
+			      "Binding": {
+			        "ConceptualEntity": "Wettbewerbspreise"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "wettbewerbspreise": {
+			          "Target": {
+			            "Entity": "wettbewerbspreise"
+			          }
+			        },
+			        "wettbewerbspreise.wettbewerbspreis": {
+			          "Target": {
+			            "Entity": "wettbewerbspreise.wettbewerbspreis"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "wettbewerbspreise"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "wettbewerbspreise.wettbewerbspreis"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "wettbewerbspreis_indicates_how_expensive_wettbewerbspreises_are"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "wettbewerbspreise"
+			            },
+			            "Object": {
+			              "Role": "wettbewerbspreise.wettbewerbspreis"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "wettbewerbspreises_have_wettbewerbspreises"
+			        }
+			      ]
+			    },
+			    "model_output_is_expensive": {
+			      "Binding": {
+			        "ConceptualEntity": "ModelOutput"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "model_output": {
+			          "Target": {
+			            "Entity": "model_output"
+			          }
+			        },
+			        "model_output.aktueller_preis": {
+			          "Target": {
+			            "Entity": "model_output.aktueller_preis"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "model_output"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "model_output.aktueller_preis"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aktueller_preis_indicates_how_expensive_model_outputs_are"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "model_output"
+			            },
+			            "Object": {
+			              "Role": "model_output.aktueller_preis"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "model_outputs_have_aktueller_preises"
+			        }
+			      ]
+			    },
+			    "model_output_is_expensive1": {
+			      "Binding": {
+			        "ConceptualEntity": "ModelOutput"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "model_output": {
+			          "Target": {
+			            "Entity": "model_output"
+			          }
+			        },
+			        "model_output.wettbewerbspreis": {
+			          "Target": {
+			            "Entity": "model_output.wettbewerbspreis"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "model_output"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "model_output.wettbewerbspreis"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "wettbewerbspreis_indicates_how_expensive_model_outputs_are"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "model_output"
+			            },
+			            "Object": {
+			              "Role": "model_output.wettbewerbspreis"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "model_outputs_have_wettbewerbspreises"
+			        }
+			      ]
+			    },
+			    "model_output_is_expensive2": {
+			      "Binding": {
+			        "ConceptualEntity": "ModelOutput"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "model_output": {
+			          "Target": {
+			            "Entity": "model_output"
+			          }
+			        },
+			        "model_output.empfohlener_preis": {
+			          "Target": {
+			            "Entity": "model_output.empfohlener_preis"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "model_output"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "model_output.empfohlener_preis"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "empfohlener_preis_indicates_how_expensive_model_outputs_are"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "model_output"
+			            },
+			            "Object": {
+			              "Role": "model_output.empfohlener_preis"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "model_outputs_have_empfohlener_preises"
+			        }
+			      ]
+			    },
+			    "produkte_has_produkt_id": {
+			      "Binding": {
+			        "ConceptualEntity": "Produkte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "produkte": {
+			          "Target": {
+			            "Entity": "produkte"
+			          }
+			        },
+			        "produkte.produkt_id": {
+			          "Target": {
+			            "Entity": "produkte.produkt_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "produkte"
+			            },
+			            "Object": {
+			              "Role": "produkte.produkt_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "produktes_have_produkt_ids"
+			        }
+			      ]
+			    },
+			    "produkte_has_kategorie": {
+			      "Binding": {
+			        "ConceptualEntity": "Produkte"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "produkte": {
+			          "Target": {
+			            "Entity": "produkte"
+			          }
+			        },
+			        "produkte.kategorie": {
+			          "Target": {
+			            "Entity": "produkte.kategorie"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "produkte"
+			            },
+			            "Object": {
+			              "Role": "produkte.kategorie"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "produktes_have_kategories"
+			        }
+			      ]
+			    },
+			    "verkaeufe_has_verkauf_id": {
+			      "Binding": {
+			        "ConceptualEntity": "Verkaeufe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "verkaeufe": {
+			          "Target": {
+			            "Entity": "verkaeufe"
+			          }
+			        },
+			        "verkaeufe.verkauf_id": {
+			          "Target": {
+			            "Entity": "verkaeufe.verkauf_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "verkaeufe"
+			            },
+			            "Object": {
+			              "Role": "verkaeufe.verkauf_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "verkaeufes_have_verkauf_ids"
+			        }
+			      ]
+			    },
+			    "verkaeufe_has_datum": {
+			      "Binding": {
+			        "ConceptualEntity": "Verkaeufe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "verkaeufe": {
+			          "Target": {
+			            "Entity": "verkaeufe"
+			          }
+			        },
+			        "verkaeufe.datum": {
+			          "Target": {
+			            "Entity": "verkaeufe.datum"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "verkaeufe"
+			            },
+			            "Object": {
+			              "Role": "verkaeufe.datum"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "verkaeufes_have_data"
+			        }
+			      ]
+			    },
+			    "verkaeufe_has_menge": {
+			      "Binding": {
+			        "ConceptualEntity": "Verkaeufe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "verkaeufe": {
+			          "Target": {
+			            "Entity": "verkaeufe"
+			          }
+			        },
+			        "verkaeufe.menge": {
+			          "Target": {
+			            "Entity": "verkaeufe.menge"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "verkaeufe"
+			            },
+			            "Object": {
+			              "Role": "verkaeufe.menge"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "verkaeufes_have_menges"
+			        }
+			      ]
+			    },
+			    "verkaeufe_has_gesamtumsatz_AC": {
+			      "Binding": {
+			        "ConceptualEntity": "Verkaeufe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "verkaeufe": {
+			          "Target": {
+			            "Entity": "verkaeufe"
+			          }
+			        },
+			        "verkaeufe.gesamtumsatz_AC": {
+			          "Target": {
+			            "Entity": "verkaeufe.gesamtumsatz_AC"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "verkaeufe"
+			            },
+			            "Object": {
+			              "Role": "verkaeufe.gesamtumsatz_AC"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "verkaeufes_have_gesamtumsatz_AC"
+			        }
+			      ]
+			    },
+			    "verkaeufe_has_ø_tagesumsatz": {
+			      "Binding": {
+			        "ConceptualEntity": "Verkaeufe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "verkaeufe": {
+			          "Target": {
+			            "Entity": "verkaeufe"
+			          }
+			        },
+			        "verkaeufe.ø_tagesumsatz": {
+			          "Target": {
+			            "Entity": "verkaeufe.ø_tagesumsatz"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "verkaeufe"
+			            },
+			            "Object": {
+			              "Role": "verkaeufe.ø_tagesumsatz"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "verkaeufes_have_ø_tagesumsatz"
+			        }
+			      ]
+			    },
+			    "wettbewerbspreise_has_datum": {
+			      "Binding": {
+			        "ConceptualEntity": "Wettbewerbspreise"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "wettbewerbspreise": {
+			          "Target": {
+			            "Entity": "wettbewerbspreise"
+			          }
+			        },
+			        "wettbewerbspreise.datum": {
+			          "Target": {
+			            "Entity": "wettbewerbspreise.datum"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "wettbewerbspreise"
+			            },
+			            "Object": {
+			              "Role": "wettbewerbspreise.datum"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "wettbewerbspreises_have_data"
+			        }
+			      ]
+			    },
+			    "model_output_has_preiselastizitaet": {
+			      "Binding": {
+			        "ConceptualEntity": "ModelOutput"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "model_output": {
+			          "Target": {
+			            "Entity": "model_output"
+			          }
+			        },
+			        "model_output.preiselastizitaet": {
+			          "Target": {
+			            "Entity": "model_output.preiselastizitaet"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "model_output"
+			            },
+			            "Object": {
+			              "Role": "model_output.preiselastizitaet"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "model_outputs_have_preiselastizitaets"
+			        }
+			      ]
+			    },
+			    "model_output_has_modell_r_2": {
+			      "Binding": {
+			        "ConceptualEntity": "ModelOutput"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "model_output": {
+			          "Target": {
+			            "Entity": "model_output"
+			          }
+			        },
+			        "model_output.modell_r_2": {
+			          "Target": {
+			            "Entity": "model_output.modell_r_2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "model_output"
+			            },
+			            "Object": {
+			              "Role": "model_output.modell_r_2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "model_outputs_have_modell_r_2"
+			        }
+			      ]
+			    },
+			    "model_output_has_erwartete_mengenänderung": {
+			      "Binding": {
+			        "ConceptualEntity": "ModelOutput"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "model_output": {
+			          "Target": {
+			            "Entity": "model_output"
+			          }
+			        },
+			        "model_output.erwartete_mengenänderung": {
+			          "Target": {
+			            "Entity": "model_output.erwartete_mengenänderung"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "model_output"
+			            },
+			            "Object": {
+			              "Role": "model_output.erwartete_mengenänderung"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "model_outputs_have_erwartete_mengenänderungs"
+			        }
+			      ]
+			    },
+			    "model_output_has_erwartete_umsatzaenderung": {
+			      "Binding": {
+			        "ConceptualEntity": "ModelOutput"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "model_output": {
+			          "Target": {
+			            "Entity": "model_output"
+			          }
+			        },
+			        "model_output.erwartete_umsatzaenderung": {
+			          "Target": {
+			            "Entity": "model_output.erwartete_umsatzaenderung"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "model_output"
+			            },
+			            "Object": {
+			              "Role": "model_output.erwartete_umsatzaenderung"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "model_outputs_have_erwartete_umsatzaenderungs"
+			        }
+			      ]
+			    },
+			    "model_output_has_erwartete_margenänderung": {
+			      "Binding": {
+			        "ConceptualEntity": "ModelOutput"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "model_output": {
+			          "Target": {
+			            "Entity": "model_output"
+			          }
+			        },
+			        "model_output.erwartete_margenänderung": {
+			          "Target": {
+			            "Entity": "model_output.erwartete_margenänderung"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "model_output"
+			            },
+			            "Object": {
+			              "Role": "model_output.erwartete_margenänderung"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "model_outputs_have_erwartete_margenänderungs"
+			        }
+			      ]
+			    },
+			    "model_output_has_aktueller_preis_ø": {
+			      "Binding": {
+			        "ConceptualEntity": "ModelOutput"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "model_output": {
+			          "Target": {
+			            "Entity": "model_output"
+			          }
+			        },
+			        "model_output.aktueller_preis_ø": {
+			          "Target": {
+			            "Entity": "model_output.aktueller_preis_ø"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "model_output"
+			            },
+			            "Object": {
+			              "Role": "model_output.aktueller_preis_ø"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "model_outputs_have_aktueller_preis_ø"
+			        }
+			      ]
+			    },
+			    "model_output_has_empfohlener_preis_ø": {
+			      "Binding": {
+			        "ConceptualEntity": "ModelOutput"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "model_output": {
+			          "Target": {
+			            "Entity": "model_output"
+			          }
+			        },
+			        "model_output.empfohlener_preis_ø": {
+			          "Target": {
+			            "Entity": "model_output.empfohlener_preis_ø"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "model_output"
+			            },
+			            "Object": {
+			              "Role": "model_output.empfohlener_preis_ø"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "model_outputs_have_empfohlener_preis_ø"
+			        }
+			      ]
+			    },
+			    "model_output_has_wettbewerbspreis_ø": {
+			      "Binding": {
+			        "ConceptualEntity": "ModelOutput"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "model_output": {
+			          "Target": {
+			            "Entity": "model_output"
+			          }
+			        },
+			        "model_output.wettbewerbspreis_ø": {
+			          "Target": {
+			            "Entity": "model_output.wettbewerbspreis_ø"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "model_output"
+			            },
+			            "Object": {
+			              "Role": "model_output.wettbewerbspreis_ø"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "model_outputs_have_wettbewerbspreis_ø"
+			        }
+			      ]
+			    },
+			    "model_output_has_preisänderung_absolut": {
+			      "Binding": {
+			        "ConceptualEntity": "ModelOutput"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "model_output": {
+			          "Target": {
+			            "Entity": "model_output"
+			          }
+			        },
+			        "model_output.preisänderung_absolut": {
+			          "Target": {
+			            "Entity": "model_output.preisänderung_absolut"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "model_output"
+			            },
+			            "Object": {
+			              "Role": "model_output.preisänderung_absolut"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "model_outputs_have_preisänderung_absolut"
+			        }
+			      ]
+			    },
+			    "model_output_has_preisänderung_": {
+			      "Binding": {
+			        "ConceptualEntity": "ModelOutput"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "model_output": {
+			          "Target": {
+			            "Entity": "model_output"
+			          }
+			        },
+			        "model_output.preisänderung_": {
+			          "Target": {
+			            "Entity": "model_output.preisänderung_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "model_output"
+			            },
+			            "Object": {
+			              "Role": "model_output.preisänderung_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "model_outputs_have_preisänderung_"
+			        }
+			      ]
+			    },
+			    "model_output_has_preiselastizität_ø": {
+			      "Binding": {
+			        "ConceptualEntity": "ModelOutput"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "model_output": {
+			          "Target": {
+			            "Entity": "model_output"
+			          }
+			        },
+			        "model_output.preiselastizität_ø": {
+			          "Target": {
+			            "Entity": "model_output.preiselastizität_ø"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "model_output"
+			            },
+			            "Object": {
+			              "Role": "model_output.preiselastizität_ø"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "model_outputs_have_preiselastizität_ø"
+			        }
+			      ]
+			    },
+			    "model_output_has_modell_r_ø": {
+			      "Binding": {
+			        "ConceptualEntity": "ModelOutput"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "model_output": {
+			          "Target": {
+			            "Entity": "model_output"
+			          }
+			        },
+			        "model_output.modell_r_ø": {
+			          "Target": {
+			            "Entity": "model_output.modell_r_ø"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "model_output"
+			            },
+			            "Object": {
+			              "Role": "model_output.modell_r_ø"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "model_outputs_have_modell_r_ø"
+			        }
+			      ]
+			    },
+			    "model_output_has_ΔMenge__ø": {
+			      "Binding": {
+			        "ConceptualEntity": "ModelOutput"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "model_output": {
+			          "Target": {
+			            "Entity": "model_output"
+			          }
+			        },
+			        "model_output.ΔMenge__ø": {
+			          "Target": {
+			            "Entity": "model_output.ΔMenge__ø"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "model_output"
+			            },
+			            "Object": {
+			              "Role": "model_output.ΔMenge__ø"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "model_outputs_have_ΔMenge__ø"
+			        }
+			      ]
+			    },
+			    "model_output_has_ΔUmsatz__ø": {
+			      "Binding": {
+			        "ConceptualEntity": "ModelOutput"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "model_output": {
+			          "Target": {
+			            "Entity": "model_output"
+			          }
+			        },
+			        "model_output.ΔUmsatz__ø": {
+			          "Target": {
+			            "Entity": "model_output.ΔUmsatz__ø"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "model_output"
+			            },
+			            "Object": {
+			              "Role": "model_output.ΔUmsatz__ø"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "model_outputs_have_ΔUmsatz__ø"
+			        }
+			      ]
+			    },
+			    "model_output_has_ΔMarge__ø": {
+			      "Binding": {
+			        "ConceptualEntity": "ModelOutput"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "model_output": {
+			          "Target": {
+			            "Entity": "model_output"
+			          }
+			        },
+			        "model_output.ΔMarge__ø": {
+			          "Target": {
+			            "Entity": "model_output.ΔMarge__ø"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "model_output"
+			            },
+			            "Object": {
+			              "Role": "model_output.ΔMarge__ø"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "model_outputs_have_ΔMarge__ø"
+			        }
+			      ]
+			    },
+			    "model_output_has_preiselastizitätsklasse": {
+			      "Binding": {
+			        "ConceptualEntity": "ModelOutput"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "model_output": {
+			          "Target": {
+			            "Entity": "model_output"
+			          }
+			        },
+			        "model_output.preiselastizitätsklasse": {
+			          "Target": {
+			            "Entity": "model_output.preiselastizitätsklasse"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "model_output"
+			            },
+			            "Object": {
+			              "Role": "model_output.preiselastizitätsklasse"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "model_outputs_have_preiselastizitätsklasse"
+			        }
+			      ]
+			    },
+			    "model_output_has_ΔUmsatz_positiv_ø": {
+			      "Binding": {
+			        "ConceptualEntity": "ModelOutput"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "model_output": {
+			          "Target": {
+			            "Entity": "model_output"
+			          }
+			        },
+			        "model_output.ΔUmsatz_positiv_ø": {
+			          "Target": {
+			            "Entity": "model_output.ΔUmsatz_positiv_ø"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "model_output"
+			            },
+			            "Object": {
+			              "Role": "model_output.ΔUmsatz_positiv_ø"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "model_outputs_have_ΔUmsatz_positiv_ø"
+			        }
+			      ]
+			    },
+			    "model_output_has_ΔUmsatz_negativ_ø": {
+			      "Binding": {
+			        "ConceptualEntity": "ModelOutput"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "model_output": {
+			          "Target": {
+			            "Entity": "model_output"
+			          }
+			        },
+			        "model_output.ΔUmsatz_negativ_ø": {
+			          "Target": {
+			            "Entity": "model_output.ΔUmsatz_negativ_ø"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "model_output"
+			            },
+			            "Object": {
+			              "Role": "model_output.ΔUmsatz_negativ_ø"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "model_outputs_have_ΔUmsatz_negativ_ø"
+			        }
+			      ]
+			    },
+			    "model_output_has_ΔMarge_positiv_ø": {
+			      "Binding": {
+			        "ConceptualEntity": "ModelOutput"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "model_output": {
+			          "Target": {
+			            "Entity": "model_output"
+			          }
+			        },
+			        "model_output.ΔMarge_positiv_ø": {
+			          "Target": {
+			            "Entity": "model_output.ΔMarge_positiv_ø"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "model_output"
+			            },
+			            "Object": {
+			              "Role": "model_output.ΔMarge_positiv_ø"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "model_outputs_have_ΔMarge_positiv_ø"
+			        }
+			      ]
+			    },
+			    "model_output_has_ΔMarge_negativ_ø": {
+			      "Binding": {
+			        "ConceptualEntity": "ModelOutput"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "model_output": {
+			          "Target": {
+			            "Entity": "model_output"
+			          }
+			        },
+			        "model_output.ΔMarge_negativ_ø": {
+			          "Target": {
+			            "Entity": "model_output.ΔMarge_negativ_ø"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "model_output"
+			            },
+			            "Object": {
+			              "Role": "model_output.ΔMarge_negativ_ø"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "model_outputs_have_ΔMarge_negativ_ø"
+			        }
+			      ]
+			    },
+			    "datum_has_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Datum"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "datum": {
+			          "Target": {
+			            "Entity": "datum"
+			          }
+			        },
+			        "datum.date": {
+			          "Target": {
+			            "Entity": "datum.date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datum"
+			            },
+			            "Object": {
+			              "Role": "datum.date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_have_dates"
+			        }
+			      ]
+			    },
+			    "datum_has_jahr": {
+			      "Binding": {
+			        "ConceptualEntity": "Datum"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "datum": {
+			          "Target": {
+			            "Entity": "datum"
+			          }
+			        },
+			        "datum.jahr": {
+			          "Target": {
+			            "Entity": "datum.jahr"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datum"
+			            },
+			            "Object": {
+			              "Role": "datum.jahr"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_have_jahrs"
+			        }
+			      ]
+			    },
+			    "datum_has_quartal": {
+			      "Binding": {
+			        "ConceptualEntity": "Datum"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "datum": {
+			          "Target": {
+			            "Entity": "datum"
+			          }
+			        },
+			        "datum.quartal": {
+			          "Target": {
+			            "Entity": "datum.quartal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datum"
+			            },
+			            "Object": {
+			              "Role": "datum.quartal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_have_quartals"
+			        }
+			      ]
+			    },
+			    "datum_has_monat_nr": {
+			      "Binding": {
+			        "ConceptualEntity": "Datum"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "datum": {
+			          "Target": {
+			            "Entity": "datum"
+			          }
+			        },
+			        "datum.monat_nr": {
+			          "Target": {
+			            "Entity": "datum.monat_nr"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datum"
+			            },
+			            "Object": {
+			              "Role": "datum.monat_nr"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_have_monat_nr"
+			        }
+			      ]
+			    },
+			    "datum_has_monatsname": {
+			      "Binding": {
+			        "ConceptualEntity": "Datum"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "datum": {
+			          "Target": {
+			            "Entity": "datum"
+			          }
+			        },
+			        "datum.monatsname": {
+			          "Target": {
+			            "Entity": "datum.monatsname"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datum"
+			            },
+			            "Object": {
+			              "Role": "datum.monatsname"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_have_monatsnames"
+			        }
+			      ]
+			    },
+			    "datum_has_kw": {
+			      "Binding": {
+			        "ConceptualEntity": "Datum"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "datum": {
+			          "Target": {
+			            "Entity": "datum"
+			          }
+			        },
+			        "datum.kw": {
+			          "Target": {
+			            "Entity": "datum.kw"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datum"
+			            },
+			            "Object": {
+			              "Role": "datum.kw"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_have_kw"
+			        }
+			      ]
+			    },
+			    "datum_has_wochentag_nr": {
+			      "Binding": {
+			        "ConceptualEntity": "Datum"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "datum": {
+			          "Target": {
+			            "Entity": "datum"
+			          }
+			        },
+			        "datum.wochentag_nr": {
+			          "Target": {
+			            "Entity": "datum.wochentag_nr"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datum"
+			            },
+			            "Object": {
+			              "Role": "datum.wochentag_nr"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_have_wochentag_nr"
+			        }
+			      ]
+			    },
+			    "datum_has_wochentag": {
+			      "Binding": {
+			        "ConceptualEntity": "Datum"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "datum": {
+			          "Target": {
+			            "Entity": "datum"
+			          }
+			        },
+			        "datum.wochentag": {
+			          "Target": {
+			            "Entity": "datum.wochentag"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datum"
+			            },
+			            "Object": {
+			              "Role": "datum.wochentag"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_have_wochentags"
+			        }
+			      ]
+			    },
+			    "verkaeufe_has_produkte": {
+			      "Binding": {
+			        "ConceptualEntity": "Verkaeufe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "verkaeufe": {
+			          "Target": {
+			            "Entity": "verkaeufe"
+			          }
+			        },
+			        "produkte": {
+			          "Target": {
+			            "Entity": "produkte"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "verkaeufe"
+			            },
+			            "Object": {
+			              "Role": "produkte"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "verkaeufes_have_produktes"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "produkte"
+			            },
+			            "Object": {
+			              "Role": "verkaeufe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "produktes_have_verkaeufes"
+			        }
+			      ]
+			    },
+			    "verkaeufe_has_datum1": {
+			      "Binding": {
+			        "ConceptualEntity": "Verkaeufe"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "verkaeufe": {
+			          "Target": {
+			            "Entity": "verkaeufe"
+			          }
+			        },
+			        "datum": {
+			          "Target": {
+			            "Entity": "datum"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "verkaeufe"
+			            },
+			            "Object": {
+			              "Role": "datum"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "verkaeufes_have_data1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datum"
+			            },
+			            "Object": {
+			              "Role": "verkaeufe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_have_verkaeufes"
+			        }
+			      ]
+			    },
+			    "wettbewerbspreise_has_produkte": {
+			      "Binding": {
+			        "ConceptualEntity": "Wettbewerbspreise"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "wettbewerbspreise": {
+			          "Target": {
+			            "Entity": "wettbewerbspreise"
+			          }
+			        },
+			        "produkte": {
+			          "Target": {
+			            "Entity": "produkte"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "wettbewerbspreise"
+			            },
+			            "Object": {
+			              "Role": "produkte"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "wettbewerbspreises_have_produktes"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "produkte"
+			            },
+			            "Object": {
+			              "Role": "wettbewerbspreise"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "produktes_have_wettbewerbspreises"
+			        }
+			      ]
+			    },
+			    "model_output_has_produkte": {
+			      "Binding": {
+			        "ConceptualEntity": "ModelOutput"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "model_output": {
+			          "Target": {
+			            "Entity": "model_output"
+			          }
+			        },
+			        "produkte": {
+			          "Target": {
+			            "Entity": "produkte"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "model_output"
+			            },
+			            "Object": {
+			              "Role": "produkte"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "model_outputs_have_produktes"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "produkte"
+			            },
+			            "Object": {
+			              "Role": "model_output"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "produktes_have_model_outputs"
+			        }
+			      ]
+			    },
+			    "wettbewerbspreise_datum_has_datumshierarchie": {
+			      "Binding": {
+			        "ConceptualEntity": "Wettbewerbspreise"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "wettbewerbspreise.datum": {
+			          "Target": {
+			            "Entity": "wettbewerbspreise.datum"
+			          }
+			        },
+			        "wettbewerbspreise.datum.datumshierarchie": {
+			          "Target": {
+			            "Entity": "wettbewerbspreise.datum.datumshierarchie"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "wettbewerbspreise.datum"
+			            },
+			            "Object": {
+			              "Role": "wettbewerbspreise.datum.datumshierarchie"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_have_datumshierarchies"
+			        }
+			      ]
+			    },
+			    "wettbewerbspreise_datum_datumshierarchie_has_wettbewerbspreise_datum_jahr": {
+			      "Binding": {
+			        "ConceptualEntity": "Wettbewerbspreise"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "wettbewerbspreise.datum.datumshierarchie": {
+			          "Target": {
+			            "Entity": "wettbewerbspreise.datum.datumshierarchie"
+			          }
+			        },
+			        "wettbewerbspreise.datum.jahr": {
+			          "Target": {
+			            "Entity": "wettbewerbspreise.datum.jahr"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "wettbewerbspreise.datum.datumshierarchie"
+			            },
+			            "Object": {
+			              "Role": "wettbewerbspreise.datum.jahr"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "datumshierarchies_have_jahrs"
+			        }
+			      ]
+			    },
+			    "wettbewerbspreise_datum_datumshierarchie_has_wettbewerbspreise_datum_quartal": {
+			      "Binding": {
+			        "ConceptualEntity": "Wettbewerbspreise"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "wettbewerbspreise.datum.datumshierarchie": {
+			          "Target": {
+			            "Entity": "wettbewerbspreise.datum.datumshierarchie"
+			          }
+			        },
+			        "wettbewerbspreise.datum.quartal": {
+			          "Target": {
+			            "Entity": "wettbewerbspreise.datum.quartal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "wettbewerbspreise.datum.datumshierarchie"
+			            },
+			            "Object": {
+			              "Role": "wettbewerbspreise.datum.quartal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "datumshierarchies_have_quartals"
+			        }
+			      ]
+			    },
+			    "wettbewerbspreise_datum_datumshierarchie_has_wettbewerbspreise_datum_monat": {
+			      "Binding": {
+			        "ConceptualEntity": "Wettbewerbspreise"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "wettbewerbspreise.datum.datumshierarchie": {
+			          "Target": {
+			            "Entity": "wettbewerbspreise.datum.datumshierarchie"
+			          }
+			        },
+			        "wettbewerbspreise.datum.monat": {
+			          "Target": {
+			            "Entity": "wettbewerbspreise.datum.monat"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "wettbewerbspreise.datum.datumshierarchie"
+			            },
+			            "Object": {
+			              "Role": "wettbewerbspreise.datum.monat"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "datumshierarchies_have_monats"
+			        }
+			      ]
+			    },
+			    "wettbewerbspreise_datum_datumshierarchie_has_wettbewerbspreise_datum_tag": {
+			      "Binding": {
+			        "ConceptualEntity": "Wettbewerbspreise"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "wettbewerbspreise.datum.datumshierarchie": {
+			          "Target": {
+			            "Entity": "wettbewerbspreise.datum.datumshierarchie"
+			          }
+			        },
+			        "wettbewerbspreise.datum.tag": {
+			          "Target": {
+			            "Entity": "wettbewerbspreise.datum.tag"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "wettbewerbspreise.datum.datumshierarchie"
+			            },
+			            "Object": {
+			              "Role": "wettbewerbspreise.datum.tag"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "datumshierarchies_have_tags"
+			        }
+			      ]
+			    },
+			    "wettbewerbspreise_datum_jahr_has_wettbewerbspreise_datum_quartal": {
+			      "Binding": {
+			        "ConceptualEntity": "Wettbewerbspreise"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "wettbewerbspreise.datum.jahr": {
+			          "Target": {
+			            "Entity": "wettbewerbspreise.datum.jahr"
+			          }
+			        },
+			        "wettbewerbspreise.datum.quartal": {
+			          "Target": {
+			            "Entity": "wettbewerbspreise.datum.quartal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "wettbewerbspreise.datum.jahr"
+			            },
+			            "Object": {
+			              "Role": "wettbewerbspreise.datum.quartal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jahrs_have_quartals"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "wettbewerbspreise.datum.quartal"
+			            },
+			            "Object": {
+			              "Role": "wettbewerbspreise.datum.jahr"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "quartals_have_jahrs"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "wettbewerbspreise.datum.quartal"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "wettbewerbspreise.datum.jahr"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "quartals_are_in_jahrs"
+			        }
+			      ]
+			    },
+			    "wettbewerbspreise_datum_quartal_has_wettbewerbspreise_datum_monat": {
+			      "Binding": {
+			        "ConceptualEntity": "Wettbewerbspreise"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "wettbewerbspreise.datum.quartal": {
+			          "Target": {
+			            "Entity": "wettbewerbspreise.datum.quartal"
+			          }
+			        },
+			        "wettbewerbspreise.datum.monat": {
+			          "Target": {
+			            "Entity": "wettbewerbspreise.datum.monat"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "wettbewerbspreise.datum.quartal"
+			            },
+			            "Object": {
+			              "Role": "wettbewerbspreise.datum.monat"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "quartals_have_monats"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "wettbewerbspreise.datum.monat"
+			            },
+			            "Object": {
+			              "Role": "wettbewerbspreise.datum.quartal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "monats_have_quartals"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "wettbewerbspreise.datum.monat"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "wettbewerbspreise.datum.quartal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "monats_are_in_quartals"
+			        }
+			      ]
+			    },
+			    "wettbewerbspreise_datum_monat_has_wettbewerbspreise_datum_tag": {
+			      "Binding": {
+			        "ConceptualEntity": "Wettbewerbspreise"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "wettbewerbspreise.datum.monat": {
+			          "Target": {
+			            "Entity": "wettbewerbspreise.datum.monat"
+			          }
+			        },
+			        "wettbewerbspreise.datum.tag": {
+			          "Target": {
+			            "Entity": "wettbewerbspreise.datum.tag"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "wettbewerbspreise.datum.monat"
+			            },
+			            "Object": {
+			              "Role": "wettbewerbspreise.datum.tag"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "monats_have_tags"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "wettbewerbspreise.datum.tag"
+			            },
+			            "Object": {
+			              "Role": "wettbewerbspreise.datum.monat"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tags_have_monats"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "wettbewerbspreise.datum.tag"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "wettbewerbspreise.datum.monat"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tags_are_in_monats"
+			        }
+			      ]
+			    },
+			    "datum_date_has_datumshierarchie": {
+			      "Binding": {
+			        "ConceptualEntity": "Datum"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "datum.date": {
+			          "Target": {
+			            "Entity": "datum.date"
+			          }
+			        },
+			        "datum.date.datumshierarchie": {
+			          "Target": {
+			            "Entity": "datum.date.datumshierarchie"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datum.date"
+			            },
+			            "Object": {
+			              "Role": "datum.date.datumshierarchie"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dates_have_datumshierarchies"
+			        }
+			      ]
+			    },
+			    "datum_date_datumshierarchie_has_datum_date_jahr": {
+			      "Binding": {
+			        "ConceptualEntity": "Datum"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "datum.date.datumshierarchie": {
+			          "Target": {
+			            "Entity": "datum.date.datumshierarchie"
+			          }
+			        },
+			        "datum.date.jahr": {
+			          "Target": {
+			            "Entity": "datum.date.jahr"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datum.date.datumshierarchie"
+			            },
+			            "Object": {
+			              "Role": "datum.date.jahr"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "datumshierarchies_have_jahrs1"
+			        }
+			      ]
+			    },
+			    "datum_date_datumshierarchie_has_datum_date_quartal": {
+			      "Binding": {
+			        "ConceptualEntity": "Datum"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "datum.date.datumshierarchie": {
+			          "Target": {
+			            "Entity": "datum.date.datumshierarchie"
+			          }
+			        },
+			        "datum.date.quartal": {
+			          "Target": {
+			            "Entity": "datum.date.quartal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datum.date.datumshierarchie"
+			            },
+			            "Object": {
+			              "Role": "datum.date.quartal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "datumshierarchies_have_quartals1"
+			        }
+			      ]
+			    },
+			    "datum_date_datumshierarchie_has_datum_date_monat": {
+			      "Binding": {
+			        "ConceptualEntity": "Datum"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "datum.date.datumshierarchie": {
+			          "Target": {
+			            "Entity": "datum.date.datumshierarchie"
+			          }
+			        },
+			        "datum.date.monat": {
+			          "Target": {
+			            "Entity": "datum.date.monat"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datum.date.datumshierarchie"
+			            },
+			            "Object": {
+			              "Role": "datum.date.monat"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "datumshierarchies_have_monats1"
+			        }
+			      ]
+			    },
+			    "datum_date_datumshierarchie_has_datum_date_tag": {
+			      "Binding": {
+			        "ConceptualEntity": "Datum"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "datum.date.datumshierarchie": {
+			          "Target": {
+			            "Entity": "datum.date.datumshierarchie"
+			          }
+			        },
+			        "datum.date.tag": {
+			          "Target": {
+			            "Entity": "datum.date.tag"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datum.date.datumshierarchie"
+			            },
+			            "Object": {
+			              "Role": "datum.date.tag"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "datumshierarchies_have_tags1"
+			        }
+			      ]
+			    },
+			    "datum_date_jahr_has_datum_date_quartal": {
+			      "Binding": {
+			        "ConceptualEntity": "Datum"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "datum.date.jahr": {
+			          "Target": {
+			            "Entity": "datum.date.jahr"
+			          }
+			        },
+			        "datum.date.quartal": {
+			          "Target": {
+			            "Entity": "datum.date.quartal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datum.date.jahr"
+			            },
+			            "Object": {
+			              "Role": "datum.date.quartal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jahrs_have_quartals1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datum.date.quartal"
+			            },
+			            "Object": {
+			              "Role": "datum.date.jahr"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "quartals_have_jahrs1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "datum.date.quartal"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "datum.date.jahr"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "quartals_are_in_jahrs1"
+			        }
+			      ]
+			    },
+			    "datum_date_quartal_has_datum_date_monat": {
+			      "Binding": {
+			        "ConceptualEntity": "Datum"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "datum.date.quartal": {
+			          "Target": {
+			            "Entity": "datum.date.quartal"
+			          }
+			        },
+			        "datum.date.monat": {
+			          "Target": {
+			            "Entity": "datum.date.monat"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datum.date.quartal"
+			            },
+			            "Object": {
+			              "Role": "datum.date.monat"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "quartals_have_monats1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datum.date.monat"
+			            },
+			            "Object": {
+			              "Role": "datum.date.quartal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "monats_have_quartals1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "datum.date.monat"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "datum.date.quartal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "monats_are_in_quartals1"
+			        }
+			      ]
+			    },
+			    "datum_date_monat_has_datum_date_tag": {
+			      "Binding": {
+			        "ConceptualEntity": "Datum"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "datum.date.monat": {
+			          "Target": {
+			            "Entity": "datum.date.monat"
+			          }
+			        },
+			        "datum.date.tag": {
+			          "Target": {
+			            "Entity": "datum.date.tag"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datum.date.monat"
+			            },
+			            "Object": {
+			              "Role": "datum.date.tag"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "monats_have_tags1"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "datum.date.tag"
+			            },
+			            "Object": {
+			              "Role": "datum.date.monat"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tags_have_monats1"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "datum.date.tag"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "datum.date.monat"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tags_are_in_monats1"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+

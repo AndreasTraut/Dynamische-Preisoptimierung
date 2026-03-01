@@ -1,0 +1,15 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "separatorH1",
+  "position": {
+    "x": 0,
+    "y": 450,
+    "z": 13000,
+    "height": 2,
+    "width": 1280,
+    "tabOrder": 18000
+  },
+  "visual": {
+    "visualType": "shape"
+  }
+}

@@ -1,0 +1,8 @@
+/// Relativer Pfad zum data/-Verzeichnis des Projekts
+expression DataPath = "C:\Users\andre\myDockerRepositories\Dynamische-Preisoptimierung\data" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 5f86254d-078f-49a2-a14c-7bd7c7477b45
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+

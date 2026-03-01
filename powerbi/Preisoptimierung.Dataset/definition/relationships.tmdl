@@ -1,0 +1,26 @@
+relationship Verkaeufe_Produkte
+	fromColumn: Verkaeufe.produkt_id
+	toColumn: Produkte.produkt_id
+
+relationship Wettbewerbspreise_Produkte
+	fromColumn: Wettbewerbspreise.produkt_id
+	toColumn: Produkte.produkt_id
+
+relationship ModelOutput_Produkte
+	fromColumn: ModelOutput.produkt_id
+	toColumn: Produkte.produkt_id
+
+relationship fbd28192-8142-48db-a96a-decc46b6bbb0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Wettbewerbspreise.datum
+	toColumn: LocalDateTable_8a0d6ba5-925a-44ce-b508-6dfeb93a406a.Date
+
+relationship 67dcf1d6-b8ae-4365-a882-03e2b804cbe3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Datum.Date
+	toColumn: LocalDateTable_1a245216-a98a-40bf-bc9d-dc0d92791646.Date
+
+relationship 9f968331-cc22-9d99-3e22-aa04d5b75ca4
+	fromColumn: Verkaeufe.datum
+	toColumn: Datum.Date
+
