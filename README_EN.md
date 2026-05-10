@@ -1,5 +1,3 @@
-English Version of this File: [README_EN.md](README_EN.md)
-
 # Dynamisches Preisoptimierungsmodell im eCommerce
 
 Prototyp-Implementierung des in der Studienarbeit

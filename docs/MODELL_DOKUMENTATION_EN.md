@@ -1,5 +1,3 @@
-English Version of this File: [MODELL_DOKUMENTATION_EN.md](MODELL_DOKUMENTATION_EN.md)
-
 # Modell-Dokumentation: Dynamisches Preisoptimierungsmodell im eCommerce
 
 > **Referenz:** *Studienarbeit „Dynamisches Preisoptimierungsmodell im eCommerce" – Andreas Traut*  

@@ -1,5 +1,3 @@
-English Version of this File: [DATENMODELL_EN.md](DATENMODELL_EN.md)
-
 # Datenmodell – PricingPrototypeDB
 
 > **Referenz:** *Studienarbeit „Dynamisches Preisoptimierungsmodell im eCommerce" – Andreas Traut*  
