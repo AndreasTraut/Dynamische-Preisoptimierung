@@ -1,35 +1,37 @@
+German Version of this File: [MODELL_DOKUMENTATION.md](MODELL_DOKUMENTATION.md)
+
 # Model Documentation: Dynamic Price Optimization Model in eCommerce
 
 > **Reference:** *Thesis “Dynamic Price Optimization Model in eCommerce” – Andreas Traut*  
-> This documentation follows the chapter structure of the thesis and links  
+> This documentation follows exactly the chapter structure of the thesis and links  
 > each section to the corresponding source code.
 >
 > 📄 **Thesis as Markdown:** [`docs/STUDIENARBEIT_EN.md`](STUDIENARBEIT_EN.md)  
-> 📄 **Original document (Word):** [`Studienarbeit Dynamisches Preisoptimierungsmodell im eCommerce- Andreas Traut.docx`](../Studienarbeit%20Dynamisches%20Preisoptimierungsmodell%20im%20eCommerce-%20Andreas%20Traut.docx)
+> 📄 **Original Document (Word):** [`Studienarbeit Dynamisches Preisoptimierungsmodell im eCommerce- Andreas Traut.docx`](../Studienarbeit%20Dynamisches%20Preisoptimierungsmodell%20im%20eCommerce-%20Andreas%20Traut.docx)
 
 ---
 
 ## Table of Contents
 
-1. [System Architecture and Data Flow](#1-system-architecture-and-data-flow)
-2. [Data and ETL](#2-data-and-etl)
-3. [Feature Engineering](#3-feature-engineering)
-4. [ML Model: Price Elasticity](#4-ml-model-price-elasticity)
-5. [Concrete Step-by-Step Calculations](#5-concrete-step-by-step-calculations)
-6. [Price Recommendation: Prescriptive Analytics](#6-price-recommendation-prescriptive-analytics)
-7. [Results and Evaluation](#7-results-and-evaluation)
-8. [Deployment: ModelOutput and Reporting](#8-deployment-modeloutput-and-reporting)
-9. [CRISP-DM Classification](#9-crisp-dm-classification)
-10. [Quick Start](#10-quick-start)
+1. [System Architecture & Data Flow](#1--system-architecture--data-flow)
+2. [Data & ETL](#2--data--etl-thesis-ch-3) — Thesis Ch. 3
+3. [Feature Engineering](#3--feature-engineering-thesis-ch-33) — Thesis Ch. 3.3
+4. [ML Model: Price Elasticity](#4--ml-model-price-elasticity-thesis-ch-4) — Thesis Ch. 4
+5. [Concrete Calculations Step by Step](#5--concrete-calculations-step-by-step)
+6. [Price Recommendation (Prescriptive Analytics)](#6--price-recommendation-prescriptive-analytics-thesis-ch-44) — Thesis Ch. 4.4
+7. [Results & Evaluation](#7--results--evaluation-thesis-ch-5) — Thesis Ch. 5
+8. [Deployment: ModelOutput & Reporting](#8--deployment-modeloutput--reporting-thesis-ch-6) — Thesis Ch. 6
+9. [CRISP-DM Classification](#9--crisp-dm-classification)
+10. [Quick Start](#10--quick-start)
 
 ---
 
-## 1. System Architecture and Data Flow
+## 1  System Architecture & Data Flow
 
-The prototype implements the end-to-end process described in the thesis —  
-from synthetic raw data to the final price recommendation in the datamart.
+The prototype maps the end-to-end process described in the thesis –  
+from synthetic raw data to the price recommendation in the datamart.
 
-```text
+```
 ┌─────────────────────────────────────────────────────────────────────────┐
 │  Source systems (prototype: synthetic CSV files)                       │
 │  data/produkte.csv  ·  data/verkaeufe.csv  ·  data/wettbewerbspreise.csv│
@@ -66,7 +68,7 @@ from synthetic raw data to the final price recommendation in the datamart.
                   (Dashboard · Price Sensitivity · EDA)
 ```
 
-**Code entry points:**
+**Source-code entry points:**
 
 | Component | File | Main function |
 |---|---|---|
@@ -74,18 +76,16 @@ from synthetic raw data to the final price recommendation in the datamart.
 | Feature Engineering | [`src/data_preparation.py`](../src/data_preparation.py) | `build_feature_dataframe()` |
 | ML Model | [`src/model.py`](../src/model.py) | `train_all_products()` |
 | Price Recommendation | [`src/pricing_optimizer.py`](../src/pricing_optimizer.py) | `recommend_price()` |
-| End-to-end demo | [`notebooks/dynamic_pricing_prototype.ipynb`](../notebooks/dynamic_pricing_prototype.ipynb) | — |
+| End-to-End Demo | [`notebooks/dynamic_pricing_prototype.ipynb`](../notebooks/dynamic_pricing_prototype.ipynb) | — |
 
 ---
 
-## 2. Data and ETL
+## 2  Data & ETL  *(Thesis Ch. 3)*
 
-*Thesis chapter 3*
+> *“Design of the ETL pipelines for data acquisition and integration”*  
+> *“Construction and extension of the data warehouse based on a layered model (Core, Bizcore, Datamart)”*
 
-> *“Design of ETL pipelines for data acquisition and integration”*  
-> *“Construction and extension of the data warehouse using a layered model (Core, Bizcore, Datamart)”*
-
-### 2.1 Product Master Data
+### 2.1  Product Master Data
 
 **Source:** [`data/produkte.csv`](../data/produkte.csv)  
 **Code:** [`data/generate_data.py`](../data/generate_data.py)
@@ -94,15 +94,15 @@ from synthetic raw data to the final price recommendation in the datamart.
 |---|---|---|---|---|---|
 | P001 | Product A | Electronics | 30.00 € | 35.00 € | 59.99 € |
 | P002 | Product B | Electronics | 50.00 € | 60.00 € | 99.99 € |
-| P003 | Product C | Household | 10.00 € | 14.00 € | 24.99 € |
-| P004 | Product D | Household | 15.00 € | 19.00 € | 34.99 € |
-| P005 | Product E | Sports | 20.00 € | 25.00 € | 44.99 € |
+| P003 | Product C | Household   | 10.00 € | 14.00 € | 24.99 € |
+| P004 | Product D | Household   | 15.00 € | 19.00 € | 34.99 € |
+| P005 | Product E | Sports      | 20.00 € | 25.00 € | 44.99 € |
 
-### 2.2 Sales Data (Historical)
+### 2.2  Sales Data (Historical)
 
 **Source:** [`data/verkaeufe.csv`](../data/verkaeufe.csv) — 1,825 rows (5 products × 365 days)
 
-| produkt_id | Avg. price | Min price | Max price | Avg. qty/day | Annual revenue |
+| produkt_id | Avg. price | Min. price | Max. price | Avg. quantity/day | Annual revenue |
 |---|---|---|---|---|---|
 | P001 | 58.80 € | 51.07 € | 65.84 € | 54 units | 1,142,918 € |
 | P002 | 97.86 € | 85.11 € | 109.97 € | 53 units | 1,865,296 € |
@@ -125,32 +125,30 @@ log_demand = (
 quantity = max(1, int(np.round(np.exp(log_demand))))
 ```
 
-The true elasticity is “hidden” inside the data — the model is supposed to estimate it.
+The true elasticity is “hidden” in the data — the model is intended to estimate it.
 
-### 2.3 ETL Process
+### 2.3  ETL Process
 
 **Code:** [`src/data_preparation.py → load_csv_to_db()`](../src/data_preparation.py#L38)
 
-```text
+```
 CSV files (data/)  →  pandas.read_csv()  →  df.to_sql()  →  SQLite
-                                               (simulates BULK INSERT / SSIS)
+                                               (simulated BULK INSERT / SSIS)
 ```
 
-In the target system (thesis chapter 3.1):
-- **Power Query / SSIS** for data extraction from ERP and Pacvue
-- **Azure Data Factory** for orchestration of nightly runs
+In the target system (Thesis Ch. 3.1):
+- **PowerQuery / SSIS** for data extraction from ERP and Pacvue
+- **Azure Data Factory** for orchestrating nightly runs
 - **SQL Server Developer Edition** instead of SQLite
 
 SQL equivalent: [`sql/create_tables.sql`](../sql/create_tables.sql) · [`sql/load_data.sql`](../sql/load_data.sql)
 
 ---
 
-## 3. Feature Engineering
+## 3  Feature Engineering  *(Thesis Ch. 3.3)*
 
-*Thesis chapter 3.3*
-
-> *“Feature engineering using Python (`pandas`, `numpy`) and SQL”*  
-> *“Creation of relevant features (e.g. time features, price indices, marketing effects, rolling metrics)”*
+> *“Feature engineering using Python (pandas, numpy) and SQL”*  
+> *“Creation of relevant features (e.g., time features, price indices, marketing influences, rolling KPIs)”*
 
 **Code:** [`src/data_preparation.py → build_feature_dataframe()`](../src/data_preparation.py#L58)
 
@@ -163,37 +161,35 @@ SQL equivalent: [`sql/create_tables.sql`](../sql/create_tables.sql) · [`sql/loa
 | `monat` | `datum.month` | Seasonality (spring peak in the data) |
 | `quartal` | `datum.quarter` | Coarse seasonality |
 | `ist_wochenende` | `1 if Sat/Sun` | Weekend effect on purchasing behavior |
-| `preis_relativ_zu_listenpreis` | `price / list price` | Detects promotional pricing |
+| `preis_relativ_zu_listenpreis` | `price / list price` | Detects promotional prices |
 | `preis_relativ_zu_wettbewerb` | `price / competitor price` | Competitive positioning |
-| `rollierender_umsatz_7d` | 7-day rolling mean | Short-term trend indicator |
-| `rollierender_preis_7d` | 7-day rolling mean | Smoothed price indicator |
+| `rollierender_umsatz_7d` | Rolling mean over 7 days | Short-term trend indicator |
+| `rollierender_preis_7d` | Rolling mean over 7 days | Smoothed price indicator |
 | `kategorie_code` | Label encoding | Product-group effect |
 
 ### Concrete Example (Product P001, First Three Trading Days)
 
-| Date | Price | Quantity | log_preis | log_menge | Month | P/List price | P/Competitor | Rolling price 7d |
+| Date | Price | Quantity | log_preis | log_menge | month | P/list price | P/competitor | Rolling price 7d |
 |---|---|---|---|---|---|---|---|---|
 | 2023-01-01 | 65.25 € | 41 | 4.178 | 3.714 | 1 | 1.088 | 1.000 | 65.25 € |
 | 2023-01-02 | 53.33 € | 69 | 3.976 | 4.234 | 1 | 0.889 | 0.821 | 59.29 € |
 | 2023-01-03 | 53.33 € | 69 | 3.976 | 4.234 | 1 | 0.889 | 0.821 | 57.30 € |
 
-**Interpretation:** On 2023-01-02 the price was 18% below list price and 18% below  
-the competitor price → quantity increased from 41 to 69 units (+68%).
+**Interpretation:** On 02.01., the price was 18% below list price and 18% below  
+the competitor price → quantity rose from 41 to 69 units (+68%).
 
 ---
 
-## 4. ML Model: Price Elasticity
+## 4  ML Model: Price Elasticity  *(Thesis Ch. 4)*
 
-*Thesis chapter 4*
-
-> *“Selection of suitable modeling approaches – models for estimating price elasticity (e.g. regression models)”*  
-> *“Implementation of the models in Python – using libraries (`scikit-learn`, `pandas`, `numpy`)”*
+> *“Selection of suitable modeling approaches – models for estimating price elasticity (e.g., regression models)”*  
+> *“Implementation of the models in Python – use of libraries (scikit-learn, pandas, numpy)”*
 
 **Code:** [`src/model.py`](../src/model.py)
 
-### 4.1 Theoretical Background
+### 4.1  Theoretical Background
 
-The **log-log linear regression** (also called a **double-log model** or **constant-elasticity model**) models demand as:
+The **log-log linear regression** (also **double-log model** or **constant-elasticity model**) models demand as:
 
 $$\log(Q) = \alpha + \varepsilon \cdot \log(P) + \beta_1 x_1 + \ldots + \beta_n x_n + u$$
 
@@ -202,9 +198,9 @@ The coefficient $\varepsilon$ of the log price is directly the **price elasticit
 $$\varepsilon = \frac{\partial \log Q}{\partial \log P} = \frac{\Delta Q / Q}{\Delta P / P}$$
 
 **Meaning:** If price increases by 1%, quantity changes by $\varepsilon$ percent.  
-Typically, $\varepsilon < 0$ (demand falls when price rises).
+Typically, $\varepsilon < 0$ (demand declines when price rises).
 
-### 4.2 Implementation
+### 4.2  Implementation
 
 **Code:** [`src/model.py → train_elasticity_model()`](../src/model.py#L61)
 
@@ -219,13 +215,13 @@ pipeline.fit(X_train, y_train)
 elastizitaet = ridge.coef_[log_preis_idx] / scaler.scale_[log_preis_idx]
 ```
 
-**Time-series split** (no random split):  
+**Time-series split** (no random split!):  
 - 80% of the oldest data → **training set**  
 - 20% of the newest data → **test set** (simulation of live operation)
 
-### 4.3 Estimated Model Coefficients (Concrete Values)
+### 4.3  Estimated Model Coefficients (Concrete Values)
 
-Coefficients on the original scale (converted back from ridge coefficient / `StandardScaler`):
+Coefficients on the original scale (converted back from ridge coefficient / StandardScaler):
 
 **P001 (Electronics “Product A”) – Intercept = 3.997:**
 
@@ -233,31 +229,31 @@ Coefficients on the original scale (converted back from ridge coefficient / `Sta
 |---|---|---|
 | **log_preis** | **−1.182** | **Price elasticity: −1.18** |
 | monat | +0.005 | Slight seasonal effect |
-| quartal | −0.020 | Opposing quarter effect |
+| quartal | −0.020 | Counteracting quarter effect |
 | ist_wochenende | −0.029 | −2.9% less demand on weekends |
 | preis_relativ_zu_listenpreis | −0.480 | Discounting has a self-reinforcing effect |
-| preis_relativ_zu_wettbewerb | −0.095 | Sensitivity to competitor price |
+| preis_relativ_zu_wettbewerb | −0.095 | Competitor-price sensitivity |
 | rollierender_umsatz_7d | +0.000 | Weak trend effect |
-| rollierender_preis_7d | +0.018 | Price smoothing effect |
+| rollierender_preis_7d | +0.018 | Price-smoothing effect |
 
 ---
 
-## 5. Concrete Step-by-Step Calculations
+## 5  Concrete Calculations Step by Step
 
-This section shows how the model calculates internally — transparently and with real numbers.
+This section shows how the model calculates internally – transparently with real numbers.
 
-### 5.1 Forecast: log(quantity) for P001 on 2023-10-20
+### 5.1  Forecast: log(quantity) for P001 on 20.10.2023
 
 **Input values (test set):**
 - Price P = 58.97 €  →  log(P) = 4.077
 - Month = 10, quarter = 4, weekend = 0
-- Price / list price = 58.97 / 59.99 = 0.983
-- Price / competitor ≈ 0.97
+- Price/list price = 58.97 / 59.99 = 0.983
+- Price/competitor ≈ 0.97
 - Rolling price 7d ≈ 59.12 €
 
-**Model equation for P001 (simplified – main effects):**
+**Model equation P001 (simplified – main effects):**
 
-```text
+```
 log(Q̂) ≈ 3.997
         + (−1.182) × 4.077   [log_preis]
         + (−0.020) × 4       [quartal]
@@ -270,24 +266,24 @@ log(Q̂) ≈ 3.997
 
 **Actually sold:** 60 units  →  deviation: 7 units (≈ 12%)
 
-### 5.2 Forecast vs. Actual (Test Set P001, October–December 2023)
+### 5.2  Forecast vs. Actual (Test Set P001, October–December 2023)
 
 | Date | Actual quantity | Predicted quantity | Deviation |
 |---|---|---|---|
-| 2023-10-20 | 60 | 53 | −12 % |
-| 2023-10-21 | 69 | 52 | −25 % |
-| 2023-10-22 | 32 | 38 | +19 % |
-| 2023-10-23 | 65 | 58 | −11 % |
-| 2023-10-24 | 52 | 57 | +10 % |
-| 2023-10-25 | 53 | 56 | +6 % |
-| 2023-10-26 | 54 | 54 | 0 % |
-| 2023-10-27 | 45 | 49 | +9 % |
-| 2023-10-28 | 38 | 36 | −5 % |
-| 2023-10-29 | 34 | 36 | +6 % |
+| 20.10.2023 | 60 | 53 | −12 % |
+| 21.10.2023 | 69 | 52 | −25 % |
+| 22.10.2023 | 32 | 38 | +19 % |
+| 23.10.2023 | 65 | 58 | −11 % |
+| 24.10.2023 | 52 | 57 | +10 % |
+| 25.10.2023 | 53 | 56 | +6 % |
+| 26.10.2023 | 54 | 54 | 0 % |
+| 27.10.2023 | 45 | 49 | +9 % |
+| 28.10.2023 | 38 | 36 | −5 % |
+| 29.10.2023 | 34 | 36 | +6 % |
 
-The model reliably captures the correct order of magnitude; remaining noise is caused by the stochastic demand component.
+The model reliably captures the order of magnitude; noise is caused by the stochastic demand component.
 
-### 5.3 Interpreting Elasticity with Numerical Examples
+### 5.3  Elasticity Interpretation Using a Numerical Example
 
 **P001, ε = −1.18:**
 
@@ -310,31 +306,29 @@ The model reliably captures the correct order of magnitude; remaining noise is c
 
 ---
 
-## 6. Price Recommendation: Prescriptive Analytics
-
-*Thesis chapter 4.4*
+## 6  Price Recommendation (Prescriptive Analytics)  *(Thesis Ch. 4.4)*
 
 > *“Derivation of price recommendations from the model results”*  
-> *“Conceptual considerations: how can elasticities and forecasts be converted into concrete price suggestions?”*
+> *“Conceptual considerations: how can elasticities and forecasts be translated into concrete price proposals?”*
 
 **Code:** [`src/pricing_optimizer.py → recommend_price()`](../src/pricing_optimizer.py#L62)
 
-### 6.1 Amoroso-Robinson Relation
+### 6.1  Amoroso-Robinson Relation
 
-For **elastic demand** (|ε| > 1.05), the **revenue-maximizing price** is calculated as:
+For **elastic demand** (|ε| > 1.05), the **revenue-maximizing price** is calculated:
 
 $$P^* = \frac{C}{1 + 1/\varepsilon}$$
 
 Where $C$ = unit cost (marginal cost in the model).
 
-### 6.2 Business Rules (Configurable)
+### 6.2  Business Rules (Configurable)
 
 Defined in [`src/pricing_optimizer.py`](../src/pricing_optimizer.py#L37):
 
 ```python
-MIN_MARGIN_RATE   = 0.10   # minimum margin: 10% on unit cost
+MIN_MARGIN_RATE   = 0.10   # minimum margin 10% on unit cost
 WETTBEWERB_GEWICHT = 0.30  # 30% weighting of competitor price
-MAX_PREIS_ÄNDERUNG = 0.20  # maximum price change: ±20% per recommendation
+MAX_PREIS_ÄNDERUNG = 0.20  # maximum price change ±20% per recommendation
 ```
 
 **Final result:**
@@ -347,20 +341,20 @@ p_empfohlen = clip(
 )
 ```
 
-### 6.3 Concrete Calculation for All Products as of 31.12.2023
+### 6.3  Concrete Calculation for All Products (As of 31.12.2023)
 
 **P001 – Electronics “Product A”** (elastic, ε = −1.18):
 
-```text
-Unit cost C          =  30.00 €
-Current price P₀     =  63.57 €   (last sales day)
-Competitor price Pw  =  62.67 €
+```
+Unit cost C         =  30.00 €
+Current price P₀    =  63.57 €   (last sales day)
+Competitor price Pw =  62.67 €
 
 Amoroso-Robinson:
   P*_AR = 30.00 / (1 + 1/(−1.1825))
         = 30.00 / (1 − 0.8456)
         = 30.00 / 0.1544
-        = 194.30 €   ← capped by the ±20% boundary
+        = 194.30 €   ← limited by the ±20% boundary
 
 Competitive adjustment:
   P*_blend = 0.70 × 194.30 + 0.30 × 62.67 = 154.80 €   ← still > P₀ × 1.20
@@ -370,23 +364,23 @@ Upper boundary: P₀ × 1.20 = 63.57 × 1.20 = 76.28 €  ← applies!
 Recommended price P* = 76.28 €   (+20%)
 ```
 
-**Impact on KPIs (ceteris paribus):**
+**Effects on KPIs (ceteris paribus):**
 
-```text
-ΔP = (76.28 − 63.57) / 63.57 = +20.0%
-ΔQ = ε × ΔP = −1.1825 × 0.200 = −23.6%
-ΔRevenue = (1 + 0.200) × (1 − 0.236) − 1 = −8.4%
+```
+ΔP = (76.28 − 63.57) / 63.57 = +20.0 %
+ΔQ = ε × ΔP = −1.1825 × 0.200 = −23.6 %
+ΔRevenue = (1 + 0.200) × (1 − 0.236) − 1 = −8.4 %
 ΔMargin = (76.28 − 30.00) × (1 − 0.236) − (63.57 − 30.00)
          = 46.28 × 0.764 − 33.57
-         = 35.36 − 33.57 = +5.3%
+         = 35.36 − 33.57 = +5.3 %
 ```
 
 **P004 – Household “Product D”** (inelastic, ε = −0.52):
 
-```text
-Unit cost C          =  15.00 €
-Current price P₀     =  30.39 €
-Competitor price Pw  =  38.72 €
+```
+Unit cost C         =  15.00 €
+Current price P₀    =  30.39 €
+Competitor price Pw =  38.72 €
 
 Inelastic (|ε| < 1.05) → fallback: P* = P₀ × 1.05 = 31.91 €
 
@@ -395,15 +389,15 @@ Competitive adjustment:
 
 Boundaries: min=max(19.00; 16.50; 24.31)=24.31 €  max=36.47 € → 33.95 € ✓
 
-Recommended price P* = 33.95 €   (+11.7%)
-ΔQuantity = −0.52 × 0.117 = −6.1%
-ΔRevenue = +4.9%
-ΔMargin  = +15.6%
+Recommended price P* = 33.95 €   (+11.7 %)
+ΔQuantity = −0.52 × 0.117 = −6.1 %
+ΔRevenue = +4.9 %
+ΔMargin  = +15.6 %
 ```
 
-### 6.4 Overall Results for All Products (ModelOutput)
+### 6.4  Overall Result for All Products (ModelOutput)
 
-| Product | ε | R² | Current Price | Competitor Price | **Rec. Price** | ΔQuantity | **ΔRevenue** | **ΔMargin** |
+| Product | ε | R² | Current price | Competitor price | **Recommended price** | ΔQuantity | **ΔRevenue** | **ΔMargin** |
 |---|---|---|---|---|---|---|---|---|
 | P001 | −1.18 | 0.61 | 63.57 € | 62.67 € | **76.28 €** | −23.6 % | **−8.4 %** | **+5.3 %** |
 | P002 | −1.05 | 0.42 | 102.71 € | 98.27 € | **104.97 €** | −2.3 % | **−0.2 %** | **+1.9 %** |
@@ -411,20 +405,18 @@ Recommended price P* = 33.95 €   (+11.7%)
 | P004 | −0.52 | 0.50 | 30.39 € | 38.72 € | **33.95 €** | −6.2 % | **+4.9 %** | **+15.6 %** |
 | P005 | −0.66 | 0.44 | 45.37 € | 49.96 € | **48.33 €** | −4.3 % | **+2.0 %** | **+6.9 %** |
 
-> **Strategic interpretation:**  
-> - P001 / P003 (elastic): a price increase causes a drop in quantity → margin rises slightly, revenue falls → useful in a margin-optimization strategy  
-> - P004 / P005 (inelastic): a price increase clearly pays off → both revenue and margin improve
+> **Strategic reading:**  
+> - P001/P003 (elastic): a price increase causes a drop in quantity → margin rises slightly, revenue falls → sensible in a margin-optimization strategy  
+> - P004/P005 (inelastic): a price increase clearly pays off → both revenue and margin rise
 
 ---
 
-## 7. Results and Evaluation
-
-*Thesis chapter 5*
+## 7  Results & Evaluation  *(Thesis Ch. 5)*
 
 > *“Technical evaluation of the model results and elasticities”*  
 > *“Plausibility check of the calculated elasticities (sign, magnitude)”*
 
-### 7.1 Model Quality Metrics (Test Set, Time-Series Split 80/20)
+### 7.1  Model Quality Metrics (Test Set, Time-Series Split 80/20)
 
 | Product | R² | MAE | RMSE | Assessment |
 |---|---|---|---|---|
@@ -434,25 +426,25 @@ Recommended price P* = 33.95 €   (+11.7%)
 | P004 | 0.50 | 0.116 | 0.146 | moderate |
 | P005 | 0.44 | 0.120 | 0.151 | moderate |
 
-*MAE/RMSE are measured on the log scale → on the quantity scale, MAE ≈ 0.11 means an average  
-deviation of approx. e^0.11 − 1 ≈ 12% from actual sales quantity.*
+*MAE/RMSE on the log scale → on the quantity scale, MAE ≈ 0.11 means an average  
+deviation of approx. e^0.11 − 1 ≈ 12% from the actual sales quantity.*
 
-### 7.2 Plausibility Check of the Elasticities
+### 7.2  Plausibility Check of the Elasticities
 
 | Criterion | Expected value | Result | ✓/✗ |
 |---|---|---|---|
 | Sign | negative (law of demand) | all ε < 0 | ✓ |
 | Magnitude | typically −0.3 to −3.0 in eCommerce | −0.52 to −1.32 | ✓ |
-| Electronics more elastic than household | |ε_electronics| > |ε_household| expected | P001: −1.18 > P004: −0.52 | ✓ |
-| Stability check | repeated values with same seed | deterministic due to `SEED=42` | ✓ |
+| Electronics more elastic than household | |ε_Electronics| > |ε_Household| expected | P001: −1.18 > P004: −0.52 | ✓ |
+| Stability check | values repeated with the same seed | deterministic due to `SEED=42` | ✓ |
 
-### 7.3 A/B Test Concept
+### 7.3  A/B Test Concept  *(Thesis Ch. 5.2)*
 
-The model can be validated using A/B tests (conceptual only in the prototype):
+The model can be validated through A/B tests (conceptual only in the prototype):
 
-```text
+```
 Group A (control): current price P₀
-Group B (test):    recommended price P*
+Group B (test):      recommended price P*
 Measurement after 4 weeks:
   ΔRevenue = Revenue_B / Revenue_A − 1
   ΔMargin  = Margin_B  / Margin_A  − 1
@@ -461,14 +453,12 @@ If ΔMargin > 0 → the model is rolled out for all products
 
 ---
 
-## 8. Deployment: ModelOutput and Reporting
+## 8  Deployment: ModelOutput & Reporting  *(Thesis Ch. 6)*
 
-*Thesis chapter 6*
-
-> *“Provision of model results (e.g. storage in DWH, provision via API)”*  
+> *“Provision of the model results (e.g., storage in the DWH, provision via API)”*  
 > *“Development of Power BI dashboards and reports”*
 
-### 8.1 dbo.ModelOutput
+### 8.1  dbo.ModelOutput
 
 **Code:** [`src/pricing_optimizer.py → save_recommendations()`](../src/pricing_optimizer.py#L131)
 
@@ -490,10 +480,10 @@ CREATE TABLE dbo.ModelOutput (
 );
 ```
 
-### 8.2 Dashboard (Power BI Prototype)
+### 8.2  Dashboard (Power BI Prototype)
 
 The notebook [`notebooks/dynamic_pricing_prototype.ipynb`](../notebooks/dynamic_pricing_prototype.ipynb)
-creates visualizations corresponding to the Power BI dashboard:
+creates visualizations that correspond to the Power BI dashboard:
 
 ![Dashboard Preview](../dashboard_preview.png)
 
@@ -501,16 +491,16 @@ creates visualizations corresponding to the Power BI dashboard:
 
 | Page | Content | DAX equivalent |
 |---|---|---|
-| Price comparison | Current vs. recommended by product | `[Empfohlener Preis]` |
-| KPI impact | ΔRevenue and ΔMargin by product | `[Erwarteter Umsatzeffekt]` |
-| Price Sensitivity | Revenue / margin as a function of price | — |
+| Price comparison | Current vs. recommended per product | `[Empfohlener Preis]` |
+| KPI impact | ΔRevenue and ΔMargin per product | `[Erwarteter Umsatzeffekt]` |
+| Price Sensitivity | Revenue/margin as a function of price | — |
 | EDA | Time series, log price vs. log quantity | — |
 
 ---
 
-## 9. CRISP-DM Classification
+## 9  CRISP-DM Classification
 
-> *Thesis chapter 1.5: “Cross Industry Standard Process for Data Mining (CRISP-DM)”*
+> *Thesis Ch. 1.5: “Cross Industry Standard Process for Data Mining (CRISP-DM)”*
 
 | CRISP-DM phase | Code / artifact | Thesis chapter |
 |---|---|---|
@@ -523,7 +513,7 @@ creates visualizations corresponding to the Power BI dashboard:
 
 ---
 
-## 10. Quick Start
+## 10  Quick Start
 
 ### Requirements
 
@@ -537,18 +527,18 @@ pip install -r requirements.txt
 python data/generate_data.py
 ```
 
-Creates `data/produkte.csv`, `data/verkaeufe.csv`, and `data/wettbewerbspreise.csv`.
+Creates `data/produkte.csv`, `data/verkaeufe.csv`, `data/wettbewerbspreise.csv`.
 
-### Step 2 – Run the Pipeline
+### Step 2 – Run Pipeline
 
 ```bash
-# ETL + feature engineering
+# ETL + Feature Engineering
 python -m src.data_preparation
 
-# model training
+# Model training
 python -m src.model
 
-# price recommendations + ModelOutput
+# Price recommendations + ModelOutput
 python -m src.pricing_optimizer
 ```
 
@@ -560,7 +550,7 @@ jupyter notebook notebooks/dynamic_pricing_prototype.ipynb
 
 ### Expected Console Output
 
-```text
+```
 ETL completed: data loaded into PricingPrototypeDB.sqlite.
   P001: ε = -1.183  R² = 0.609  MAE = 0.111
   P002: ε = -1.047  R² = 0.417  MAE = 0.109
