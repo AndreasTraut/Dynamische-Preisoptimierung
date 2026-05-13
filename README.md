@@ -75,7 +75,7 @@ ETL abgeschlossen: Daten in PricingPrototypeDB.sqlite geladen.
 
 **Dashboard-Vorschau:**
 
-![Dashboard](dashboard_preview.png)
+![Dashboard](screenshots/dashboard_preview.png)
 
 ---
 
@@ -299,16 +299,22 @@ Das Semantische Modell verbindet alle Datenschichten:
 - Bar Chart: Preiselastizität ε je Produkt
 - Detail-Tabelle: Alle ModelOutput-Kennzahlen mit IBCS-Spaltenformatierung
 
+![Dashboard](screenshots/PreisoptimierungDashboard.png)
+
 **Seite 2: „Umsatz & Preisentwicklung"**
 - Filter-Slicer: Produkt & Monat
 - Zeitreihe: Täglicher Umsatz AC je Produkt (2023)
 - Zeitreihe: Täglicher Verkaufspreis AC je Produkt (Basis für ε-Schätzung)
+
+![Dashboard](screenshots/UmsatzPreisentwicklung.png)
 
 **Seite 3: „Preisempfehlungs-Dashboard"**
 - Schwarze Titelleiste mit Untertitel (Aktueller vs. Empfohlener Preis | Erwartete Umsatzänderung | Erwartete Margenänderung)
 - Clustered Column Chart: Aktueller vs. Empfohlener Preis je Produkt
 - Clustered Column Chart: Erwartete Umsatzänderung (%) – positiv/negativ je Produkt
 - Clustered Column Chart: Erwartete Margenänderung (%) – positiv/negativ je Produkt
+
+![Dashboard](screenshots/PreisempfehlungsDashboard.png)
 
 ### IBCS-Konformität
 
