@@ -14,8 +14,8 @@ English Version of this File: [STUDIENARBEIT_EN.md](STUDIENARBEIT_EN.md)
 
 ---
 
-> 📄 **Original-Dokument (Word):**  
-> [`Studienarbeit Dynamisches Preisoptimierungsmodell im eCommerce- Andreas Traut.docx`](../Studienarbeit%20Dynamisches%20Preisoptimierungsmodell%20im%20eCommerce-%20Andreas%20Traut.docx)
+> 📄 **Original-Dokument (PDF):**  
+> [`Studienarbeit Dynamisches Preisoptimierungsmodell im eCommerce- Andreas Traut.pdf`](../Studienarbeit%20Dynamisches%20Preisoptimierungsmodell%20im%20eCommerce-%20Andreas%20Traut.pdf)
 >
 > 📖 **Detaillierte Modell-Dokumentation mit konkreten Berechnungen und Quellcode-Verlinkungen:**  
 > [`docs/MODELL_DOKUMENTATION.md`](MODELL_DOKUMENTATION.md)
@@ -37,30 +37,36 @@ English Version of this File: [STUDIENARBEIT_EN.md](STUDIENARBEIT_EN.md)
    - [1.3 Relevanz und Kontext](#13-relevanz-und-kontext-für-einen-international-tätigen-mittelständischen-weltmarktführer)
    - [1.4 Begründung der Abgrenzung zum Data Analysten](#14-begründung-der-abgrenzung-zum-data-analysten)
    - [1.5 Theoretische Einordnung: Prädiktive und Präskriptive Analytik](#15-theoretische-einordnung-prädiktive-und-präskriptive-analytik-im-projektkontext)
-   - [1.6 Cross Industry Standard Process for Data Mining (CRISP-DM)](#16-cross-industry-standard-process-for-data-mining-crisp-dm)
+   - [1.6 Cross Industry Standard Process for Data Mining (CRISP-DM)](#16-cross-industry-standard-process-for-data-mining-crisp-dm)  
+   
 [2. Analyse der Ausgangslage und Datenanforderungen](#2-analyse-der-ausgangslage-und-datenanforderungen)
    - [2.1 Bestehende Preisprozesse und Herausforderungen](#21-bestehende-preisprozesse-und-herausforderungen-im-e-commerce-team-insb-amazon)
    - [2.2 Identifikation und Bewertung benötigter Datenquellen](#22-identifikation-und-bewertung-benötigter-datenquellen)
-   - [2.3 Anforderungen an Datenqualität, Granularität und Verfügbarkeit](#23-anforderungen-an-datenqualität-granularität-und-verfügbarkeit)
+   - [2.3 Anforderungen an Datenqualität, Granularität und Verfügbarkeit](#23-anforderungen-an-datenqualität-granularität-und-verfügbarkeit)  
+   
 [3. Datenintegration und -aufbereitung für die Preismodellierung](#3-datenintegration-und--aufbereitung-für-die-preismodellierung-data-understanding--data-preparation)
    - [3.1 Konzeption der ETL-Strecken](#31-konzeption-der-etl-strecken-zur-datenakquise-und--integration)
    - [3.2 Aufbau und Erweiterung des Data Warehouse nach Schichtenmodell](#32-aufbau-und-erweiterung-des-data-warehouse-nach-schichtenmodell-core-bizcore-datamart-für-pricing-daten)
-   - [3.3 Feature Engineering mittels Python (pandas, numpy) und SQL](#33-feature-engineering-mittels-python-pandas-numpy-und-sql)
+   - [3.3 Feature Engineering mittels Python (pandas, numpy) und SQL](#33-feature-engineering-mittels-python-pandas-numpy-und-sql)  
+   
 [4. Entwicklung der Machine-Learning-Modelle zur Preisoptimierung](#4-entwicklung-der-machine-learning-modelle-zur-preisoptimierung-modeling)
    - [4.1 Auswahl geeigneter Modellierungsansätze](#41-auswahl-geeigneter-modellierungsansätze)
    - [4.2 Implementierung der Modelle in Python](#42-implementierung-der-modelle-in-python)
    - [4.3 Training, Validierung und Auswahl der Modelle](#43-training-validierung-und-auswahl-der-modelle)
-   - [4.4 Ableitung von Preisempfehlungen aus den Modellergebnissen](#44-ableitung-von-preisempfehlungen-aus-den-modellergebnissen)
+   - [4.4 Ableitung von Preisempfehlungen aus den Modellergebnissen](#44-ableitung-von-preisempfehlungen-aus-den-modellergebnissen)  
+   
 [5. Evaluation und Validierung der Preisstrategie](#5-evaluation-und-validierung-der-preisstrategie-evaluation)
    - [5.1 Technische Evaluation der Modellergebnisse und Elastizitäten](#51-technische-evaluation-der-modellergebnisse-und-elastizitäten)
    - [5.2 Konzeption und Simulation von A/B-Tests im E-Commerce Kontext](#52-konzeption-und-simulation-von-ab-tests-im-e-commerce-kontext)
    - [5.3 Bewertung der Auswirkungen auf die Geschäftsziele (Umsatz, Marge)](#53-bewertung-der-auswirkungen-auf-die-geschäftsziele-umsatz-marge)
-   - [5.4 Iterative Verbesserung der Modelle basierend auf Evaluationsergebnissen](#54-iterative-verbesserung-der-modelle-basierend-auf-evaluationsergebnissen)
+   - [5.4 Iterative Verbesserung der Modelle basierend auf Evaluationsergebnissen](#54-iterative-verbesserung-der-modelle-basierend-auf-evaluationsergebnissen)  
+   
 [6. Operationalisierung und Monitoring im BI-System](#6-operationalisierung-und-monitoring-im-bi-system-deployment)
    - [6.1 Bereitstellung der Modellergebnisse](#61-bereitstellung-der-modellergebnisse)
    - [6.2 Aufbau eines analytischen Datenmodells (Tabular Model in SSAS) für das Frontend](#62-aufbau-eines-analytischen-datenmodells-tabular-model-in-ssas-für-das-frontend)
    - [6.3 Entwicklung von Power BI Dashboards und Reports](#63-entwicklung-von-power-bi-dashboards-und-reports)
-   - [6.4 Überlegungen zur Automatisierung des Gesamtprozesses](#64-überlegungen-zur-automatisierung-des-gesamtprozesses)
+   - [6.4 Überlegungen zur Automatisierung des Gesamtprozesses](#64-überlegungen-zur-automatisierung-des-gesamtprozesses)  
+   
 [7. Zusammenfassung und Ergebnisse](#7-zusammenfassung-und-ergebnisse)
    - [7.1 Darstellung des entwickelten Systems](#71-darstellung-des-entwickelten-systems)
    - [7.2 Zusammenfassung der Kernergebnisse](#72-zusammenfassung-der-kernergebnisse)
@@ -629,4 +635,4 @@ Die Weiterentwicklungspotenziale des Systems sind entsprechend vielfältig. Prio
 
 ---
 
-*Letzte Aktualisierung: Markdown-Konvertierung des Original-Dokuments ([`Studienarbeit Dynamisches Preisoptimierungsmodell im eCommerce- Andreas Traut.docx`](../Studienarbeit%20Dynamisches%20Preisoptimierungsmodell%20im%20eCommerce-%20Andreas%20Traut.docx))*
+*Letzte Aktualisierung: Markdown-Konvertierung des Original-Dokuments ([`Studienarbeit Dynamisches Preisoptimierungsmodell im eCommerce- Andreas Traut.docx`](../Studienarbeit%20Dynamisches%20Preisoptimierungsmodell%20im%20eCommerce-%20Andreas%20Traut.pdf))*

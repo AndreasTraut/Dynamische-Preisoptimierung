@@ -15,3 +15,7 @@ notebooks/.ipynb_checkpoints/
 *.egg-info/
 dist/
 build/
+
+
+# Word
+*.docx
